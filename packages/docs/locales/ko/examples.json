@@ -1,0 +1,377 @@
+{
+  "button": {
+    "heading": "Button",
+    "subheading": "A Button indicates a possible user action.",
+    "type": "atoms",
+    "button": {
+      "id": "button",
+      "title": "Button",
+      "description": "A standard button."
+    },
+    "icon": {
+      "id": "icon",
+      "title": "Icon",
+      "description": "A button can be made of only an icon."
+    },
+    "color": {
+      "id": "color",
+      "title": "Color",
+      "description": "A button can be formatted to show different levels of emphasis."
+    },
+    "basic": {
+      "id": "basic",
+      "title": "Basic",
+      "description": "The basic button has a subtle appearance."
+    },
+    "disabled": {
+      "id": "disabled",
+      "title": "Disabled",
+      "description": "A button can show it is currently unable to be interacted with."
+    },
+    "loading": {
+      "id": "loading",
+      "title": "Loading",
+      "description": "A button can show a loading indicator."
+    },
+    "group": {
+      "id": "group",
+      "title": "Group",
+      "description": "Buttons can exist together as a group."
+    }
+  },
+  "typography": {
+    "heading": "Typography",
+    "subheading": "A Text displays words and characters at various sizes.",
+    "type": "atoms",
+    "typography": {
+      "id": "typography",
+      "title": "Typography",
+      "description": "A Typography."
+    },
+    "color": {
+      "id": "color",
+      "title": "Color",
+      "description": "A typography can have different colors."
+    }
+  },
+  "input": {
+    "heading": "Input",
+    "subheading": "A input lets users enter and edit text.",
+    "type": "atoms",
+    "input": {
+      "id": "input",
+      "title": "Input",
+      "description": "A standard input."
+    },
+    "disabled": {
+      "id": "disabled",
+      "title": "Disabled",
+      "description": "An input field can show that it is disabled."
+    },
+    "labeled": {
+      "id": "labeled",
+      "title": "Labeld",
+      "description": "An input can be formatted with a label."
+    },
+    "adornment": {
+      "id": "adornment",
+      "title": "Adornment",
+      "description": "This can be used to add a prefix, a suffix or an action to an element."
+    },
+    "icon": {
+      "id": "icon",
+      "title": "Icon",
+      "description": "An input can be formatted with an icon."
+    },
+    "error": {
+      "id": "error",
+      "title": "Error",
+      "description": "An input field can show that the data contains errors."
+    }
+  },
+  "image": {
+    "heading": "Image",
+    "subheading": "An image is a graphic representation of something.",
+    "type": "atoms",
+    "image": {
+      "id": "image",
+      "title": "Image",
+      "description": "A standard image."
+    },
+    "percentage": {
+      "id": "percentage",
+      "title": "Percentage",
+      "description": "A image width can be set by a percentage of its container width."
+    },
+    "hidden": {
+      "id": "hidden",
+      "title": "Hidden",
+      "description": "An image can be hidden."
+    },
+    "bordered": {
+      "id": "bor dered",
+      "title": "Bodered",
+      "description": "An image may include a border to emphasize the edges of white or transparent content."
+    },
+    "rounded": {
+      "id": "rounded",
+      "title": "Rounded",
+      "description": "An image may appear rounded."
+    },
+    "circular": {
+      "id": "circular",
+      "title": "Circular",
+      "description": "An image may appear circular."
+    },
+    "centered": {
+      "id": "centered",
+      "title": "Centered",
+      "description": "An image can appear centered in a content block."
+    },
+    "lazy": {
+      "id": "lazy",
+      "title": "Lazy",
+      "description": "An image can be loaded lazily."
+    },
+    "progressive": {
+      "id": "progressive",
+      "title": "Progressive",
+      "description": "An image can be loaded progressively."
+    },
+    "autoHeight": {
+      "id": "autoHeight",
+      "title": "Auto Height",
+      "description": "Automatically set the image height to the image dimension which fits the provided width."
+    }
+  },
+  "spacer": {
+    "heading": "Spacer",
+    "subheading": "A Spacer that adds space between elements.",
+    "type": "atoms",
+    "spacer": {
+      "id": "standard-spacer",
+      "title": "Spacer",
+      "description": "A standard Spacer that may add spaces both horizontally and vertically between elements."
+    },
+    "axis": {
+      "id": "axis",
+      "title": "Axis",
+      "description": "A Spacer may add space only to the specific axis."
+    }
+  },
+  "icon": {
+    "heading": "Icon",
+    "subheading": "An icon is a glyph used to represent something else.",
+    "type": "atoms",
+    "size": {
+      "id": "size",
+      "title": "Size",
+      "description": "An icon can vary in size."
+    },
+    "color": {
+      "id": "color",
+      "title": "Color",
+      "description": "An icon can be formatted with different colors."
+    },
+    "rotated": {
+      "id": "rotated",
+      "title": "Rotated",
+      "description": "An icon can be rotated."
+    },
+    "flipped": {
+      "id": "flipped",
+      "title": "Flipped",
+      "description": "An icon can be flipped."
+    }
+  },
+  "slider": {
+    "heading": "Slider",
+    "subheading": "A slider allows a user to select a value from a small set of options, often binary.",
+    "type": "atoms",
+    "slider": {
+      "id": "slider",
+      "title": "Slider",
+      "description": "A slider."
+    },
+    "toggle": {
+      "id": "toggle",
+      "title": "Toggle",
+      "description": "A slider can toggle."
+    },
+    "color": {
+      "id": "color",
+      "title": "Color",
+      "description": "A slider can be filled with different colors."
+    },
+    "disabled": {
+      "id": "disabled",
+      "title": "Disabled",
+      "description": "A slider can be read-only and unable to change states."
+    },
+    "state": {
+      "id": "state",
+      "title": "State",
+      "description": ""
+    }
+  },
+  "collapse": {
+    "heading": "Collapse",
+    "subheading": "A Collapse expands and collapses its children.",
+    "type": "atoms",
+    "collapse": {
+      "id": "collapse",
+      "title": "Collapse",
+      "description": "A standard collapse."
+    }
+  },
+  "comment": {
+    "heading": "Comment",
+    "subheading": "A comment displays user feedback to site content.",
+    "type": "molecules",
+    "comment": {
+      "id": "comment",
+      "title": "Comment",
+      "description": "A basic list of comments."
+    },
+    "collapsed": {
+      "id": "collapsed",
+      "title": "Collapsed",
+      "description": "Comments can be collapsed, or hidden from view."
+    }
+  },
+  "list": {
+    "heading": "List",
+    "subheading": "A list groups related content.",
+    "type": "molecules",
+    "list": {
+      "id": "list",
+      "title": "List",
+      "description": "A standard list."
+    },
+    "active": {
+      "id": "active",
+      "title": "Active",
+      "description": "A item can show it is currently the active user selection."
+    },
+    "swipeable": {
+      "id": "swipeable",
+      "title": "Swipeable",
+      "description": "A list can be swipeable to reveal hidden items."
+    },
+    "divided": {
+      "id": "divided",
+      "title": "Divided",
+      "description": "A list can show divisions between content."
+    },
+    "padded": {
+      "id": "padded",
+      "title": "Padded",
+      "description": "A list can relax its padding to provide more negative space."
+    },
+    "collapse": {
+      "id": "collapse",
+      "title": "Collapse",
+      "description": "A list can collapse its items."
+    },
+    "verticalAlign": {
+      "id": "verticalAlign",
+      "title": "Vertical Align",
+      "description": "A list may align its items vertically."
+    },
+    "ripple": {
+      "id": "ripple",
+      "title": "Ripple",
+      "description": "Ripple effect upon clicking an item may be turned on and off."
+    },
+    "variations": {
+      "id": "variations",
+      "title": "Variations",
+      "description": ""
+    }
+  },
+  "badge": {
+    "heading": "Badge",
+    "subheading": "Badge generates a small badge to corner of its child.",
+    "type": "atoms",
+    "badge": {
+      "id": "badge",
+      "title": "Badge",
+      "description": "A badge."
+    },
+    "color": {
+      "id": "color",
+      "title": "Color",
+      "description": "A badge can vary in color."
+    },
+    "dot": {
+      "id": "dot",
+      "title": "Dot",
+      "description": "A badge with empty content."
+    },
+    "direction": {
+      "id": "direction",
+      "title": "Direction",
+      "description": "A badge can appear to all corners."
+    },
+    "max": {
+      "id": "max",
+      "title": "Max",
+      "description": "Max count to show."
+    },
+    "overlap": {
+      "id": "overlap",
+      "title": "Overlap",
+      "description": "Wrapped shape the badge should overlap."
+    },
+    "overlapColor": {
+      "id": "overlapColor",
+      "title": "Overlap Color",
+      "description": "The background color of the overlap."
+    },
+    "textColor": {
+      "id": "textColor",
+      "title": "Text Color",
+      "description": "The color of the text."
+    }
+  },
+  "chip": {
+    "heading": "Chip",
+    "subheading": "A chip displays content classification.",
+    "type": "atoms",
+    "chip": {
+      "id": "chip",
+      "title": "Chip",
+      "description": "A Chip."
+    },
+    "icon": {
+      "id": "icon",
+      "title": "Icon",
+      "description": "A chip can include an icon"
+    },
+    "image": {
+      "id": "image",
+      "title": "Image",
+      "description": "A chip can include an image"
+    },
+    "circular": {
+      "id": "circular",
+      "title": "Circular",
+      "description": "A chip can be circular"
+    },
+    "outlined": {
+      "id": "outlined",
+      "title": "Outlined",
+      "description": "A chip can reduce its complexity"
+    },
+    "color": {
+      "id": "color",
+      "title": "Color",
+      "description": "A chip can have different colors"
+    },
+    "size": {
+      "id": "size",
+      "title": "Size",
+      "description": "A label can be small or large"
+    }
+  }
+}

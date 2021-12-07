@@ -1,0 +1,22 @@
+{
+  "heading": "Introduction",
+  "subheading": "Install GUI, React Native Elements for faster and easier app development. Build your own design system. The official Growth-UI-Native integration.",
+  "npm": {
+    "shortInstruction": "To install and save in your package.json dependencies, run:",
+    "note": "Please note that react >= 17.0.0 and react-dom >= 17.0.0 are peer dependencies."
+  },
+  "basicUsage": {
+    "heading": "Bsic usage",
+    "shortInstruction": "",
+    "note": ""
+  },
+  "darkMode": {
+    "heading": "Dark Mode",
+    "description": "You can enable dark mode both automatically and manually."
+  },
+  "icon": {
+    "shortInstruction": "The icon sets in GUI Native are made possible through <0>react-native-vector-icons</0>. <1>Expo</1> or <2>create-react-native-app</2> projects include react-native-vector-icons out of the box, hence this step can be skipped.<3></3><3></3>If you encounter the following error:",
+    "link": "Link the dependency"
+  },
+  "sponsors": "A quick thank for our sponsors:"
+}

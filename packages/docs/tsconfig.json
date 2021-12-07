@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "module": "esnext",
+    "paths": {
+      "@growth-ui/native/*": ["../growth-ui-native/src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "public", "src"],
+  "exclude": ["node_modules"]
+}

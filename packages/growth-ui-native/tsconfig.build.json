@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.build.json",
+
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "module": "esnext"
+  },
+  "include": ["src/**/*"]
+}

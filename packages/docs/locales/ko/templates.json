@@ -1,0 +1,22 @@
+{
+  "heading": "템플레이트",
+  "subheading": "빠르고 간편한 프로젝트 시작을 위한 무료 템플레이트를 사용해보세요. 로그인폼, 대시보드등 여러 탬플릿이 기다리고 있습니다.",
+  "Dashboard": {
+    "title": "대시보드",
+    "description": "미니멀 대시보드입니다.",
+    "image": "/images/dashboard-template.png",
+    "sourceCode": "https://github.com/Growth-UI/Growth-UI-React/tree/main/packages/docs/src/templates/Dashboard"
+  },
+  "Signin": {
+    "title": "로그인",
+    "description": "심플한 로그인폼입니다.",
+    "image": "/images/signin-template.png",
+    "sourceCode": "https://github.com/Growth-UI/Growth-UI-React/tree/main/packages/docs/src/templates/Signin"
+  },
+  "Signup": {
+    "title": "회원가입",
+    "description": "심플한 회원가입폼입니다.",
+    "image": "/images/signup-template.png",
+    "sourceCode": "https://github.com/Growth-UI/Growth-UI-React/tree/main/packages/docs/src/templates/Signup"
+  }
+}

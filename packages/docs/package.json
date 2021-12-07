@@ -1,0 +1,52 @@
+{
+  "name": "docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@growth-ui/native": "*",
+    "@native-html/iframe-plugin": "^2.6.1",
+    "brace": "^0.11.1",
+    "copy-to-clipboard": "^3.3.1",
+    "faker": "^5.5.3",
+    "growth-ui-react": "^1.14.2",
+    "lodash": "^4.17.21",
+    "next": "11.1.2",
+    "next-images": "^1.8.1",
+    "next-translate": "^1.2.0",
+    "next-transpile-modules": "^9.0.0",
+    "prettier": "^2.4.1",
+    "react": "17.0.2",
+    "react-ace": "^9.5.0",
+    "react-dom": "17.0.2",
+    "react-markdown": "^7.1.0",
+    "react-native": "^0.66.3",
+    "react-native-svg": "^12.1.1",
+    "react-native-web": "^0.17.1",
+    "rehype-highlight": "^5.0.0",
+    "setimmediate": "^1.0.5",
+    "string-similarity": "^4.0.4",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/faker": "^5.5.9",
+    "@types/lodash": "^4.14.177",
+    "@types/prettier": "^2.4.2",
+    "@types/react": "17.0.24",
+    "@types/react-native": "^0.66.8",
+    "@types/setimmediate": "^1.0.2",
+    "@types/string-similarity": "^4.0.0",
+    "@types/styled-components": "^5.1.15",
+    "babel-plugin-react-native-web": "^0.17.1",
+    "babel-plugin-transform-define": "^2.0.1",
+    "next-compose-plugins": "^2.2.1",
+    "next-translate": "^1.2.0",
+    "next-transpile-modules": "^9.0.0",
+    "typescript": "^4.4.3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "localeDetection": true,
+  "locales": ["en", "ko"],
+  "defaultLocale": "en",
+  "pages": {
+    "*": ["common", "error", "examples"],
+    "/getting-started/introduction": ["introduction"],
+    "/get-started": ["get-started"],
+    "/templates": ["templates"],
+    "/templates/[template]": ["templates"]
+  }
+}

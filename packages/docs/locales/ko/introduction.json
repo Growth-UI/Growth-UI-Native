@@ -1,0 +1,22 @@
+{
+  "heading": "소개",
+  "subheading": "빠르고 효율적이며 유연한 앱개발을 위한 리액트 컴포너트 입니다.",
+  "npm": {
+    "shortInstruction": "Growth-UI-Native를 사용하시기 위해서 아래의 명령어를 실행해주세요.",
+    "note": "@growth-ui/native는 react 버전 >= 17.0.0 과 react-dom 버전  >= 17.0.0 을 peer dependencies로 설치합니다."
+  },
+  "basicUsage": {
+    "heading": "기본 사용법",
+    "shortInstruction": "",
+    "note": ""
+  },
+  "darkMode": {
+    "heading": "다크모드",
+    "description": "자동 혹은 수동으로 다크모드를 설정하실 수 있습니다."
+  },
+  "icon": {
+    "shortInstruction": "The icon sets in GUI Native are made possible through <0>react-native-vector-icons</0>. <1>Expo</1> or <2>create-react-native-app</2> projects include react-native-vector-icons out of the box, hence this step can be skipped.<3></3><3></3>If you encounter the following error:",
+    "link": "Link the dependency"
+  },
+  "sponsors": "스폰서들에게 감사합니다."
+}

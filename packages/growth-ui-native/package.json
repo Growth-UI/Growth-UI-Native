@@ -1,0 +1,59 @@
+{
+  "name": "@growth-ui/native",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kyuhak Yuk",
+  "license": "MIT",
+  "repository": "https://github.com/Growth-UI/Growth-UI-Native",
+  "keywords": [
+    "growth-ui-native",
+    "@growth-ui/native",
+    "react",
+    "ui",
+    "react-component",
+    "react-elements"
+  ],
+  "homepage": "https://native.growth-ui.com",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "yarn lint --fix",
+    "test": "jest --passWithNoTests",
+    "test:watch": "yarn jest --watch",
+    "typecheck": "tsc",
+    "clean": "rimraf -rf ./dist",
+    "build": "yarn run clean && yarn run build:types && yarn run build:js",
+    "build:types": "tsc -p tsconfig.build.json --emitDeclarationOnly --downlevelIteration",
+    "build:js": "babel src --presets minify --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "postbuild": "cp package.json README.md dist",
+    "version": "npm version"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/react": "^17.0.19",
+    "@types/react-native": "^0.66.8",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^27.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-tsconfig-paths": "^1.0.1",
+    "babel-preset-minify": "^0.5.1",
+    "minify": "^8.0.3",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-svg": "*"
+  },
+  "dependencies": {
+    "react-native": "^0.66.3",
+    "react-native-svg": "^12.1.1"
+  }
+}

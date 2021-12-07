@@ -1,0 +1,22 @@
+{
+  "heading": "Templates",
+  "subheading": "A selection of free react templates to help you get started building your app. The collection contains react dashboard, react admin, and more.",
+  "Dashboard": {
+    "title": "Dashboard",
+    "description": "A minimal dashboard with navbar and sidebar to draw.",
+    "image": "/images/dashboard-template.png",
+    "sourceCode": "https://github.com/Growth-UI/Growth-UI-React/tree/main/packages/docs/src/templates/Dashboard"
+  },
+  "Signin": {
+    "title": "Signin",
+    "description": "A simple sign-in form.",
+    "image": "/images/signin-template.png",
+    "sourceCode": "https://github.com/Growth-UI/Growth-UI-React/tree/main/packages/docs/src/templates/Signin"
+  },
+  "Signup": {
+    "title": "Signup",
+    "description": "A simple sign-up form.",
+    "image": "/images/signup-template.png",
+    "sourceCode": "https://github.com/Growth-UI/Growth-UI-React/tree/main/packages/docs/src/templates/Signup"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "npm": {
+    "description": "It can be installed and saved via <0>npm</0> or <0>yarn</0>",
+    "dependencies": "Please note that Growth-UI-React makes use of <0>styled-components</0>."
+  },
+  "theme": {
+    "heading": "Theme",
+    "description": "Import GrowthStyle and wrap your app component:"
+  },
+  "darkMode": {
+    "heading": "Dark Mode",
+    "description": "You can enable dark mode both automatically and manually."
+  },
+  "demo": {
+    "heading": "Demo"
+  },
+  "custom": {
+    "heading": "Custom Theme",
+    "description": "If you are using styled-components and want to apply your own global style and theme:"
+  }
+}
