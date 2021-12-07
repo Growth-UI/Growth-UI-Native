@@ -3,7 +3,7 @@
   "subheading": "빠르고 효율적이며 유연한 앱개발을 위한 리액트 컴포너트 입니다.",
   "npm": {
     "shortInstruction": "Growth-UI-Native를 사용하시기 위해서 아래의 명령어를 실행해주세요.",
-    "note": "@growth-ui/native는 react 버전 >= 17.0.0 과 react-dom 버전  >= 17.0.0 을 peer dependencies로 설치합니다."
+    "note": "@growth-ui/native는 react-native-svg 버전 >= 12.1.1 을 peer dependency로 설치합니다."
   },
   "basicUsage": {
     "heading": "기본 사용법",
