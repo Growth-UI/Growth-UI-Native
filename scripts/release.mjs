@@ -151,9 +151,9 @@ ${commits.join("\n")}`
       await $`yarn run build`;
       await $`npm config set @growth-ui:registry https://registry.npmjs.org`;
       await $`npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}`;
-      await $`===================================Publishing===================================`;
+      await $`================================ Publishing ================================`;
       await $`npm publish --access public ./packages/growth-ui-native/dist`;
-      await $`===================================Done===================================`;
+      await $`=================================== Done ===================================`;
     } catch (err) {
       core.setFailed(err);
     }
