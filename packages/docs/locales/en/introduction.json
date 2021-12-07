@@ -3,7 +3,7 @@
   "subheading": "Install GUI, React Native Elements for faster and easier app development. Build your own design system. The official Growth-UI-Native integration.",
   "npm": {
     "shortInstruction": "To install and save in your package.json dependencies, run:",
-    "note": "Please note that react >= 17.0.0 and react-dom >= 17.0.0 are peer dependencies."
+    "note": "Please note that react-native-svg >= 12.1.1 is peer dependency."
   },
   "basicUsage": {
     "heading": "Bsic usage",

@@ -146,17 +146,13 @@ ${commits.join("\n")}`
 
   //  Update package version
   if (lastTag !== nextVersion) {
-    try {
-      await $`yarn run version --no-git-tag-version --new-version ${nextReleaseType}`;
-      await $`yarn run build`;
-      await $`npm config set @growth-ui:registry https://registry.npmjs.org`;
-      await $`npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}`;
-      console.log("================================ Publishing ================================");
-      await $`npm publish --access public ./packages/growth-ui-native/dist`;
-      console.log("=================================== Done ===================================");
-    } catch (err) {
-      core.setFailed(err);
-    }
+    await $`yarn run version --no-git-tag-version --new-version ${nextReleaseType}`;
+    await $`yarn run build`;
+    await $`npm config set @growth-ui:registry https://registry.npmjs.org`;
+    await $`npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}`;
+    console.log("================================ Publishing ================================");
+    await $`npm publish --no-git-tag-version --access public ./packages/growth-ui-native/dist`;
+    console.log("=================================== Done ===================================");
   }
 
   // Update CHANGELOG.md
