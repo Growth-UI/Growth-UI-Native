@@ -1,3 +1,11 @@
+## [1.1.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.1.1...v1.1.2) (2021-12-07)
+
+### 🐛  Fixes
+* fix: update peer-dependencies ([da091a9](https://github.com/Growth-UI/Growth-UI-Native/commit/da091a9e316b637f201e30235949bfbe874b59e8))
+
+### 📝  Documentation
+* docs: update introduction for  peer dependency ([5734824](https://github.com/Growth-UI/Growth-UI-Native/commit/5734824d7bd555fa592ae401a301c56dcfa036a0))
+
 ## [1.1.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.1.0...v1.1.1) (2021-12-07)
 
 ### 🐛  Fixes
