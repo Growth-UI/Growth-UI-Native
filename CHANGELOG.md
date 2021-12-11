@@ -1,3 +1,8 @@
+## [1.1.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.1.2...v1.1.3) (2021-12-11)
+
+### 🐛  Fixes
+* fix: remove source map for production ([8e7ae40](https://github.com/Growth-UI/Growth-UI-Native/commit/8e7ae401f5a7bf3a4fe7785398fd500744184bc7))
+
 ## [1.1.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.1.1...v1.1.2) (2021-12-07)
 
 ### 🐛  Fixes
