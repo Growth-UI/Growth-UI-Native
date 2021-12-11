@@ -23,7 +23,7 @@
     "clean": "rimraf -rf ./dist",
     "build": "yarn run clean && yarn run build:types && yarn run build:js",
     "build:types": "tsc -p tsconfig.build.json --emitDeclarationOnly --downlevelIteration",
-    "build:js": "babel src --presets minify --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "build:js": "babel src --presets minify --out-dir dist --extensions \".ts,.tsx\" --source-maps false",
     "postbuild": "cp package.json README.md dist",
     "version": "npm version"
   },
