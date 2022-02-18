@@ -43,6 +43,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-plugin-tsconfig-paths": "^1.0.1",
     "babel-preset-minify": "^0.5.1",
+    "metro-react-native-babel-preset": "^0.68.0",
     "minify": "^8.0.3",
     "rimraf": "^3.0.2",
     "typescript": "^4.4.2"

@@ -1,5 +1,11 @@
 {
-  "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript", "minify"],
+  "presets": [
+    "module:metro-react-native-babel-preset",
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-typescript",
+    "minify"
+  ],
   "comments": false,
   "plugins": ["lodash", "@babel/plugin-transform-runtime"]
 }
