@@ -5,6 +5,9 @@ export type { ButtonProps } from "./atoms/Button";
 export { default as ButtonGroup } from "./atoms/ButtonGroup";
 export type { ButtonGroupProps } from "./atoms/ButtonGroup";
 
+export { default as Box } from "./atoms/Box";
+export type { BoxProps } from "./atoms/Box";
+
 export { default as Typography } from "./atoms/Typography";
 export type { TypographyProps } from "./atoms/Typography";
 

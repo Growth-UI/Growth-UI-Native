@@ -1,6 +1,6 @@
 import ComponentDocContext from "../ComponentDocContext";
 import React, { useContext } from "react";
-import { Container, Heading } from "growth-ui-react";
+import { Container, Heading } from "@growth-ui/react";
 
 const ComponentExampleTitle = () => {
   const { description, id, title } = useContext(ComponentDocContext);

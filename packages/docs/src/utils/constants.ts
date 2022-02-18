@@ -1,4 +1,5 @@
 import { GUI } from "@growth-ui/native/utils";
+import { HORIZONTALALIGNMENTS, VERTICALALIGNMENTS } from "@growth-ui/native/utils/GUI";
 
 export const growthUIRepoURL = "https://github.com/Growth-UI/Growth-UI-Native";
 export const availableLanguages = [
@@ -16,21 +17,23 @@ export const typeOrder = ["atoms", "molecules", "organisms", "templates"];
 export const componentByType: Record<string, string[]> = {
   atoms: [
     "badge",
+    "box",
     "button",
     "chip",
     "collapse",
     "icon",
     "image",
     "input",
-    "list",
+    "row",
     "slider",
     "spacer",
     "typography",
   ],
-  molecules: ["comment"],
+  molecules: ["comment", "list"],
 };
 export const components = [
   "badge",
+  "box",
   "button",
   "chip",
   "collapse",
@@ -39,6 +42,7 @@ export const components = [
   "image",
   "input",
   "list",
+  "row",
   "slider",
   "spacer",
   "typography",
@@ -52,6 +56,9 @@ export const componentInfo: Record<
   // atoms
   badge: {
     names: ["Badge"],
+  },
+  box: {
+    names: ["Box"],
   },
   button: {
     names: ["Button", "ButtonGroup"],
@@ -70,6 +77,9 @@ export const componentInfo: Record<
   },
   input: {
     names: ["Input"],
+  },
+  row: {
+    names: ["Row"],
   },
   slider: {
     names: ["Slider"],
@@ -949,6 +959,38 @@ export const componentProps: Record<
       description: "The content of the component",
       name: "text",
       type: "string",
+    },
+  ],
+  Row: [
+    {
+      description: "A row can have its columns aligned horizontally.",
+      name: "horizontalAlign",
+      type: "enum",
+      enums: HORIZONTALALIGNMENTS,
+    },
+    {
+      description: "The custom style",
+      name: "style",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description:
+        "A row can specify its vertical alignment to have all its columns vertically centered.",
+      name: "verticalAlign",
+      type: "enum",
+      enums: VERTICALALIGNMENTS,
+    },
+    {
+      description: "How flex items wrap.",
+      name: "wrap",
+      type: "boolean",
+    },
+  ],
+  Box: [
+    {
+      description: "A shortcut for defining custom style",
+      name: "sx",
+      type: "enum",
     },
   ],
 };

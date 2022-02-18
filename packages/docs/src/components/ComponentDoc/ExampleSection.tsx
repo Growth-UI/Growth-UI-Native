@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Grid, Heading, Spacer } from "growth-ui-react";
+import { Grid, Heading, Spacer } from "@growth-ui/react";
 
 type Props = {
   title: string;

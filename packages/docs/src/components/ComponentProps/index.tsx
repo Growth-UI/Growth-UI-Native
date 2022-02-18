@@ -1,8 +1,8 @@
-import Checkbox, { CheckboxProps } from "growth-ui-react/modules/Checkbox";
+import Checkbox, { CheckboxProps } from "@growth-ui/react/modules/Checkbox";
 import ComponentTable from "../ComponentDoc/ComponentTable";
-import List from "growth-ui-react/elements/List";
 import React, { memo, SyntheticEvent, useEffect, useState } from "react";
-import { componentInfo } from "../../utils";
+import { componentInfo } from "../../utils/constants";
+import { List } from "@growth-ui/react";
 
 type Props = {
   component: string;
@@ -31,6 +31,7 @@ const ComponentProps = ({ component }: Props) => {
 
   useEffect(() => {
     setActiveName("");
+    setChecked(false);
   }, [component]);
 
   return (

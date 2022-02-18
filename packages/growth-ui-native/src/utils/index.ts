@@ -4,3 +4,4 @@ export { partitionNativeProps, nativeInputProps, nativeImageProps } from "./nati
 export { default as useColorMode } from "./hooks/useColorMode";
 export { default as IntersectionObserver } from "./intersectionObserver";
 export { Screen, ScreenHeight, ScreenWidth } from "./screen";
+export { default as sx } from "./sx";

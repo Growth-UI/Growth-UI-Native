@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import React from "react";
 import VerticalSidebar from "../components/VerticalSidebar";
-import { Sidebar, Spacer } from "growth-ui-react";
+import { Sidebar, Spacer } from "@growth-ui/react";
 
 const PageLayout: React.FC = ({ children }) => {
   return (

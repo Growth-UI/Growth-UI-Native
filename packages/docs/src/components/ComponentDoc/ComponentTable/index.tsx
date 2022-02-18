@@ -4,7 +4,7 @@ import ComponentPropFunc from "../../ComponentProp/ComponentPropFunc";
 import React from "react";
 import useTranslation from "next-translate/useTranslation";
 import { componentProps } from "../../../utils";
-import { Table } from "growth-ui-react";
+import { Table } from "@growth-ui/react";
 
 type Props = {
   displayName: string;

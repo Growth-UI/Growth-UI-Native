@@ -1,6 +1,6 @@
 import ComponentCode from "./ComponentCode";
 import React from "react";
-import { Grid, Paragraph, Spacer } from "growth-ui-react";
+import { Grid, Paragraph, Spacer } from "@growth-ui/react";
 
 type Props = {
   func?: {

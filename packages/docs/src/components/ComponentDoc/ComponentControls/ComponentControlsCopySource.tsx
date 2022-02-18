@@ -1,7 +1,7 @@
 import ComponentDocContext from "../ComponentDocContext";
 import copy from "copy-to-clipboard";
 import React, { useContext, useState } from "react";
-import { Container, Icon } from "growth-ui-react";
+import { Container, Icon } from "@growth-ui/react";
 
 const ComponentControlsCopySource = () => {
   const [copied, setCopied] = useState(false);

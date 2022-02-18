@@ -192,3 +192,36 @@ export type GrowthICONS =
   | "underline"
   | "warning"
   | "yarn";
+
+export type SPACING = Partial<{
+  m: number | string;
+  p: number | string;
+  mt: number | string;
+  ml: number | string;
+  mr: number | string;
+  mb: number | string;
+  mx: number | string;
+  my: number | string;
+  pt: number | string;
+  pr: number | string;
+  pb: number | string;
+  pl: number | string;
+  px: number | string;
+  py: number | string;
+}>;
+
+export type SIZING = Partial<{
+  w: number | string;
+  h: number | string;
+  maxWidth: number | string;
+  minWidht: number | string;
+  maxHeight: number | string;
+  minHeight: number | string;
+}>;
+
+export type PALETTE = Partial<{
+  color: string;
+  bg: string;
+}>;
+
+export type SX = SPACING & SIZING & PALETTE;
