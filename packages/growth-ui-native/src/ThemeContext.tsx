@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import React from "react";
 
 export type Scheme = "light" | "dark";
 
@@ -6,7 +6,7 @@ export type ThemeContextState = {
   mode: Scheme;
 };
 
-const ThemeContext = createContext<ThemeContextState>({
+const ThemeContext = React.createContext<ThemeContextState>({
   mode: "light",
 });
 
