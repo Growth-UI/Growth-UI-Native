@@ -1,3 +1,8 @@
+## [1.3.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.2.3...v1.3.0) (2022-02-18)
+
+### 🚀  Features
+* feat: add box component ([99b2f08](https://github.com/Growth-UI/Growth-UI-Native/commit/99b2f08a4c7a4ce9832cc72781ea85609afa6ed0))
+
 ## [1.2.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.2.2...v1.2.3) (2022-02-18)
 
 ### 🐛  Fixes
