@@ -1,3 +1,8 @@
+## [1.2.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.2.1...v1.2.2) (2022-02-18)
+
+### 🐛  Fixes
+* fix: add metro-react-native-babel-preset ([908daa4](https://github.com/Growth-UI/Growth-UI-Native/commit/908daa4775aeaeb836496d1e1c8daa45175203ad))
+
 ## [1.2.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.2.0...v1.2.1) (2022-02-18)
 
 ### 🐛  Fixes
