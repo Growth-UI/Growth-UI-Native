@@ -1,3 +1,8 @@
+## [1.2.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.2.0...v1.2.1) (2022-02-18)
+
+### 🐛  Fixes
+* fix: typo in filename CheckBox -> Checkbox ([3c0e994](https://github.com/Growth-UI/Growth-UI-Native/commit/3c0e994595478be5777914fb4bd39e2e5407c1c4))
+
 ## [1.2.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.1.4...v1.2.0) (2022-02-18)
 
 ### 🚀  Features
