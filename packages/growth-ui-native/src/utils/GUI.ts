@@ -118,6 +118,7 @@ export const ICONS: GrowthICONS[] = [
   "camera",
   "cart",
   "check",
+  "checkbox",
   "chevron down",
   "chevron left",
   "chevron right",
