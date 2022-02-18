@@ -1,3 +1,8 @@
+## [1.1.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.1.3...v1.1.4) (2022-02-18)
+
+### 🐛  Fixes
+* fix: add react peerdependencies ([22c1f9a](https://github.com/Growth-UI/Growth-UI-Native/commit/22c1f9a4fcd9c04ac875ae20688ac71646a1fd82))
+
 ## [1.1.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.1.2...v1.1.3) (2021-12-11)
 
 ### 🐛  Fixes
