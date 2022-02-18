@@ -116,6 +116,7 @@ export type GrowthICONS =
   | "camera"
   | "cart"
   | "check"
+  | "checkbox"
   | "chevron down"
   | "chevron left"
   | "chevron right"
