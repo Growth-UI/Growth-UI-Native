@@ -1,8 +1,7 @@
 import ComponentDocContext from "../ComponentDocContext";
-import Container from "growth-ui-react/elements/Container";
 import copy from "copy-to-clipboard";
-import Icon from "growth-ui-react/elements/Icon";
 import React, { useContext, useState } from "react";
+import { Container, Icon } from "@growth-ui/react";
 import { scrollToAnchor } from "../../../utils";
 import { useRouter } from "next/router";
 

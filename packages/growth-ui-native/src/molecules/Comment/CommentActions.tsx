@@ -1,9 +1,9 @@
-import React, {FC} from 'react';
-import Row from '../../atoms/Row';
-import {StyleProp, StyleSheet, ViewStyle} from 'react-native';
+import React, { FC } from "react";
+import Row from "../../atoms/Row";
+import { StyleProp, StyleSheet, ViewStyle } from "react-native";
 
-const CommentActions: FC<CommentActionsProps> = props => {
-  const {children, style, ...rest} = props;
+const CommentActions: FC<CommentActionsProps> = (props) => {
+  const { children, style, ...rest } = props;
 
   return (
     <Row
@@ -13,7 +13,8 @@ const CommentActions: FC<CommentActionsProps> = props => {
           marginVertical: 10,
           style,
         },
-      ])}>
+      ])}
+    >
       {children}
     </Row>
   );

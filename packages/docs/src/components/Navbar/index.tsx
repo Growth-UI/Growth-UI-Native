@@ -1,9 +1,7 @@
-import ComponentSearch from "../ComponentSearch";
 import Context from "../Context";
 import React, { MouseEvent, ReactNode, useContext } from "react";
 import Router from "next/router";
-import useTranslation from "next-translate/useTranslation";
-import { availableLanguages, getOperatingSystem, growthUIRepoURL } from "../../utils";
+import { availableLanguages, growthUIRepoURL } from "../../utils";
 import {
   Checkbox,
   Container,
@@ -11,9 +9,8 @@ import {
   DropdownItemProps,
   Grid,
   Icon,
-  Paragraph,
   Spacer,
-} from "growth-ui-react";
+} from "@growth-ui/react";
 
 type Props = {
   children?: ReactNode;
@@ -27,7 +24,6 @@ const iconStyle = {
 
 const Navbar = ({ children }: Props) => {
   const { darkMode, setDarkMode } = useContext(Context);
-  const { t } = useTranslation("common");
 
   const handleToggle = () => {
     setDarkMode(!darkMode);
@@ -65,7 +61,7 @@ const Navbar = ({ children }: Props) => {
                   <Icon name="language" width={20} />
                   <Spacer size={5} />
                   <Dropdown
-                    icon
+                    icon={null}
                     simple
                     space
                     defaultValue={availableLanguages[0].language}

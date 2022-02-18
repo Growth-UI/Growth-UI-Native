@@ -373,5 +373,25 @@
       "title": "Size",
       "description": "A label can be small or large"
     }
+  },
+  "row": {
+    "heading": "Row",
+    "subheading": "A row displays content in a row.",
+    "type": "atoms",
+    "row": {
+      "id": "row",
+      "title": "Row",
+      "description": "A standard row."
+    }
+  },
+  "box": {
+    "heading": "Box",
+    "subheading": "The Box component serves as a wrapper component for most of the style utility needs.",
+    "type": "atoms",
+    "box": {
+      "id": "box",
+      "title": "Box",
+      "description": "A standard box."
+    }
   }
 }

@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import Row from "@growth-ui/native/atoms/Row";
-import { Spacer } from "growth-ui-react";
+import { Spacer } from "@growth-ui/react";
 
 const Icon = dynamic(() => import("@growth-ui/native/atoms/Icon"), { ssr: false });
 const Slider = dynamic(() => import("@growth-ui/native/atoms/Slider"), { ssr: false });

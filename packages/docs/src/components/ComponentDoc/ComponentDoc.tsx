@@ -1,7 +1,7 @@
 import ComponentExamples from "./ComponentExamples";
 import ComponentProps from "../ComponentProps";
 import React, { FC } from "react";
-import { Grid, Heading, Spacer } from "growth-ui-react";
+import { Grid, Heading, Spacer } from "@growth-ui/react";
 
 type Props = {
   subheading: string;

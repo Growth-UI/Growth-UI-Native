@@ -4,9 +4,9 @@ import ComponentDocContext from "../ComponentDocContext";
 import ComponentExampleTitle from "./ComponentExampleTitle";
 import ExampleEditor from "../ExampleEditor";
 import React, { useState } from "react";
-import Spacer from "growth-ui-react/elements/Spacer";
 import styled from "styled-components";
 import { getExampleSource } from "../../../utils";
+import { Spacer } from "@growth-ui/react";
 
 const Wrapper = styled.div`
   width: 100%;

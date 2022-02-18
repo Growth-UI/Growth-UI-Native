@@ -15,7 +15,7 @@ import {
   Spacer,
   Heading,
   Image,
-} from "growth-ui-react";
+} from "@growth-ui/react";
 
 const headingStyle = {
   width: "fit-content",

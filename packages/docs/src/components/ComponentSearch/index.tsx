@@ -1,13 +1,9 @@
-import EventListener from "growth-ui-react/addons/EventListener";
-import Input from "growth-ui-react/elements/Input";
-import List from "growth-ui-react/elements/List";
-import Modal from "growth-ui-react/modules/Modal";
 import React, { ReactNode, useState } from "react";
 import Router from "next/router";
-import Spacer from "growth-ui-react/elements/Spacer";
 import stringSimilarity from "string-similarity";
 import useTranslation from "next-translate/useTranslation";
 import { capitalize, components } from "../../utils";
+import { EventListener, Input, List, Modal, Spacer } from "@growth-ui/react";
 
 type Props = {
   trigger?: ReactNode;
@@ -73,7 +69,7 @@ const ComponentSearch = ({ trigger }: Props) => {
         </Modal.Content>
         <Modal.Actions>Ad</Modal.Actions>
       </Modal>
-      <EventListener type="keydown" listener={handleKeydown} />
+      <EventListener name="keydown" listener={handleKeydown} />
     </>
   );
 };

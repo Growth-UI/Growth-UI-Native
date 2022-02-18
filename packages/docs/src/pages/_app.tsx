@@ -3,7 +3,7 @@ import Head from "next/head";
 import React, { useState } from "react";
 import ThemeProvider from "@growth-ui/native/ThemeProvider";
 import { AppProps } from "next/dist/shared/lib/router/router";
-import { GrowthStyle } from "growth-ui-react";
+import { GrowthStyle } from "@growth-ui/react";
 import "setimmediate";
 
 const globalStyle = `

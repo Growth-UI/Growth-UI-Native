@@ -6,7 +6,7 @@ import Layout from "../../components/PageLayout";
 import React, { useContext } from "react";
 import ThemeProviderExample from "../../md/ThemeProviderExample";
 import useTranslation from "next-translate/useTranslation";
-import { Checkbox, Grid, Heading, Icon, Paragraph, Spacer } from "growth-ui-react";
+import { Checkbox, Grid, Heading, Icon, Paragraph, Spacer } from "@growth-ui/react";
 
 const IntroductionPage = () => {
   const { darkMode, setDarkMode } = useContext(Context);

@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import React, { ChangeEvent, useState } from "react";
 import stringSimilarity from "string-similarity";
 import useTranslation from "next-translate/useTranslation";
-import { Grid, Heading, Input, Spacer } from "growth-ui-react";
+import { Grid, Heading, Input, Spacer } from "@growth-ui/react";
 import { GrowthICONS } from "@growth-ui/native/types";
 import { ICONS } from "@growth-ui/native/utils/GUI";
 
