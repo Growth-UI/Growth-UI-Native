@@ -1,3 +1,8 @@
+## [1.2.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.2.2...v1.2.3) (2022-02-18)
+
+### 🐛  Fixes
+* fix: remove react and react-native from dependencies ([cf82b74](https://github.com/Growth-UI/Growth-UI-Native/commit/cf82b74901466597290d4ed210a5bbfd9f326bca))
+
 ## [1.2.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.2.1...v1.2.2) (2022-02-18)
 
 ### 🐛  Fixes
