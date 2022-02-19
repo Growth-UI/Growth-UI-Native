@@ -36,7 +36,7 @@ export default function spacing(props: SX = {}) {
   return Object.keys(spacingProps).reduce((acc, cur) => {
     if (cur === "mx") {
       return {
-        acc,
+        ...acc,
         marginLeft: numberToString(spacingProps[cur]),
         marginRight: spacingProps[cur],
       };
@@ -44,7 +44,7 @@ export default function spacing(props: SX = {}) {
 
     if (cur === "my") {
       return {
-        acc,
+        ...acc,
         marginTop: numberToString(spacingProps[cur]),
         marginBottom: spacingProps[cur],
       };
@@ -52,7 +52,7 @@ export default function spacing(props: SX = {}) {
 
     if (cur === "px") {
       return {
-        acc,
+        ...acc,
         paddingLeft: numberToString(spacingProps[cur]),
         paddingRight: spacingProps[cur],
       };
@@ -60,7 +60,7 @@ export default function spacing(props: SX = {}) {
 
     if (cur === "py") {
       return {
-        acc,
+        ...acc,
         paddingTop: numberToString(spacingProps[cur]),
         paddingBottom: spacingProps[cur],
       };

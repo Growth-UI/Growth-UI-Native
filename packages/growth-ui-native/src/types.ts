@@ -1,3 +1,5 @@
+import { ViewStyle } from "react-native";
+
 export type VERTICALALIGNMENTS = "baseline" | "top" | "middle" | "bottom" | "stretch";
 export type HORIZONTALALIGNMENTS =
   | "left"
@@ -224,4 +226,4 @@ export type PALETTE = Partial<{
   bg: string;
 }>;
 
-export type SX = SPACING & SIZING & PALETTE;
+export type SX = SPACING & SIZING & PALETTE & ViewStyle;
