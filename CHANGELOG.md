@@ -1,3 +1,8 @@
+## [1.4.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.4.0...v1.4.1) (2022-02-19)
+
+### 🐛  Fixes
+* fix: remove converting number to string px ([1878949](https://github.com/Growth-UI/Growth-UI-Native/commit/187894967f895d526e371711bb32e84cab4ea105))
+
 ## [1.4.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.3.0...v1.4.0) (2022-02-19)
 
 ### 🚀  Features
