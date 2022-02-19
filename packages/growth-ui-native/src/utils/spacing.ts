@@ -1,5 +1,4 @@
 import pick from "lodash/pick";
-import { numberToString } from "./numberToString";
 import { SX } from "../types";
 
 export const mapSxToSpacing = {
@@ -37,7 +36,7 @@ export default function spacing(props: SX = {}) {
     if (cur === "mx") {
       return {
         ...acc,
-        marginLeft: numberToString(spacingProps[cur]),
+        marginLeft: spacingProps[cur],
         marginRight: spacingProps[cur],
       };
     }
@@ -45,7 +44,7 @@ export default function spacing(props: SX = {}) {
     if (cur === "my") {
       return {
         ...acc,
-        marginTop: numberToString(spacingProps[cur]),
+        marginTop: spacingProps[cur],
         marginBottom: spacingProps[cur],
       };
     }
@@ -53,7 +52,7 @@ export default function spacing(props: SX = {}) {
     if (cur === "px") {
       return {
         ...acc,
-        paddingLeft: numberToString(spacingProps[cur]),
+        paddingLeft: spacingProps[cur],
         paddingRight: spacingProps[cur],
       };
     }
@@ -61,14 +60,14 @@ export default function spacing(props: SX = {}) {
     if (cur === "py") {
       return {
         ...acc,
-        paddingTop: numberToString(spacingProps[cur]),
+        paddingTop: spacingProps[cur],
         paddingBottom: spacingProps[cur],
       };
     }
 
     return {
       ...acc,
-      [mapSxToSpacing[cur]]: numberToString(spacingProps[cur as keyof typeof spacingProps]),
+      [mapSxToSpacing[cur]]: spacingProps[cur as keyof typeof spacingProps],
     };
   }, {});
 }
