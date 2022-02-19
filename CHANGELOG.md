@@ -1,3 +1,8 @@
+## [1.4.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.3.0...v1.4.0) (2022-02-19)
+
+### 🚀  Features
+* feat: add normal style to sx and fix spreading acc props in spacing ([2608670](https://github.com/Growth-UI/Growth-UI-Native/commit/2608670c6952e2d26484fafc54208ce3b8986b92))
+
 ## [1.3.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.2.3...v1.3.0) (2022-02-18)
 
 ### 🚀  Features
