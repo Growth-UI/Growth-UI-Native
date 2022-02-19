@@ -1,5 +1,4 @@
 import pick from "lodash/pick";
-import { numberToString } from "./numberToString";
 import { SX } from "../types";
 
 export default function sizing(props: SX = {}) {
@@ -9,20 +8,20 @@ export default function sizing(props: SX = {}) {
     if (cur === "w") {
       return {
         ...acc,
-        width: numberToString(sizingProps.w),
+        width: sizingProps.w,
       };
     }
 
     if (cur === "h") {
       return {
         ...acc,
-        height: numberToString(sizingProps.h),
+        height: sizingProps.h,
       };
     }
 
     return {
       ...acc,
-      [cur]: numberToString(sizingProps[cur as keyof typeof sizingProps]),
+      [cur]: sizingProps[cur as keyof typeof sizingProps],
     };
   }, {});
 }
