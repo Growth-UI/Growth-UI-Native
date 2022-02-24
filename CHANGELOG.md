@@ -1,3 +1,8 @@
+## [1.5.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.5.0...v1.5.1) (2022-02-24)
+
+### 🐛  Fixes
+* fix: fix centering letter avatar ([89b94ad](https://github.com/Growth-UI/Growth-UI-Native/commit/89b94ad7f164708a49c489cb72c2d82e3608b1f9))
+
 ## [1.5.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.4.1...v1.5.0) (2022-02-24)
 
 ### 📝  Documentation
