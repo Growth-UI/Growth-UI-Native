@@ -29,7 +29,7 @@ const Avatar: FC<AvatarProps> & AvatarComponents = (props) => {
         <Typography
           textAlign="center"
           variant="h6"
-          style={StyleSheet.flatten([{ margin: "auto" }, textStyle])}
+          style={StyleSheet.flatten([{ marginTop: "auto", marginBottom: "auto" }, textStyle])}
         >
           {text}
         </Typography>
