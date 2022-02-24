@@ -1,3 +1,14 @@
+## [1.5.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.4.1...v1.5.0) (2022-02-24)
+
+### 📝  Documentation
+* docs: add examples for new feature, Avatar component 📓📓 ([acff408](https://github.com/Growth-UI/Growth-UI-Native/commit/acff40850d4a3818a006d49f6cfcccc53b15852e))
+
+### 🐛  Fixes
+* fix: 🔨fix typo background -> backgroundColor ([167fd46](https://github.com/Growth-UI/Growth-UI-Native/commit/167fd46900dd8d1f81ed3353867c8784459d91cf))
+
+### 🚀  Features
+* feat: 🎉add new feature - Avatar ([1d99093](https://github.com/Growth-UI/Growth-UI-Native/commit/1d99093714b91f6791173d1b4bcdd6f1bc84911b))
+
 ## [1.4.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.4.0...v1.4.1) (2022-02-19)
 
 ### 🐛  Fixes
