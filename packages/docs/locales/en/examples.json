@@ -393,5 +393,20 @@
       "title": "Box",
       "description": "A standard box."
     }
+  },
+  "avatar": {
+    "heading": "Avatar",
+    "subheading": "Avatar represent a user and can contain photos, icons, or even text.",
+    "type": "atoms",
+    "avatar": {
+      "id": "avatar",
+      "title": "Avatar",
+      "description": "A standard avatar."
+    },
+    "group": {
+      "id": "group",
+      "title": "Group",
+      "description": "AvatarGroup renders its children as a stack."
+    }
   }
 }

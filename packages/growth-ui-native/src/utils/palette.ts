@@ -8,7 +8,7 @@ export default function palette(props: SX = {}) {
     if (cur === "bg") {
       return {
         ...acc,
-        background: paletteProps[cur],
+        backgroundColor: paletteProps[cur],
       };
     }
 
