@@ -16,6 +16,7 @@ export const availableLanguages = [
 export const typeOrder = ["atoms", "molecules", "organisms", "templates"];
 export const componentByType: Record<string, string[]> = {
   atoms: [
+    "avatar",
     "badge",
     "box",
     "button",
@@ -32,6 +33,7 @@ export const componentByType: Record<string, string[]> = {
   molecules: ["comment", "list"],
 };
 export const components = [
+  "avatar",
   "badge",
   "box",
   "button",
@@ -54,6 +56,9 @@ export const componentInfo: Record<
   }
 > = {
   // atoms
+  avatar: {
+    names: ["Avatar", "Avatar.Group"],
+  },
   badge: {
     names: ["Badge"],
   },
@@ -991,6 +996,75 @@ export const componentProps: Record<
       description: "A shortcut for defining custom style",
       name: "sx",
       type: "enum",
+    },
+  ],
+  Avatar: [
+    {
+      description: "Avatar may appear circular.",
+      name: "circular",
+      type: "boolean",
+    },
+    {
+      description: "Custom container style.",
+      name: "containerStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description: "Avatars contains simple icon.",
+      name: "icon",
+      type: "IconProps",
+    },
+    {
+      description: "Custom inner container style.",
+      name: "innerContainerStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description: "Size of the avatar.",
+      name: "size",
+      type: "number",
+    },
+    {
+      description: "The image source.",
+      name: "src",
+      type: "string",
+    },
+    {
+      description: "Accepts all system properties.",
+      name: "sx",
+      type: "enums",
+    },
+    {
+      description: "Avatars contains simple characters.",
+      name: "text",
+      type: "string",
+    },
+    {
+      description: "Custom text style.",
+      name: "textStyle",
+      type: "StyleProp<TextStyle>",
+    },
+  ],
+  "Avatar.Group": [
+    {
+      description: "Custom container style.",
+      name: "containerStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description: "Max avatars to show before +x.",
+      name: "max",
+      type: "number",
+    },
+    {
+      description: "Accepts all system properties.",
+      name: "sx",
+      type: "enums",
+    },
+    {
+      description: "The total number of avatars.",
+      name: "total",
+      type: "number",
     },
   ],
 };
