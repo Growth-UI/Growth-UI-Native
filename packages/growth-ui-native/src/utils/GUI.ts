@@ -9,6 +9,16 @@ export const HORIZONTALALIGNMENTS = [
   "space-around",
   "space-evenly",
 ];
+export const DIRECTION = [
+  "top center",
+  "top left",
+  "top right",
+  "bottom center",
+  "bottom left",
+  "bottom right",
+  "right center",
+  "left center",
+];
 export const ONLY = ["monimobile", "mobile", "tablet", "laptop", "computer", "widescreen"];
 export const VISIBILITY = ["mobile", "tablet", "laptop", "computer", "widescreen"];
 export const SIZES = ["mini", "tiny", "small", "medium", "large", "big", "huge", "massive"];
