@@ -1,3 +1,8 @@
+## [1.7.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.7.1...v1.7.2) (2022-02-25)
+
+### 📝  Documentation
+* docs: change expo snack project id for Tooltip ([f496a68](https://github.com/Growth-UI/Growth-UI-Native/commit/f496a68fe1468d669e19e2c02eaccde5c4cd0287))
+
 ## [1.7.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.7.0...v1.7.1) (2022-02-25)
 
 ### 🐛  Fixes
