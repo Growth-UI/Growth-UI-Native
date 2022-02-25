@@ -1,7 +1,6 @@
 import Button from "@growth-ui/native/atoms/Button";
 import React from "react";
 import Row from "@growth-ui/native/atoms/Row";
-import Typography from "@growth-ui/native/atoms/Typography";
 import { View } from "react-native";
 
 const RowExampleRow = () => {
