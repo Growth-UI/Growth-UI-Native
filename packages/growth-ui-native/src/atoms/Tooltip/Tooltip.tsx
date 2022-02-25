@@ -1,3 +1,7 @@
+import Typography from "../Typography";
+import { DIRECTION, SX } from "../../types";
+import { getTooltipStyle } from "./helpers";
+import { isIOS, sx } from "../../utils";
 import React, {
   FunctionComponent,
   ReactNode,
@@ -7,12 +11,9 @@ import React, {
   useRef,
   useState,
 } from "react";
-import Typography from "../Typography";
-import { DIRECTION, SX } from "../../types";
-import { getTooltipStyle } from "./helpers";
-import { isIOS, sx } from "../../utils";
 import {
   Dimensions,
+  GestureResponderEvent,
   Modal,
   Platform,
   Pressable,
@@ -36,6 +37,7 @@ const Tooltip: FunctionComponent<TooltipProps> = (props) => {
     title,
     visible = false,
     width = 200,
+    onPress,
     ...rest
   } = props;
   const [open, setOpen] = useState(false);
@@ -107,9 +109,14 @@ const Tooltip: FunctionComponent<TooltipProps> = (props) => {
     };
   }, [getElementPosition]);
 
-  const handleClose = () => setOpen(false);
-
-  const handleOpen = () => setOpen(true);
+  const handleOnPress = useCallback(
+    (e: GestureResponderEvent) => {
+      getElementPosition();
+      setOpen(!open);
+      onPress?.(e, props);
+    },
+    [getElementPosition, open]
+  );
 
   return (
     <View
@@ -123,9 +130,11 @@ const Tooltip: FunctionComponent<TooltipProps> = (props) => {
         },
       ])}
     >
-      <Pressable onPress={handleOpen}>{children}</Pressable>
+      <Pressable onPress={handleOnPress} onStartShouldSetResponderCapture={() => true}>
+        {children}
+      </Pressable>
       <Modal transparent animationType="fade" visible={open}>
-        <TouchableOpacity style={{ flex: 1 }} onPress={handleClose}>
+        <TouchableOpacity style={{ flex: 1 }} onPress={handleOnPress}>
           <View
             style={StyleSheet.flatten([
               {
@@ -172,6 +181,9 @@ export interface TooltipProps extends StrictTooltipProps {
 interface StrictTooltipProps {
   /** Tooltip container height. Necessary in order to render the container in the correct place. */
   height?: number;
+
+  /** Called when a press event happens. */
+  onPress?: (e: GestureResponderEvent, data: TooltipProps) => void;
 
   /** Position for the tooltip. */
   position?: DIRECTION;
