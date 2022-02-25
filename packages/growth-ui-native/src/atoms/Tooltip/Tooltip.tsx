@@ -16,12 +16,11 @@ import {
   GestureResponderEvent,
   Modal,
   Platform,
-  Pressable,
   StatusBar,
   StyleProp,
   StyleSheet,
   TextStyle,
-  TouchableOpacity,
+  Pressable,
   View,
   ViewStyle,
 } from "react-native";
@@ -134,7 +133,7 @@ const Tooltip: FunctionComponent<TooltipProps> = (props) => {
         {children}
       </Pressable>
       <Modal transparent animationType="fade" visible={open}>
-        <TouchableOpacity style={{ flex: 1 }} onPress={handleOnPress}>
+        <Pressable style={{ flex: 1 }} onPress={handleOnPress}>
           <View
             style={StyleSheet.flatten([
               {
@@ -168,7 +167,7 @@ const Tooltip: FunctionComponent<TooltipProps> = (props) => {
               title
             )}
           </View>
-        </TouchableOpacity>
+        </Pressable>
       </Modal>
     </View>
   );
