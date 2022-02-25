@@ -1,5 +1,5 @@
 import { GUI } from "@growth-ui/native/utils";
-import { HORIZONTALALIGNMENTS, VERTICALALIGNMENTS } from "@growth-ui/native/utils/GUI";
+import { DIRECTION, HORIZONTALALIGNMENTS, VERTICALALIGNMENTS } from "@growth-ui/native/utils/GUI";
 
 export const growthUIRepoURL = "https://github.com/Growth-UI/Growth-UI-Native";
 export const availableLanguages = [
@@ -47,6 +47,7 @@ export const components = [
   "row",
   "slider",
   "spacer",
+  "tooltip",
   "typography",
 ];
 export const componentInfo: Record<
@@ -91,6 +92,9 @@ export const componentInfo: Record<
   },
   spacer: {
     names: ["Spacer"],
+  },
+  tooltip: {
+    names: ["Tooltip"],
   },
   typography: {
     names: ["Typography"],
@@ -1064,6 +1068,57 @@ export const componentProps: Record<
     {
       description: "The total number of avatars.",
       name: "total",
+      type: "number",
+    },
+  ],
+  Tooltip: [
+    {
+      description:
+        "Tooltip container height. Necessary in order to render the container in the correct place.",
+      name: "height",
+      type: "number",
+    },
+    {
+      description: "Position for the tooltip.",
+      name: "position",
+      type: "enums",
+      enums: DIRECTION,
+    },
+    {
+      description:
+        "Force skip StatusBar height when calculating element position. Pass true if Tooltip used inside react-native Modal component.",
+      name: "StatusBar",
+      type: "boolean",
+    },
+    {
+      description: "Accepts all system properties.",
+      name: "sx",
+      type: "enums",
+    },
+    {
+      description: "Tooltip title. Zero-length titles string are never displayed.",
+      name: "title",
+      type: "string",
+    },
+    {
+      description: "Custom container style.",
+      name: "containerStyle",
+      type: "StyleProp<TextStyle>",
+    },
+    {
+      description: "Custom text style.",
+      name: "textStyle",
+      type: "StyleProp<TextStyle>",
+    },
+    {
+      description: "If true, the component is shown.",
+      name: "visible",
+      type: "boolean",
+    },
+    {
+      description:
+        "Tooltip container width. Necessary in order to render the container in the correct place.",
+      name: "width",
       type: "number",
     },
   ],

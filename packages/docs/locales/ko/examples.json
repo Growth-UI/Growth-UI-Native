@@ -408,5 +408,15 @@
       "title": "Group",
       "description": "AvatarGroup renders its children as a stack."
     }
+  },
+  "tooltip": {
+    "heading": "Tooltip",
+    "subheading": "A Tooltip displays additional information on top of a page.",
+    "type": "atoms",
+    "tooltip": {
+      "id": "tooltip",
+      "title": "Tooltip",
+      "description": "An element can specify popup content to appear."
+    }
   }
 }

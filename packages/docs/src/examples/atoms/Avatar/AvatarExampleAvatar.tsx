@@ -1,4 +1,3 @@
-import AvatarGroup from "@growth-ui/native/atoms/Avatar/AvatarGroup";
 import { Spacer } from "@growth-ui/react";
 import dynamic from "next/dynamic";
 import React from "react";
@@ -36,5 +35,4 @@ const AvatarExampleAvatar = () => (
     />
   </View>
 );
-
 export default AvatarExampleAvatar;
