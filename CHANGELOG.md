@@ -1,3 +1,8 @@
+## [1.7.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.7.0...v1.7.1) (2022-02-25)
+
+### 🐛  Fixes
+* fix: remove html title tag ([64dd621](https://github.com/Growth-UI/Growth-UI-Native/commit/64dd621c346a614b9a28d1c33a8b5cc6ea7bae7f))
+
 ## [1.7.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.6.1...v1.7.0) (2022-02-25)
 
 ### 🐛  Fixes
