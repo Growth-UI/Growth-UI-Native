@@ -1,3 +1,11 @@
+## [1.7.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.6.1...v1.7.0) (2022-02-25)
+
+### 🐛  Fixes
+* fix: fix tooltip coordinates and fix issue with pressable ([1e480c2](https://github.com/Growth-UI/Growth-UI-Native/commit/1e480c25a91eaa2141c468e7e8c292f1bf89b912))
+
+### 🚀  Features
+* feat: add new Card icon ([7a75b24](https://github.com/Growth-UI/Growth-UI-Native/commit/7a75b247ee1481fb5a4815a5a0a4360853b1f21d))
+
 ## [1.6.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.6.0...v1.6.1) (2022-02-25)
 
 ### 📝  Documentation
