@@ -24,6 +24,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Bookmark").default;
     case "camera":
       return require("../Camera").default;
+    case "card":
+      return require("../Card").default;
     case "cart":
       return require("../Cart").default;
     case "check":
@@ -52,6 +54,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Dashboard").default;
     case "democrat":
       return require("../Democrat").default;
+    case "donate":
+      return require("../Donate").default;
     case "dots horizontal rounded":
       return require("../DotsHorizontalRounded").default;
     case "download":

@@ -124,6 +124,7 @@ export type GrowthICONS =
   | "bold"
   | "bookmark"
   | "camera"
+  | "card"
   | "cart"
   | "check"
   | "checkbox"
