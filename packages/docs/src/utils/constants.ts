@@ -30,7 +30,7 @@ export const componentByType: Record<string, string[]> = {
     "spacer",
     "typography",
   ],
-  molecules: ["comment", "list"],
+  molecules: ["comment", "list", "speeddial"],
 };
 export const components = [
   "avatar",
@@ -47,6 +47,7 @@ export const components = [
   "row",
   "slider",
   "spacer",
+  "speeddial",
   "tooltip",
   "typography",
 ];
@@ -116,6 +117,9 @@ export const componentInfo: Record<
   },
   list: {
     names: ["List", "List.Content", "List.Description", "List.Heading", "List.Image", "List.Item"],
+  },
+  speeddial: {
+    names: ["SpeedDial", "SpeedDial.Action"],
   },
 };
 export const componentProps: Record<
@@ -1120,6 +1124,123 @@ export const componentProps: Record<
         "Tooltip container width. Necessary in order to render the container in the correct place.",
       name: "width",
       type: "number",
+    },
+  ],
+  SpeedDial: [
+    {
+      description: "Color of the SpeedDial Fab.",
+      name: "color",
+      type: "string",
+      defaultValue: "#1976d2",
+    },
+    {
+      description: "The icon to display in the SpeedDial Fab.",
+      name: "icon",
+      type: "IconProps",
+      defaultValue:
+        '{color: "white", name: "plus", size: 25, to: 45, rotateDirection: "counterclockwise"}',
+    },
+    {
+      description: "Animation interval.",
+      name: "interval",
+      type: "number",
+      defaultValue: "30",
+    },
+    {
+      description: "Called on close dial.",
+      name: "onClose",
+      type: "func",
+      func: {
+        title: "(event: GestureResponderEvent, data: SpeedDialProps)",
+        params: [
+          {
+            name: "event",
+            description: "React's original GestureResponderEvent.",
+          },
+          {
+            name: "data",
+            description: "All props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "Called on open dial.",
+      name: "onOpen",
+      type: "func",
+      func: {
+        title: "(event: GestureResponderEvent, data: SpeedDialProps)",
+        params: [
+          {
+            name: "event",
+            description: "React's original GestureResponderEvent.",
+          },
+          {
+            name: "data",
+            description: "All props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "If true, the component is shown.",
+      name: "open",
+      type: "boolean",
+      defaultValue: "false",
+    },
+    {
+      description: "Overlay color to the speed dial when opened.",
+      name: "overlayColor",
+      type: "string",
+      defaultValue: "transparent",
+    },
+    {
+      description: "Accepts all system properties.",
+      name: "sx",
+      type: "enums",
+    },
+    {
+      description: "The duration for the transition, in milliseconds.",
+      name: "transitionDuration",
+      type: "number",
+      defaultValue: "400",
+    },
+  ],
+  "SpeedDial.Action": [
+    {
+      description: "Color of the action button.",
+      name: "color",
+      type: "string",
+    },
+    {
+      description: "Add an Icon by props object.",
+      name: "icon",
+      type: "IconProps",
+      required: true,
+    },
+    {
+      description: "Called on press.",
+      name: "onOpen",
+      type: "func",
+      func: {
+        title: "(event: GestureResponderEvent, data: SpeedDialActionProps)",
+        params: [
+          {
+            name: "event",
+            description: "React's original GestureResponderEvent.",
+          },
+          {
+            name: "data",
+            description: "All props.",
+          },
+        ],
+      },
+    },
+
+    {
+      description: "Label to display.",
+      name: "title",
+      type: "string",
     },
   ],
 };

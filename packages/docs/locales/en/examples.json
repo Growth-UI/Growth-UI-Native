@@ -418,5 +418,10 @@
       "title": "Tooltip",
       "description": "An element can specify popup content to appear."
     }
+  },
+  "speeddial": {
+    "heading": "SpeedDial",
+    "subheading": "Aa floating action button can display actions in the form of a speed dial.",
+    "type": "molecules"
   }
 }
