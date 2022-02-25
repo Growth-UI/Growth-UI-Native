@@ -1,3 +1,8 @@
+## [1.8.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.8.0...v1.8.1) (2022-02-25)
+
+### 📝  Documentation
+* docs: fix snack-id ([bba4b2e](https://github.com/Growth-UI/Growth-UI-Native/commit/bba4b2ef9f36756da5151fa682642d348dbcb2f0))
+
 ## [1.8.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.7.2...v1.8.0) (2022-02-25)
 
 ### 🚀  Features
