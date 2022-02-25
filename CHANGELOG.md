@@ -1,3 +1,8 @@
+## [1.6.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.5.1...v1.6.0) (2022-02-25)
+
+### 🚀  Features
+* feat: add new feature Tooltip ([3adf1ac](https://github.com/Growth-UI/Growth-UI-Native/commit/3adf1ace9d8300c9c7c37e735a890db534398486))
+
 ## [1.5.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.5.0...v1.5.1) (2022-02-24)
 
 ### 🐛  Fixes
