@@ -1,3 +1,17 @@
+## [1.8.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.7.2...v1.8.0) (2022-02-25)
+
+### 🚀  Features
+* feat: add new icons ([4dd0f18](https://github.com/Growth-UI/Growth-UI-Native/commit/4dd0f1876d104aa385a33a8f164a7dabfe30556c))
+* feat: add new feature - SpeedDial ([eba1b6d](https://github.com/Growth-UI/Growth-UI-Native/commit/eba1b6df0807371a5aefaeff5c7abe7c6cfb5875))
+
+### 📝  Documentation
+* docs: add example for new feature, SpeedDial ([78fbf24](https://github.com/Growth-UI/Growth-UI-Native/commit/78fbf248d6dbae9783c233f47d87e11c5243173c))
+
+## [1.7.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.7.1...v1.7.2) (2022-02-25)
+
+### 📝  Documentation
+* docs: change expo snack project id for Tooltip ([f496a68](https://github.com/Growth-UI/Growth-UI-Native/commit/f496a68fe1468d669e19e2c02eaccde5c4cd0287))
+
 ## [1.7.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.7.0...v1.7.1) (2022-02-25)
 
 ### 🐛  Fixes
