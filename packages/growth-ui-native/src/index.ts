@@ -61,6 +61,9 @@ export type { RippleProps } from "./addons/Ripple";
 export { default as Tooltip } from "./atoms/Tooltip";
 export type { TooltipProps } from "./atoms/Tooltip";
 
+export { default as SpeedDial } from "./molecules/SpeedDial";
+export type { SpeedDialProps, SpeedDialActionProps } from "./molecules/SpeedDial";
+
 export { default as List } from "./molecules/List";
 export type {
   ListProps,
