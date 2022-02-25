@@ -8,7 +8,15 @@ export type HORIZONTALALIGNMENTS =
   | "space-between"
   | "space-around"
   | "space-evenly";
-
+export type DIRECTION =
+  | "top center"
+  | "top left"
+  | "top right"
+  | "bottom center"
+  | "bottom left"
+  | "bottom right"
+  | "right center"
+  | "left center";
 export type TEXTALIGNMENTS = "left" | "center" | "right" | "auto";
 export type COLORS =
   | "primary"

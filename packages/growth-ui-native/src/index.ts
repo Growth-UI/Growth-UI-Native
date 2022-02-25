@@ -58,6 +58,9 @@ export type {
 export { default as Ripple } from "./addons/Ripple";
 export type { RippleProps } from "./addons/Ripple";
 
+export { default as Tooltip } from "./atoms/Tooltip";
+export type { TooltipProps } from "./atoms/Tooltip";
+
 export { default as List } from "./molecules/List";
 export type {
   ListProps,
