@@ -1,3 +1,8 @@
+## [1.6.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.6.0...v1.6.1) (2022-02-25)
+
+### 📝  Documentation
+* docs: add expo snack for example ([6f0b6f2](https://github.com/Growth-UI/Growth-UI-Native/commit/6f0b6f2a0559e0438308081a059b2e3fd3e8734c))
+
 ## [1.6.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.5.1...v1.6.0) (2022-02-25)
 
 ### 🚀  Features
