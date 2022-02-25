@@ -177,6 +177,7 @@ export const ICONS: GrowthICONS[] = [
   "play",
   "play skip back",
   "play skip forward",
+  "plus",
   "price tag",
   "purchase tag",
   "react logo",

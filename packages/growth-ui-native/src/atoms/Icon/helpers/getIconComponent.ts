@@ -128,6 +128,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../PlaySkipBack").default;
     case "play skip forward":
       return require("../PlaySkipForward").default;
+    case "plus":
+      return require("../Plus").default;
     case "price tag":
       return require("../PriceTag").default;
     case "purchase tag":

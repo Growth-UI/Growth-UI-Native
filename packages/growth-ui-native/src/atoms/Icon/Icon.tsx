@@ -27,6 +27,7 @@ const Icon: FC<IconProps> & IconComponents = (props) => {
     rotated,
     rotateDirection = "clockwise",
     size = 16,
+    to = 90,
     ...rest
   } = props;
 
@@ -77,14 +78,14 @@ const Icon: FC<IconProps> & IconComponents = (props) => {
     if (!isNil(rotated) && rotateDirection === "clockwise") {
       return {
         inputRange: [0, 1],
-        outputRange: ["0deg", "90deg"],
+        outputRange: ["0deg", `${to}deg`],
       };
     }
 
     if (!isNil(rotated) && rotateDirection === "counterclockwise") {
       return {
         inputRange: [0, 1],
-        outputRange: ["0deg", "-90deg"],
+        outputRange: ["0deg", `${to * -1}deg`],
       };
     }
 
@@ -185,6 +186,9 @@ interface StrictIconProps {
 
   /** Size of the icon. */
   size?: number;
+
+  /** Icon can be roated up to customized degree. */
+  to?: number;
 }
 
 export default Icon;
