@@ -4,7 +4,7 @@ import Snack from "../../../components/ComponentDoc/Snack";
 const SpacerExamples = () => {
   return (
     <>
-      <Snack id="@kyuhakyuk/ff5adb" />
+      <Snack id="@kyuhakyuk/growth-ui-native-tooltip" />
     </>
   );
 };
