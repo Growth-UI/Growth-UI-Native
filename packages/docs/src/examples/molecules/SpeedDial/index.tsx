@@ -4,7 +4,7 @@ import Snack from "../../../components/ComponentDoc/Snack";
 const SpacerExamples = () => {
   return (
     <>
-      <Snack id="@kyuhakyuk/SpeedDial" />
+      <Snack id="@kyuhakyuk/speeddial" />
     </>
   );
 };
