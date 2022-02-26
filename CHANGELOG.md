@@ -1,3 +1,8 @@
+## [1.8.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.8.2...v1.8.3) (2022-02-26)
+
+### 🐛  Fixes
+* fix: opacity to transform scale anim to prevent from android bug ([1c9a8e6](https://github.com/Growth-UI/Growth-UI-Native/commit/1c9a8e6523ae2ae105c7ba0f105ff79f35d744db))
+
 ## [1.8.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.8.1...v1.8.2) (2022-02-26)
 
 ### 📝  Documentation
