@@ -1,3 +1,8 @@
+## [1.8.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.8.3...v1.8.4) (2022-02-26)
+
+### 🐛  Fixes
+* fix: set Typography's background to transparent ([e6c4b7c](https://github.com/Growth-UI/Growth-UI-Native/commit/e6c4b7c512e9e6815bdcf34c4b0890a873153ccf))
+
 ## [1.8.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.8.2...v1.8.3) (2022-02-26)
 
 ### 🐛  Fixes
