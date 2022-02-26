@@ -157,7 +157,12 @@ const Tooltip: FunctionComponent<TooltipProps> = (props) => {
               <Typography
                 textAlign="center"
                 style={StyleSheet.flatten([
-                  { marginTop: "auto", marginBottom: "auto", color: "#fff" },
+                  {
+                    marginTop: "auto",
+                    marginBottom: "auto",
+                    color: "#fff",
+                    backgroundColor: "transparent",
+                  },
                   textStyle,
                 ])}
               >
