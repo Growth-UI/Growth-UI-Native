@@ -427,6 +427,12 @@ export const componentProps: Record<
       enums: ["clockwise", "counterclockwise"],
       defaultValue: "clockwise",
     },
+    {
+      description: "Icon can be roated up to customized degree.",
+      name: "to",
+      type: "number",
+      defaultValue: "90",
+    },
   ],
   Slider: [
     {
