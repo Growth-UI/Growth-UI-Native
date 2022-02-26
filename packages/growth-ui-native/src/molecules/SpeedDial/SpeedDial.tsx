@@ -108,7 +108,7 @@ const SpeedDial: FC<SpeedDialProps> & SpeedDialComponents = (props) => {
             pointerEvents={isOpen ? "auto" : "none"}
             key={idx}
             style={{
-              opacity: actionAnims[idx],
+              transform: [{ scale: actionAnims[idx] }],
             }}
           >
             {child}
