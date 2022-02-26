@@ -1,3 +1,8 @@
+## [1.8.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.8.1...v1.8.2) (2022-02-26)
+
+### 📝  Documentation
+* docs: add to prop to give more flexibility on rotate animation for Icon ([a1b8085](https://github.com/Growth-UI/Growth-UI-Native/commit/a1b808551fb8d30c21ab30c01fb505c37ea3626b))
+
 ## [1.8.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.8.0...v1.8.1) (2022-02-25)
 
 ### 📝  Documentation
