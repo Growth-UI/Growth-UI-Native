@@ -1,3 +1,12 @@
+## [1.9.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.8.4...v1.9.0) (2022-03-01)
+
+### 🚀  Features
+* feat: add new component, Sheet ([894492c](https://github.com/Growth-UI/Growth-UI-Native/commit/894492cea18af44297e28f2315a9f3f37a0a16b9))
+* feat: add new icon ([50f7985](https://github.com/Growth-UI/Growth-UI-Native/commit/50f7985a926886fbefa6841cd1eed3815a6aa792))
+
+### 🐛  Fixes
+* fix: wrap Pressable ([09f5bd1](https://github.com/Growth-UI/Growth-UI-Native/commit/09f5bd1e3a55fb5aec524b4cee0f619626293170))
+
 ## [1.8.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.8.3...v1.8.4) (2022-02-26)
 
 ### 🐛  Fixes
