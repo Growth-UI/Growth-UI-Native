@@ -180,6 +180,7 @@ export const ICONS: GrowthICONS[] = [
   "plus",
   "price tag",
   "purchase tag",
+  "qrcode",
   "react logo",
   "refresh outline",
   "republican",

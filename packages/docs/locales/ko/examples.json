@@ -421,7 +421,12 @@
   },
   "speeddial": {
     "heading": "SpeedDial",
-    "subheading": "Aa floating action button can display actions in the form of a speed dial.",
+    "subheading": "A floating action button can display actions in the form of a speed dial.",
     "type": "molecules"
+  },
+  "sheet": {
+    "heading": "Sheet",
+    "subheading": "Overlay Modal that displays content from either the bottom or top of the screen.",
+    "type": "atoms"
   }
 }

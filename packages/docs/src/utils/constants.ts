@@ -26,6 +26,7 @@ export const componentByType: Record<string, string[]> = {
     "image",
     "input",
     "row",
+    "sheet",
     "slider",
     "spacer",
     "typography",
@@ -45,6 +46,7 @@ export const components = [
   "input",
   "list",
   "row",
+  "sheet",
   "slider",
   "spacer",
   "speeddial",
@@ -87,6 +89,9 @@ export const componentInfo: Record<
   },
   row: {
     names: ["Row"],
+  },
+  sheet: {
+    names: ["Sheet"],
   },
   slider: {
     names: ["Slider"],
@@ -1242,11 +1247,89 @@ export const componentProps: Record<
         ],
       },
     },
-
     {
       description: "Label to display.",
       name: "title",
       type: "string",
+    },
+  ],
+  Sheet: [
+    {
+      description: "Custom style for container.",
+      name: "containerStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description: "Direction of the sheet to show.",
+      name: "direction",
+      type: "enums",
+      enums: ["bottom", "top"],
+    },
+    {
+      description: "Animation time takes to fully show the component.",
+      name: "duration",
+      type: "number",
+    },
+    {
+      description: "Called on close.",
+      name: "onClose",
+      type: "func",
+      func: {
+        title: "(event: GestureResponderEvent, data: SheetProps)",
+        params: [
+          {
+            name: "event",
+            description: "React's original GestureResponderEvent.",
+          },
+          {
+            name: "data",
+            description: "All props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "Called on open.",
+      name: "onOpen",
+      type: "func",
+      func: {
+        title: "(event: NativeSyntheticEvent, data: SheetProps)",
+        params: [
+          {
+            name: "event",
+            description: "React's original GestureResponderEvent.",
+          },
+          {
+            name: "data",
+            description: "All props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "If true, the component is shown.",
+      name: "open",
+      type: "boolean",
+    },
+    {
+      description: "Overlay color.",
+      name: "overlayColor",
+      type: "string",
+    },
+    {
+      description: "Custom style for SafeAreaView.",
+      name: "safeAreaViewStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description: "Accepts all system properties.",
+      name: "sx",
+      type: "enums",
+    },
+    {
+      description: "A Component that triggers the component.",
+      name: "trigger",
+      type: "ReactNode",
     },
   ],
 };

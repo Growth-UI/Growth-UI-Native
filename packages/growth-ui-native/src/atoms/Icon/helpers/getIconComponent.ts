@@ -134,6 +134,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../PriceTag").default;
     case "purchase tag":
       return require("../PurchaseTag").default;
+    case "qrcode":
+      return require("../QrCode").default;
     case "react logo":
       return require("../ReactLogo").default;
     case "refresh outline":

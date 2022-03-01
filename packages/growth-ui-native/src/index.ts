@@ -41,6 +41,9 @@ export type { ChipProps, ChipDetailProps } from "./atoms/Chip";
 export { default as Collapse } from "./atoms/Collapse";
 export type { CollapseProps } from "./atoms/Collapse";
 
+export { default as Sheet } from "./atoms/Sheet";
+export type { SheetProps } from "./atoms/Sheet";
+
 export { default as Comment } from "./molecules/Comment";
 export type {
   CommentProps,

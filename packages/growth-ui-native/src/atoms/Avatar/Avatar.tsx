@@ -3,7 +3,7 @@ import Icon, { IconProps } from "../Icon";
 import React, { FC, useContext } from "react";
 import ThemeContext from "../../ThemeContext";
 import Typography, { TypographyProps } from "../Typography";
-import { Image, StyleProp, StyleSheet, View, ViewStyle } from "react-native";
+import { Image, Pressable, StyleProp, StyleSheet, View, ViewStyle } from "react-native";
 import { sx } from "../../utils";
 import { SX } from "../../types";
 import theme from "../../theme";
@@ -20,6 +20,7 @@ const Avatar: FC<AvatarProps> & AvatarComponents = (props) => {
     src,
     text,
     textStyle,
+    ...rest
   } = props;
   const { mode } = useContext(ThemeContext);
 
@@ -54,49 +55,51 @@ const Avatar: FC<AvatarProps> & AvatarComponents = (props) => {
   };
 
   return (
-    <View
-      style={StyleSheet.flatten([
-        {
-          position: "relative",
-          width: size,
-          height: size,
-          borderRadius: 7,
-        },
-        circular && {
-          borderRadius: 500,
-        },
-        isGrouped && {
-          position: "absolute",
-          zIndex: index * -1,
-          left: size * 0.77 * index,
-          background: theme[mode].backgroundColor,
-        },
-        sx(props.sx),
-        containerStyle,
-      ])}
-    >
+    <Pressable {...rest} onStartShouldSetResponderCapture={() => true}>
       <View
         style={StyleSheet.flatten([
           {
+            position: "relative",
             width: size,
             height: size,
-            overflow: "hidden",
-            margin: "auto",
             borderRadius: 7,
           },
           circular && {
             borderRadius: 500,
           },
           isGrouped && {
-            width: size - 3,
-            height: size - 3,
+            position: "absolute",
+            zIndex: index * -1,
+            left: size * 0.77 * index,
+            background: theme[mode].backgroundColor,
           },
-          innerContainerStyle,
+          sx(props.sx),
+          containerStyle,
         ])}
       >
-        {renderAvatar()}
+        <View
+          style={StyleSheet.flatten([
+            {
+              width: size,
+              height: size,
+              overflow: "hidden",
+              margin: "auto",
+              borderRadius: 7,
+            },
+            circular && {
+              borderRadius: 500,
+            },
+            isGrouped && {
+              width: size - 3,
+              height: size - 3,
+            },
+            innerContainerStyle,
+          ])}
+        >
+          {renderAvatar()}
+        </View>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
