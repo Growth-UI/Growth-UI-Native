@@ -1,3 +1,8 @@
+## [1.9.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.2...v1.9.3) (2022-03-02)
+
+### 🐛  Fixes
+* fix: forgot to add inputStyle prop ([4069444](https://github.com/Growth-UI/Growth-UI-Native/commit/4069444248dd06fb29d2b182a643f0cfd876a072))
+
 ## [1.9.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.1...v1.9.2) (2022-03-02)
 
 ### 📝  Documentation
