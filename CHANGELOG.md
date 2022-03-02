@@ -1,3 +1,8 @@
+## [1.9.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.0...v1.9.1) (2022-03-02)
+
+### 🐛  Fixes
+* fix: add custom style and padding issue when no label is present ([35b84cb](https://github.com/Growth-UI/Growth-UI-Native/commit/35b84cb2d30d406d305993020edc91df4918ced5))
+
 ## [1.9.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.8.4...v1.9.0) (2022-03-01)
 
 ### 🚀  Features
