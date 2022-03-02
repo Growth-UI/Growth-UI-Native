@@ -28,6 +28,7 @@ const Input: FC<InputProps> = (props) => {
     label,
     icon,
     iconPosition = "left",
+    inputStyle,
     placeholder,
     rounded,
     value,
@@ -213,6 +214,7 @@ const Input: FC<InputProps> = (props) => {
                 color: error ? theme.error.textColor : theme[mode].textColor,
               },
               label ? styles.common : { paddingVertical: 15 },
+              inputStyle,
             ])}
             underlineColorAndroid="transparent"
             {...nativeInputProps}
