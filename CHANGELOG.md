@@ -1,3 +1,8 @@
+## [1.9.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.1...v1.9.2) (2022-03-02)
+
+### 📝  Documentation
+* docs: add system docs ([6acac3d](https://github.com/Growth-UI/Growth-UI-Native/commit/6acac3d7ea3e3f5c2d69bdbdb448917d8834c640))
+
 ## [1.9.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.0...v1.9.1) (2022-03-02)
 
 ### 🐛  Fixes
