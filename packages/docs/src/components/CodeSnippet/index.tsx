@@ -1,6 +1,8 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 import styled from "styled-components";
 
 const Highligher = styled.div<Props>`
@@ -24,7 +26,7 @@ const Highligher = styled.div<Props>`
   }
 
   /* Shared */
-  color: #ccc;
+  color: ${({ color = "#ccc" }) => color};
 
   /* BASH */
   .language-bash .hljs-comment {
@@ -48,6 +50,7 @@ const Highligher = styled.div<Props>`
   .language-jsx .hljs-tag .hljs-attr {
     color: #e2777a;
   }
+  ${({ css }) => css}
 `;
 
 interface Props extends StrictProps {
@@ -62,7 +65,9 @@ interface StrictProps {
 const CodeSnippet = ({ markdown, ...rest }: Props) => {
   return (
     <Highligher {...rest}>
-      <ReactMarkdown rehypePlugins={[rehypeHighlight]}>{markdown}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeHighlight]}>
+        {markdown}
+      </ReactMarkdown>
     </Highligher>
   );
 };

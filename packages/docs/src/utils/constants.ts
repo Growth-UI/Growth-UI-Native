@@ -278,6 +278,11 @@ export const componentProps: Record<
       type: "string",
     },
     {
+      description: "Custom container style.",
+      name: "containerStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
       description: "An Input field can show that it is disabled.",
       name: "disabled",
       type: "boolean",
@@ -301,6 +306,11 @@ export const componentProps: Record<
       description: "Icon to display inside the Input.",
       name: "icon",
       type: "IconProps",
+    },
+    {
+      description: "Custom TextInput style.",
+      name: "inputStyle",
+      type: "StyleProp<TextStyle>",
     },
     {
       description: "An Icon can appear inside an Input on the left or right.",
