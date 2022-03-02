@@ -13,11 +13,15 @@ import {
   TextInputFocusEventData,
   StyleSheet,
   View,
+  StyleProp,
+  ViewStyle,
+  TextStyle,
 } from "react-native";
 
 const Input: FC<InputProps> = (props) => {
   const {
     adornment,
+    containerStyle,
     disabled,
     error,
     feedback,
@@ -160,6 +164,7 @@ const Input: FC<InputProps> = (props) => {
           },
           disabled && { opacity: 0.6 },
           rounded && { borderRadius: 500 },
+          containerStyle,
         ])}
       >
         {label && (
@@ -182,7 +187,7 @@ const Input: FC<InputProps> = (props) => {
                 {
                   opacity: opacityAnim,
                 },
-                styles.icon,
+                label ? styles.common : { paddingVertical: 15 },
               ])}
             >
               {icon && <Icon {...icon} />}
@@ -194,6 +199,7 @@ const Input: FC<InputProps> = (props) => {
                 opacity: opacityAnim,
               },
               styles.adornment,
+              label ? styles.common : { paddingVertical: 15 },
             ])}
           >
             {adornment}
@@ -206,6 +212,7 @@ const Input: FC<InputProps> = (props) => {
               {
                 color: error ? theme.error.textColor : theme[mode].textColor,
               },
+              label ? styles.common : { paddingVertical: 15 },
             ])}
             underlineColorAndroid="transparent"
             {...nativeInputProps}
@@ -216,7 +223,7 @@ const Input: FC<InputProps> = (props) => {
                 {
                   opacity: opacityAnim,
                 },
-                styles.icon,
+                label ? styles.common : { paddingVertical: 15 },
               ])}
             >
               {icon && <Icon {...icon} />}
@@ -256,22 +263,19 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   input: {
-    paddingTop: 27,
-    paddingBottom: 5,
     paddingLeft: 3,
     flex: 1,
   },
-  icon: {
-    paddingTop: 27,
-    paddingBottom: 5,
-  },
   adornment: {
     paddingTop: 27,
-    paddingBottom: 5,
   },
   feedback: {
     marginTop: -5,
     marginBottom: 10,
+  },
+  common: {
+    paddingTop: 27,
+    paddingBottom: 5,
   },
 });
 
@@ -282,6 +286,9 @@ export interface InputProps extends StrictInputProps {
 export interface StrictInputProps {
   /** This can be used to add a prefix, a suffix or an action to an element. */
   adornment?: string;
+
+  /** Custom container style */
+  containerStyle?: StyleProp<ViewStyle>;
 
   /** An Input field can show that it is disabled. */
   disabled?: boolean;
@@ -300,6 +307,9 @@ export interface StrictInputProps {
 
   /** An Icon can appear inside an Input on the left or right. */
   iconPosition?: "left" | "right";
+
+  /** Custom TextInput style. */
+  inputStyle?: StyleProp<TextStyle>;
 
   /**
    * Called on text change.
