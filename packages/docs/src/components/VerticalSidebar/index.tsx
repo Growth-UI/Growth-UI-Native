@@ -69,6 +69,7 @@ const VerticalSidebar: FC<SidebarProps> = (props) => {
           &nbsp;&nbsp;
           <strong>Growth UI Native</strong>&nbsp;&nbsp;
         </List.Item>
+        {/* GETTING STARTED */}
         <List.Item onClick={() => handleClickItem("getting-started")}>
           <Grid.Row horizontalAlign="space-between" verticalAlign="middle">
             <div>
@@ -113,6 +114,42 @@ const VerticalSidebar: FC<SidebarProps> = (props) => {
             </List.Item>
           </List>
         </Collapse>
+        {/* SYSTEM */}
+        <List.Item onClick={() => handleClickItem("system")}>
+          <Grid.Row horizontalAlign="space-between" verticalAlign="middle">
+            <div>
+              <Grid.Row verticalAlign="middle">
+                <IconButton color="primary" name="newspaper" size={18} />
+                <Spacer inline axis="horizontal" size={8} />
+                <Heading as="h4" style={headingStyle}>
+                  {t("common:system")}
+                </Heading>
+              </Grid.Row>
+            </div>
+            <Spacer inline axis="horizontal" size={60} />
+            <IconButton
+              color="primary"
+              name="chevron down"
+              flipped={activeItem === "system"}
+              size={18}
+            />
+          </Grid.Row>
+        </List.Item>
+        <Collapse expanded={activeItem === "system"}>
+          <List padded selection hoverColor="green-50" verticalAlign="middle">
+            <List.Item
+              active={activeItem === "system" && activeSubItem === "the-sx-prop"}
+              style={collapsedItemStyle}
+            >
+              <List.Content>
+                <Link href="/system/the-sx-prop">
+                  <Anchor>{t("common:the-sx-prop")}</Anchor>
+                </Link>
+              </List.Content>
+            </List.Item>
+          </List>
+        </Collapse>
+        {/* COMPONENTS */}
         <List.Item onClick={() => handleClickItem("components")}>
           <Grid.Row horizontalAlign="space-between" verticalAlign="middle">
             <div>
