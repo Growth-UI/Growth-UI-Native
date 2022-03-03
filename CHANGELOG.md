@@ -1,3 +1,8 @@
+## [1.9.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.3...v1.9.4) (2022-03-03)
+
+### 🐛  Fixes
+* fix: remove adornment's default paddingTop ([972a207](https://github.com/Growth-UI/Growth-UI-Native/commit/972a207611acdac5c879e71d24e2263ef3bad7a1))
+
 ## [1.9.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.2...v1.9.3) (2022-03-02)
 
 ### 🐛  Fixes
