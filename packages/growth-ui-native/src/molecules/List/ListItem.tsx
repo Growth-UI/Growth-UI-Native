@@ -110,7 +110,16 @@ const ListItem: FC<ListItemProps> = (props) => {
     () =>
       PanResponder.create({
         onPanResponderGrant: () => false,
-        onMoveShouldSetPanResponderCapture: () => true,
+        onMoveShouldSetPanResponderCapture: (evt, gestureState) => {
+          const { dx, dy } = gestureState;
+          const swiping = dx > 2 || dx < -2 || dy > 2 || dy < -2;
+
+          if (swiping) {
+            return true;
+          }
+
+          return false;
+        },
         onPanResponderTerminationRequest: () => false,
         onPanResponderMove: handleSwipe,
         onPanResponderRelease: handleRelease,
@@ -119,49 +128,45 @@ const ListItem: FC<ListItemProps> = (props) => {
   );
 
   return (
-    <Pressable onPress={handlePress}>
-      <View
+    <View
+      style={StyleSheet.flatten([
+        divided &&
+          index !== 0 && {
+            borderTopWidth: 1,
+            borderColor: theme[mode].border,
+          },
+      ])}
+    >
+      <Row wrap={false} horizontalAlign="space-between" style={StyleSheet.flatten([styles.hidden])}>
+        <View onLayout={({ nativeEvent }) => setLeftItemWidth(nativeEvent.layout.width)}>
+          {leftContent}
+        </View>
+        <View style={{ flex: 0 }} />
+        <View onLayout={({ nativeEvent }) => setRightItemWidth(nativeEvent.layout.width)}>
+          {rightContent}
+        </View>
+      </Row>
+      <Animated.View
         style={StyleSheet.flatten([
-          divided &&
-            index !== 0 && {
-              borderTopWidth: 1,
-              borderColor: theme[mode].border,
-            },
+          {
+            backgroundColor: theme[mode].backgroundColor,
+            padding: text ? 3 : 8,
+            transform: [
+              {
+                translateX: panAnim,
+              },
+            ],
+            overflow: "hidden",
+            zIndex: 2,
+          },
+          padded && { padding: 14 },
+          relaxed && { padding: 20 },
+          style,
         ])}
+        onLayout={({ nativeEvent }) => setRectWidth(nativeEvent.layout.width)}
+        {...panResponder.panHandlers}
       >
-        <Row
-          wrap={false}
-          horizontalAlign="space-between"
-          style={StyleSheet.flatten([styles.hidden])}
-        >
-          <View onLayout={({ nativeEvent }) => setLeftItemWidth(nativeEvent.layout.width)}>
-            {leftContent}
-          </View>
-          <View style={{ flex: 0 }} />
-          <View onLayout={({ nativeEvent }) => setRightItemWidth(nativeEvent.layout.width)}>
-            {rightContent}
-          </View>
-        </Row>
-        <Animated.View
-          style={StyleSheet.flatten([
-            {
-              backgroundColor: theme[mode].backgroundColor,
-              padding: text ? 3 : 8,
-              transform: [
-                {
-                  translateX: panAnim,
-                },
-              ],
-              overflow: "hidden",
-              zIndex: 2,
-            },
-            padded && { padding: 14 },
-            relaxed && { padding: 20 },
-            style,
-          ])}
-          onLayout={({ nativeEvent }) => setRectWidth(nativeEvent.layout.width)}
-          {...panResponder.panHandlers}
-        >
+        <Pressable onPress={handlePress}>
           <Row verticalAlign={verticalAlign}>
             {text ? (
               <ListContent isLast={isLast}>
@@ -180,10 +185,10 @@ const ListItem: FC<ListItemProps> = (props) => {
               newChildren
             )}
           </Row>
-          {ripple && <Ripple color={rippleColor} onPress={handlePress} />}
-        </Animated.View>
-      </View>
-    </Pressable>
+        </Pressable>
+        {ripple && <Ripple color={rippleColor} onPress={handlePress} />}
+      </Animated.View>
+    </View>
   );
 };
 
