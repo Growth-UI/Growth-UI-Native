@@ -199,7 +199,6 @@ const Input: FC<InputProps> = (props) => {
               {
                 opacity: opacityAnim,
               },
-              styles.adornment,
               label ? styles.common : { paddingVertical: 15 },
             ])}
           >
@@ -267,9 +266,6 @@ const styles = StyleSheet.create({
   input: {
     paddingLeft: 3,
     flex: 1,
-  },
-  adornment: {
-    paddingTop: 27,
   },
   feedback: {
     marginTop: -5,
