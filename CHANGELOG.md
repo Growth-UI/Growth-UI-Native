@@ -1,3 +1,8 @@
+## [1.9.5](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.4...v1.9.5) (2022-03-03)
+
+### 🐛  Fixes
+* fix: issue handling ListItem press on android ([2696747](https://github.com/Growth-UI/Growth-UI-Native/commit/269674784980820d7c36467c324a35a3eadb493f))
+
 ## [1.9.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.3...v1.9.4) (2022-03-03)
 
 ### 🐛  Fixes
