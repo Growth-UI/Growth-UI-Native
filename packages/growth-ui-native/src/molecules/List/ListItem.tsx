@@ -20,6 +20,7 @@ import {
   GestureResponderEvent,
   PanResponder,
   PanResponderGestureState,
+  Pressable,
   StyleProp,
   StyleSheet,
   TextStyle,
@@ -87,12 +88,8 @@ const ListItem: FC<ListItemProps> = (props) => {
   );
 
   const handleSwipe = (_: GestureResponderEvent, { dx }: PanResponderGestureState) => {
-    if (!swipeable) {
+    if (!swipeable || (dx > 0 && !leftContent) || (dx < 0 && !rightContent)) {
       return;
-    }
-
-    if ((dx > 0 && !leftContent) || (dx < 0 && !rightContent)) {
-      slideAnimation(0);
     }
 
     const sign = dx > 0 ? 1 : -1;
@@ -122,65 +119,71 @@ const ListItem: FC<ListItemProps> = (props) => {
   );
 
   return (
-    <View
-      style={StyleSheet.flatten([
-        divided &&
-          index !== 0 && {
-            borderTopWidth: 1,
-            borderColor: theme[mode].border,
-          },
-      ])}
-    >
-      <Row wrap={false} horizontalAlign="space-between" style={StyleSheet.flatten([styles.hidden])}>
-        <View onLayout={({ nativeEvent }) => setLeftItemWidth(nativeEvent.layout.width)}>
-          {leftContent}
-        </View>
-        <View style={{ flex: 0 }} />
-        <View onLayout={({ nativeEvent }) => setRightItemWidth(nativeEvent.layout.width)}>
-          {rightContent}
-        </View>
-      </Row>
-      <Animated.View
+    <Pressable onPress={handlePress}>
+      <View
         style={StyleSheet.flatten([
-          {
-            backgroundColor: theme[mode].backgroundColor,
-            padding: text ? 3 : 8,
-            transform: [
-              {
-                translateX: panAnim,
-              },
-            ],
-            overflow: "hidden",
-            zIndex: 2,
-          },
-          padded && { padding: 14 },
-          relaxed && { padding: 20 },
-          style,
+          divided &&
+            index !== 0 && {
+              borderTopWidth: 1,
+              borderColor: theme[mode].border,
+            },
         ])}
-        onLayout={({ nativeEvent }) => setRectWidth(nativeEvent.layout.width)}
-        {...panResponder.panHandlers}
       >
-        <Row verticalAlign={verticalAlign}>
-          {text ? (
-            <ListContent isLast={isLast}>
-              <Typography
-                style={StyleSheet.flatten([
-                  active && {
-                    fontWeight: "bold",
-                  },
-                  textStyle,
-                ])}
-              >
-                {text}
-              </Typography>
-            </ListContent>
-          ) : (
-            newChildren
-          )}
+        <Row
+          wrap={false}
+          horizontalAlign="space-between"
+          style={StyleSheet.flatten([styles.hidden])}
+        >
+          <View onLayout={({ nativeEvent }) => setLeftItemWidth(nativeEvent.layout.width)}>
+            {leftContent}
+          </View>
+          <View style={{ flex: 0 }} />
+          <View onLayout={({ nativeEvent }) => setRightItemWidth(nativeEvent.layout.width)}>
+            {rightContent}
+          </View>
         </Row>
-        {ripple && <Ripple color={rippleColor} onPress={handlePress} />}
-      </Animated.View>
-    </View>
+        <Animated.View
+          style={StyleSheet.flatten([
+            {
+              backgroundColor: theme[mode].backgroundColor,
+              padding: text ? 3 : 8,
+              transform: [
+                {
+                  translateX: panAnim,
+                },
+              ],
+              overflow: "hidden",
+              zIndex: 2,
+            },
+            padded && { padding: 14 },
+            relaxed && { padding: 20 },
+            style,
+          ])}
+          onLayout={({ nativeEvent }) => setRectWidth(nativeEvent.layout.width)}
+          {...panResponder.panHandlers}
+        >
+          <Row verticalAlign={verticalAlign}>
+            {text ? (
+              <ListContent isLast={isLast}>
+                <Typography
+                  style={StyleSheet.flatten([
+                    active && {
+                      fontWeight: "bold",
+                    },
+                    textStyle,
+                  ])}
+                >
+                  {text}
+                </Typography>
+              </ListContent>
+            ) : (
+              newChildren
+            )}
+          </Row>
+          {ripple && <Ripple color={rippleColor} onPress={handlePress} />}
+        </Animated.View>
+      </View>
+    </Pressable>
   );
 };
 
