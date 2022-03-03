@@ -1,3 +1,8 @@
+## [1.9.6](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.5...v1.9.6) (2022-03-03)
+
+### 🐛  Fixes
+* fix: fix handling press issue ([580998b](https://github.com/Growth-UI/Growth-UI-Native/commit/580998bb155ed9b8099df07e94110b5a9730d2dc))
+
 ## [1.9.5](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.4...v1.9.5) (2022-03-03)
 
 ### 🐛  Fixes
