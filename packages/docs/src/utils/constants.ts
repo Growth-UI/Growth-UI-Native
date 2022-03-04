@@ -278,6 +278,11 @@ export const componentProps: Record<
       type: "string",
     },
     {
+      description: "Color of the adornmanet",
+      name: "adornmentColor",
+      type: "string",
+    },
+    {
       description: "Custom container style.",
       name: "containerStyle",
       type: "StyleProp<ViewStyle>",
