@@ -1,3 +1,8 @@
+## [1.10.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.6...v1.10.0) (2022-03-04)
+
+### 🚀  Features
+* feat: add adormentColor prop ([8d21fe9](https://github.com/Growth-UI/Growth-UI-Native/commit/8d21fe9071dae07be969516e2579493781fad98e))
+
 ## [1.9.6](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.5...v1.9.6) (2022-03-03)
 
 ### 🐛  Fixes
