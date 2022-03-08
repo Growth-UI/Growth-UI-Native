@@ -59,7 +59,7 @@ const Tab: FC<TabProps> = (props) => {
 
   useEffect(() => {
     Animated.timing(indicatorAnim, {
-      duration: 300,
+      duration: 150,
       toValue: index,
       useNativeDriver: true,
       ...indicatorAnimConfig,
