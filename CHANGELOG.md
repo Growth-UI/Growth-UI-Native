@@ -1,3 +1,8 @@
+## [1.11.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.2...v1.11.3) (2022-03-08)
+
+### 🐛  Fixes
+* fix: change default duration from 300 -> 150 ([c47674b](https://github.com/Growth-UI/Growth-UI-Native/commit/c47674b13d5c09ea38b0fa04050d0a25bba23023))
+
 ## [1.11.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.1...v1.11.2) (2022-03-08)
 
 ### 🐛  Fixes
