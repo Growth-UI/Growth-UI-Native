@@ -1,3 +1,8 @@
+## [1.11.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.3...v1.11.4) (2022-03-08)
+
+### 🐛  Fixes
+* fix: fix mishandling slide animation on click tab item ([8b66465](https://github.com/Growth-UI/Growth-UI-Native/commit/8b6646577ccab123f72d092a597f808a1e8a45c9))
+
 ## [1.11.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.2...v1.11.3) (2022-03-08)
 
 ### 🐛  Fixes
