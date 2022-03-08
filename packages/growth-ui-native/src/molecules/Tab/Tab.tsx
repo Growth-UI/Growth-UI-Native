@@ -172,7 +172,7 @@ const Tab: FC<TabProps> = (props) => {
       <Row
         verticalAlign="middle"
         style={StyleSheet.flatten([
-          { backgroundColor: "#363535" },
+          { backgroundColor: mode === "dark" ? "#363535" : "#e8e8e8" },
           rounded && { padding: 5, borderRadius: 500 },
           props.sx && sx(props.sx),
           tabStyle,
