@@ -1,3 +1,8 @@
+## [1.11.5](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.4...v1.11.5) (2022-03-08)
+
+### 🐛  Fixes
+* fix: fix lagging when swiping ([205b25b](https://github.com/Growth-UI/Growth-UI-Native/commit/205b25bb04d56cd3704ead7bb37b0911a0ca1e6e))
+
 ## [1.11.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.3...v1.11.4) (2022-03-08)
 
 ### 🐛  Fixes
