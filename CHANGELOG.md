@@ -1,3 +1,8 @@
+## [1.11.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.1...v1.11.2) (2022-03-08)
+
+### 🐛  Fixes
+* fix: fix tab background color ([b532d1d](https://github.com/Growth-UI/Growth-UI-Native/commit/b532d1da313ab6ad44da04a5e93193683f233a4e))
+
 ## [1.11.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.0...v1.11.1) (2022-03-08)
 
 ### 🐛  Fixes
