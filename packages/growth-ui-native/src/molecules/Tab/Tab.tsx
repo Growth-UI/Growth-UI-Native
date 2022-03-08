@@ -104,7 +104,7 @@ const Tab: FC<TabProps> = (props) => {
     if (abs >= window.width * 0.15) {
       const nextIndex = dx > 0 ? index - 1 : index + 1;
 
-      setIndex(() => nextIndex);
+      handleItemClick(nextIndex)(e);
       slideAnimation(nextIndex * -window.width);
     } else {
       slideAnimation(0);
@@ -153,14 +153,14 @@ const Tab: FC<TabProps> = (props) => {
     });
   }, [tabItemLayouts]);
 
-  const handleLayout = (e: LayoutChangeEvent, idx: number) => {
+  const handleLayout = (idx: number) => (e: LayoutChangeEvent) => {
     setTabItemLayouts({
       ...tabItemLayouts,
       [idx]: e.nativeEvent.layout,
     });
   };
 
-  const handleItemClick = (e: GestureResponderEvent, idx: number) => {
+  const handleItemClick = (idx: number) => (e: GestureResponderEvent) => {
     onTabChange?.(e, { ...props, activeIndex: idx });
     setIndex(idx);
   };
@@ -186,8 +186,8 @@ const Tab: FC<TabProps> = (props) => {
               rounded && { borderRadius: 500 },
               tabItemStyle,
             ])}
-            onLayout={(e) => handleLayout(e, idx)}
-            onPress={(e) => handleItemClick(e, idx)}
+            onLayout={handleLayout(idx)}
+            onPress={handleItemClick(idx)}
             onStartShouldSetResponderCapture={() => true}
           >
             {icon && (
