@@ -1,3 +1,8 @@
+## [1.11.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.10.0...v1.11.0) (2022-03-08)
+
+### 🚀  Features
+* feat: add new component, Tab ([e242819](https://github.com/Growth-UI/Growth-UI-Native/commit/e2428196b8ac37bb0bf6aa570c206e6e0197f10a))
+
 ## [1.10.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.9.6...v1.10.0) (2022-03-04)
 
 ### 🚀  Features
