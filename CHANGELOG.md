@@ -1,3 +1,8 @@
+## [1.11.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.0...v1.11.1) (2022-03-08)
+
+### 🐛  Fixes
+* fix: fix mishandling onTabChange event ([dab989e](https://github.com/Growth-UI/Growth-UI-Native/commit/dab989e5c97b4c616c49750b3da7d001c724b637))
+
 ## [1.11.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.10.0...v1.11.0) (2022-03-08)
 
 ### 🚀  Features
