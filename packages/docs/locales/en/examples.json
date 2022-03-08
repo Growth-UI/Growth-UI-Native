@@ -428,5 +428,10 @@
     "heading": "Sheet",
     "subheading": "Overlay Modal that displays content from either the bottom or top of the screen.",
     "type": "atoms"
+  },
+  "tab": {
+    "heading": "Tab",
+    "subheading": "A Tab is a hidden section of content activated by a Menu.",
+    "type": "molecules"
   }
 }
