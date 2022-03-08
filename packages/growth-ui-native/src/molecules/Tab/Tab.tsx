@@ -64,7 +64,7 @@ const Tab: FC<TabProps> = (props) => {
       useNativeDriver: true,
       ...indicatorAnimConfig,
     }).start();
-  }, [index]);
+  }, [index, indicatorAnim]);
 
   const slideAnimation = useCallback(
     (toValue: number) => {
@@ -105,7 +105,6 @@ const Tab: FC<TabProps> = (props) => {
       const nextIndex = dx > 0 ? index - 1 : index + 1;
 
       handleItemClick(nextIndex)(e);
-      slideAnimation(nextIndex * -window.width);
     } else {
       slideAnimation(0);
     }
@@ -163,6 +162,7 @@ const Tab: FC<TabProps> = (props) => {
   const handleItemClick = (idx: number) => (e: GestureResponderEvent) => {
     onTabChange?.(e, { ...props, activeIndex: idx });
     setIndex(idx);
+    slideAnimation(idx * -window.width);
   };
 
   const HEIGHT = max(Object.keys(tabItemLayouts).map((k: any) => tabItemLayouts[k].height));
@@ -247,8 +247,8 @@ const Tab: FC<TabProps> = (props) => {
         ])}
         {...panResponder.panHandlers}
       >
-        {panes.map(({ render }: any, idx: number) => (
-          <View key={idx} style={StyleSheet.flatten([{ flex: 1 }, tabPaneStyle])}>
+        {panes.map(({ render, title }: any, idx: number) => (
+          <View key={`${idx}-${title}`} style={StyleSheet.flatten([{ flex: 1 }, tabPaneStyle])}>
             {render(props)}
           </View>
         ))}
