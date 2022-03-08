@@ -57,14 +57,17 @@ const Tab: FC<TabProps> = (props) => {
     setIndex(+activeIndex);
   }, [activeIndex]);
 
-  useEffect(() => {
-    Animated.timing(indicatorAnim, {
-      duration: 150,
-      toValue: index,
-      useNativeDriver: true,
-      ...indicatorAnimConfig,
-    }).start();
-  }, [index, indicatorAnim]);
+  const indicatorAnimation = useCallback(
+    (toValue: number) => {
+      Animated.timing(indicatorAnim, {
+        duration: 150,
+        toValue,
+        useNativeDriver: true,
+        ...indicatorAnimConfig,
+      }).start();
+    },
+    [indicatorAnim]
+  );
 
   const slideAnimation = useCallback(
     (toValue: number) => {
@@ -162,6 +165,7 @@ const Tab: FC<TabProps> = (props) => {
   const handleItemClick = (idx: number) => (e: GestureResponderEvent) => {
     onTabChange?.(e, { ...props, activeIndex: idx });
     setIndex(idx);
+    indicatorAnimation(idx);
     slideAnimation(idx * -window.width);
   };
 
