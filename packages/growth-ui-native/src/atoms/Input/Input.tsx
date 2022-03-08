@@ -21,6 +21,7 @@ import {
 const Input: FC<InputProps> = (props) => {
   const {
     adornment,
+    adornmentColor,
     containerStyle,
     disabled,
     error,
@@ -198,6 +199,7 @@ const Input: FC<InputProps> = (props) => {
             style={StyleSheet.flatten([
               {
                 opacity: opacityAnim,
+                color: adornmentColor || "black",
               },
               label ? styles.common : { paddingVertical: 15 },
             ])}
@@ -284,6 +286,9 @@ export interface InputProps extends StrictInputProps {
 export interface StrictInputProps {
   /** This can be used to add a prefix, a suffix or an action to an element. */
   adornment?: string;
+
+  /** Color of the adornmanet. */
+  adornmentColor?: string;
 
   /** Custom container style */
   containerStyle?: StyleProp<ViewStyle>;

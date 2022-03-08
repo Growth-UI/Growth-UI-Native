@@ -31,7 +31,7 @@ export const componentByType: Record<string, string[]> = {
     "spacer",
     "typography",
   ],
-  molecules: ["comment", "list", "speeddial"],
+  molecules: ["comment", "list", "speeddial", "tab"],
 };
 export const components = [
   "avatar",
@@ -50,6 +50,7 @@ export const components = [
   "slider",
   "spacer",
   "speeddial",
+  "tab",
   "tooltip",
   "typography",
 ];
@@ -125,6 +126,9 @@ export const componentInfo: Record<
   },
   speeddial: {
     names: ["SpeedDial", "SpeedDial.Action"],
+  },
+  tab: {
+    names: ["Tab"],
   },
 };
 export const componentProps: Record<
@@ -1345,6 +1349,82 @@ export const componentProps: Record<
       description: "A Component that triggers the component.",
       name: "trigger",
       type: "ReactNode",
+    },
+  ],
+  Tab: [
+    {
+      description: "Index of the currently active tab.",
+      name: "activeIndex",
+      type: "number | string",
+    },
+    {
+      description: "Disable the active indicator.",
+      name: "disableIndicator",
+      type: "boolean",
+    },
+    {
+      description: "Additional styling for tab indicator.",
+      name: "indicatorStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description: "Define the indicator animation configurations.",
+      name: "indicatorAnimConfig",
+      type: 'Omit<Animated.TimingAnimationConfig, "toValue">',
+    },
+    {
+      description: "Called on tab change.",
+      name: "onTabChange",
+      type: "func",
+      func: {
+        title: "(event: GestureResponderEvent, data: TabProps)",
+        params: [
+          {
+            name: "event",
+            description: "React's original GestureResponderEvent.",
+          },
+          {
+            name: "data",
+            description: "All props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "Rounded shape.",
+      name: "rounded",
+      type: "boolean",
+    },
+    {
+      description: "Define the slide animation configurations.",
+      name: "slideAnimationConfig",
+      type: 'Omit<Animated.SpringAnimationConfig & Animated.TimingAnimationConfig,"toValue">',
+    },
+    {
+      description: "Accepts all system properties.",
+      name: "sx",
+      type: "enums",
+    },
+    {
+      description: "Additional styling for tab.",
+      name: "tabStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description: "Additional styling for tab item.",
+      name: "tabItemStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description: "Additional styling for tab pane.",
+      name: "tabPaneStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description:
+        "Array of objects describing each Tab item and Tab pane:\n [{ title?: string, icon?: IconProps, render: (props: TabProps) => ReactNode }]",
+      name: "panes",
+      type: "{arrayOf}",
     },
   ],
 };

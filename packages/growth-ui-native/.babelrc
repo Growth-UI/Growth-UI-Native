@@ -4,7 +4,13 @@
     "@babel/preset-env",
     "@babel/preset-react",
     "@babel/preset-typescript",
-    "minify"
+    [
+      "minify",
+      {
+        "builtIns": false,
+        "evaluate": false
+      }
+    ]
   ],
   "comments": false,
   "plugins": ["lodash", "@babel/plugin-transform-runtime"]
