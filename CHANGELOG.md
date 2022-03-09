@@ -1,3 +1,8 @@
+## [1.11.6](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.5...v1.11.6) (2022-03-09)
+
+### 🐛  Fixes
+* fix: fix state update on an unmounted component ([774b6f2](https://github.com/Growth-UI/Growth-UI-Native/commit/774b6f25562e5496b5bf6be4dcfb7841e32b174d))
+
 ## [1.11.5](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.4...v1.11.5) (2022-03-08)
 
 ### 🐛  Fixes
