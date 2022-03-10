@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC, useEffect, useMemo, useRef, useState } from "react";
 import Row from "../Row";
 import theme from "../../theme";
 import { COLORS } from "../../types";
@@ -14,7 +14,7 @@ type State = {
 };
 
 const Slider: FC<SliderProps> = (props) => {
-  const { checked, color, disabled, toggle, onPress } = props;
+  const { checked = false, color, disabled, toggle, onPress } = props;
 
   const [state, setState] = useState<State>({ checked });
 
@@ -30,10 +30,6 @@ const Slider: FC<SliderProps> = (props) => {
       return;
     }
 
-    if (onPress) {
-      onPress(e, { ...props, checked: !state.checked });
-    }
-
     Animated.parallel([
       Animated.timing(transformAnim, {
         duration: 300,
@@ -43,17 +39,23 @@ const Slider: FC<SliderProps> = (props) => {
       Animated.timing(colorAnim, {
         duration: 150,
         toValue: state.checked ? 0 : 1,
-        useNativeDriver: true,
+        useNativeDriver: false,
       }),
     ]).start();
+
+    if (onPress) {
+      onPress(e, { ...props, checked: !state.checked });
+    }
 
     setState({ checked: !state.checked });
   };
 
-  const colorInterpolation = colorAnim.interpolate({
-    inputRange: [0, 1],
-    outputRange: [theme.light.border, color ? theme.colors[color] : theme.colors.primary],
-  });
+  const colorInterpolation = useMemo(() => {
+    return colorAnim.interpolate({
+      inputRange: [0, 1],
+      outputRange: [theme.light.border, color ? theme.colors[color] : theme.colors.primary],
+    });
+  }, [color]);
 
   return (
     <TouchableWithoutFeedback onPress={handePress}>
@@ -81,8 +83,16 @@ const Slider: FC<SliderProps> = (props) => {
               ],
               borderRadius: 500,
               borderWidth: 1,
-              borderColor: colorInterpolation,
-              shadowColor: colorInterpolation,
+              borderColor: state.checked
+                ? color
+                  ? theme.colors[color]
+                  : theme.colors.primary
+                : theme.light.border,
+              shadowColor: state.checked
+                ? color
+                  ? theme.colors[color]
+                  : theme.colors.primary
+                : theme.light.border,
               shadowOffset: {
                 width: 0,
                 height: 1,
