@@ -43,7 +43,7 @@ const Slider: FC<SliderProps> = (props) => {
       Animated.timing(colorAnim, {
         duration: 150,
         toValue: state.checked ? 0 : 1,
-        useNativeDriver: false,
+        useNativeDriver: true,
       }),
     ]).start();
 
