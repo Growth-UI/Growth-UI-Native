@@ -41,13 +41,13 @@ const SpeedDial: FC<SpeedDialProps> & SpeedDialComponents = (props) => {
       Animated.timing(opacityAnim, {
         duration: transitionDuration,
         toValue: !isOpen ? 0 : 1,
-        useNativeDriver: false,
+        useNativeDriver: true,
       }),
       ...actionAnims.map((_, idx) =>
         Animated.timing(actionAnims[idx], {
           duration: transitionDuration,
           toValue: isOpen ? 1 : 0,
-          useNativeDriver: false,
+          useNativeDriver: true,
           delay: (count - (idx + 1)) * interval,
         })
       ),
