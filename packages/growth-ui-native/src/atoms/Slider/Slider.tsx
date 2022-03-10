@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useMemo, useRef, useState } from "react";
+import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Row from "../Row";
 import theme from "../../theme";
 import { COLORS } from "../../types";
@@ -9,20 +9,16 @@ import {
   GestureResponderEvent,
 } from "react-native";
 
-type State = {
-  checked?: boolean;
-};
-
 const Slider: FC<SliderProps> = (props) => {
   const { checked = false, color, disabled, toggle, onPress } = props;
 
-  const [state, setState] = useState<State>({ checked });
+  const [_checked, _setChecked] = useState(checked);
 
-  const colorAnim = useRef(new Animated.Value(!checked ? 0 : 1)).current;
-  const transformAnim = useRef(new Animated.Value(!checked ? 0 : 32)).current;
+  const colorAnim = useRef(new Animated.Value(!_checked ? 0 : 1)).current;
+  const transformAnim = useRef(new Animated.Value(!_checked ? 0 : 32)).current;
 
   useEffect(() => {
-    setState({ checked });
+    _setChecked(checked);
   }, [checked]);
 
   const handePress = (e: GestureResponderEvent) => {
@@ -33,21 +29,21 @@ const Slider: FC<SliderProps> = (props) => {
     Animated.parallel([
       Animated.timing(transformAnim, {
         duration: 300,
-        toValue: state.checked ? 0 : 32,
+        toValue: _checked ? 0 : 32,
         useNativeDriver: true,
       }),
       Animated.timing(colorAnim, {
         duration: 150,
-        toValue: state.checked ? 0 : 1,
+        toValue: _checked ? 0 : 1,
         useNativeDriver: false,
       }),
     ]).start();
 
-    if (onPress) {
-      onPress(e, { ...props, checked: !state.checked });
-    }
+    _setChecked(!_checked);
 
-    setState({ checked: !state.checked });
+    if (onPress) {
+      onPress(e, { ...props, checked: !_checked });
+    }
   };
 
   const colorInterpolation = useMemo(() => {
@@ -83,12 +79,12 @@ const Slider: FC<SliderProps> = (props) => {
               ],
               borderRadius: 500,
               borderWidth: 1,
-              borderColor: state.checked
+              borderColor: _checked
                 ? color
                   ? theme.colors[color]
                   : theme.colors.primary
                 : theme.light.border,
-              shadowColor: state.checked
+              shadowColor: _checked
                 ? color
                   ? theme.colors[color]
                   : theme.colors.primary
