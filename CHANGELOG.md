@@ -1,3 +1,8 @@
+## [1.11.9](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.8...v1.11.9) (2022-03-10)
+
+### 🐛  Fixes
+* fix: fix state change issue ([b5f4dc9](https://github.com/Growth-UI/Growth-UI-Native/commit/b5f4dc902f9c70375f2c104afea35e3f47c269b8))
+
 ## [1.11.8](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.7...v1.11.8) (2022-03-10)
 
 ### 🐛  Fixes
