@@ -1,3 +1,8 @@
+## [1.11.7](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.6...v1.11.7) (2022-03-10)
+
+### 🐛  Fixes
+* fix: useNativeDriver: false -> true ([ef07233](https://github.com/Growth-UI/Growth-UI-Native/commit/ef07233a0277059fbdf3b8f2b8c3155e325b7de1))
+
 ## [1.11.6](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.5...v1.11.6) (2022-03-09)
 
 ### 🐛  Fixes
