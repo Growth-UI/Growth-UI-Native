@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { FC, useEffect, useMemo, useRef, useState } from "react";
 import Row from "../Row";
 import theme from "../../theme";
 import { COLORS } from "../../types";
@@ -11,7 +11,6 @@ import {
 
 const Slider: FC<SliderProps> = (props) => {
   const { checked = false, color, disabled, toggle, onPress } = props;
-
   const [_checked, _setChecked] = useState(checked);
 
   const colorAnim = useRef(new Animated.Value(!_checked ? 0 : 1)).current;
@@ -30,7 +29,7 @@ const Slider: FC<SliderProps> = (props) => {
       Animated.timing(transformAnim, {
         duration: 300,
         toValue: _checked ? 0 : 32,
-        useNativeDriver: true,
+        useNativeDriver: false,
       }),
       Animated.timing(colorAnim, {
         duration: 150,
@@ -79,16 +78,8 @@ const Slider: FC<SliderProps> = (props) => {
               ],
               borderRadius: 500,
               borderWidth: 1,
-              borderColor: _checked
-                ? color
-                  ? theme.colors[color]
-                  : theme.colors.primary
-                : theme.light.border,
-              shadowColor: _checked
-                ? color
-                  ? theme.colors[color]
-                  : theme.colors.primary
-                : theme.light.border,
+              borderColor: colorInterpolation,
+              shadowColor: colorInterpolation,
               shadowOffset: {
                 width: 0,
                 height: 1,
