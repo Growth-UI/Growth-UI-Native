@@ -1,3 +1,8 @@
+## [1.11.10](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.9...v1.11.10) (2022-03-11)
+
+### 🐛  Fixes
+* fix: fix color animated issue ([9b4ac1a](https://github.com/Growth-UI/Growth-UI-Native/commit/9b4ac1a34377963700af9954dddd39cc18fcd587))
+
 ## [1.11.9](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.8...v1.11.9) (2022-03-10)
 
 ### 🐛  Fixes
