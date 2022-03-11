@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useMemo, useRef, useState } from "react";
+import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Row from "../Row";
 import theme from "../../theme";
 import { COLORS } from "../../types";
@@ -13,31 +13,38 @@ const Slider: FC<SliderProps> = (props) => {
   const { checked = false, color, disabled, toggle, onPress } = props;
   const [_checked, _setChecked] = useState(checked);
 
-  const colorAnim = useRef(new Animated.Value(!_checked ? 0 : 1)).current;
-  const transformAnim = useRef(new Animated.Value(!_checked ? 0 : 32)).current;
+  const colorAnim = useRef(new Animated.Value(_checked ? 1 : 0)).current;
+  const transformAnim = useRef(new Animated.Value(_checked ? 32 : 0)).current;
 
   useEffect(() => {
     _setChecked(checked);
+    animate(checked);
   }, [checked]);
+
+  const animate = useCallback(
+    (isChecked: boolean) => {
+      Animated.parallel([
+        Animated.timing(transformAnim, {
+          duration: 300,
+          toValue: isChecked ? 32 : 0,
+          useNativeDriver: false,
+        }),
+        Animated.timing(colorAnim, {
+          duration: 150,
+          toValue: isChecked ? 1 : 0,
+          useNativeDriver: false,
+        }),
+      ]).start();
+    },
+    [colorAnim, transformAnim, _checked]
+  );
 
   const handePress = (e: GestureResponderEvent) => {
     if (disabled) {
       return;
     }
 
-    Animated.parallel([
-      Animated.timing(transformAnim, {
-        duration: 300,
-        toValue: _checked ? 0 : 32,
-        useNativeDriver: false,
-      }),
-      Animated.timing(colorAnim, {
-        duration: 150,
-        toValue: _checked ? 0 : 1,
-        useNativeDriver: false,
-      }),
-    ]).start();
-
+    animate(!_checked);
     _setChecked(!_checked);
 
     if (onPress) {
