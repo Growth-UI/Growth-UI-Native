@@ -1,3 +1,8 @@
+## [1.11.11](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.10...v1.11.11) (2022-03-11)
+
+### 🐛  Fixes
+* fix: fix issue with checked param not envoking animation ([40670e6](https://github.com/Growth-UI/Growth-UI-Native/commit/40670e6dd3872c88f665267ac04fe83f2c20f141))
+
 ## [1.11.10](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.9...v1.11.10) (2022-03-11)
 
 ### 🐛  Fixes
