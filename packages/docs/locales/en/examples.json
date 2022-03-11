@@ -182,6 +182,11 @@
       "id": "flipped",
       "title": "Flipped",
       "description": "An icon can be flipped."
+    },
+    "inverted": {
+      "id": "inverted",
+      "title": "Inverted",
+      "description": "An icon can have its colors inverted for contrast."
     }
   },
   "slider": {
