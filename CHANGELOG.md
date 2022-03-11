@@ -1,3 +1,11 @@
+## [1.12.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.11...v1.12.0) (2022-03-11)
+
+### 📝  Documentation
+* docs: add inverted icon example ([f1b3e4e](https://github.com/Growth-UI/Growth-UI-Native/commit/f1b3e4ea37a3143bbd3dc48e1c060a972c0c045e))
+
+### 🚀  Features
+* feat: add new icons ([46781b4](https://github.com/Growth-UI/Growth-UI-Native/commit/46781b48509b26176c0ce93a91af38891d6fa9a7))
+
 ## [1.11.11](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.10...v1.11.11) (2022-03-11)
 
 ### 🐛  Fixes
