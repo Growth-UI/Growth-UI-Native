@@ -32,6 +32,7 @@ const Icon: FC<IconProps> & IconComponents = (props) => {
   } = props;
 
   const { mode } = useContext(ThemeContext);
+  const reverseMode = mode === "dark" ? "light" : "dark";
 
   const rotationAnim = useRef(new Animated.Value(flipped || rotated ? 1 : 0)).current;
 
@@ -44,7 +45,11 @@ const Icon: FC<IconProps> & IconComponents = (props) => {
   }, [flipped, rotated]);
 
   const getIconColor = () => {
-    if (inverted) {
+    if (inverted && color === "white") {
+      return theme.light.iconColor;
+    }
+
+    if (inverted && color) {
       return theme.colors.white;
     }
 
@@ -61,10 +66,25 @@ const Icon: FC<IconProps> & IconComponents = (props) => {
     }
 
     if (inverted) {
-      const reverseMode = mode === "dark" ? "light" : "dark";
-
       return theme[reverseMode].iconColor;
     }
+  };
+
+  const getShadow = () => {
+    if (inverted) {
+      return {
+        shadowColor: theme[reverseMode].backgroundColor,
+        shadowOffset: {
+          width: 0,
+          height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        elevation: 3,
+      };
+    }
+
+    return {};
   };
 
   const computeRotationDegree = () => {
@@ -129,6 +149,7 @@ const Icon: FC<IconProps> & IconComponents = (props) => {
               backgroundColor: getBackgroundColor(),
               alignItems: "center",
               justifyContent: "center",
+              ...getShadow(),
             },
           ])}
         >

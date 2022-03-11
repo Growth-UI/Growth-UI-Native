@@ -54,6 +54,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Dashboard").default;
     case "democrat":
       return require("../Democrat").default;
+    case "document":
+      return require("../Document").default;
     case "donate":
       return require("../Donate").default;
     case "dots horizontal rounded":
@@ -74,12 +76,16 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../FileCopyOutline").default;
     case "file outline":
       return require("../FileOutline").default;
+    case "fingerprint":
+      return require("../Fingerprint").default;
     case "folder outline":
       return require("../FolderOutline").default;
     case "github":
       return require("../Github").default;
     case "heart":
       return require("../Heart").default;
+    case "help":
+      return require("../Help").default;
     case "home":
       return require("../Home").default;
     case "image":
@@ -102,6 +108,10 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../ListUl").default;
     case "location":
       return require("../Location").default;
+    case "lock":
+      return require("../Lock").default;
+    case "logout":
+      return require("../Logout").default;
     case "menu":
       return require("../Menu").default;
     case "message":
@@ -120,6 +130,10 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../PartlySunny").default;
     case "people":
       return require("../People").default;
+    case "person":
+      return require("../Person").default;
+    case "phone":
+      return require("../Phone").default;
     case "pie chart":
       return require("../PieChart").default;
     case "play":

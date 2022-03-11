@@ -37,6 +37,13 @@ const IconExamples = () => {
         description={t("examples:icon.flipped.description")}
         examplePath="atoms/Icon/IconExampleFlipped"
       />
+
+      <ComponentExample
+        id={t("examples:icon.inverted.id")}
+        title={t("examples:icon.inverted.title")}
+        description={t("examples:icon.inverted.description")}
+        examplePath="atoms/Icon/IconExampleInverted"
+      />
     </>
   );
 };
