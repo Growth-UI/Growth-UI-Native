@@ -1,3 +1,6 @@
+## [v1.13.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.13.1...vv1.13.1) (2022-03-17)
+
+
 ## [1.13.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.13.0...v1.13.1) (2022-03-17)
 
 ### 🐛  Fixes
