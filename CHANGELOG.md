@@ -1,3 +1,8 @@
+## [1.13.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.13.1...v1.13.2) (2022-03-17)
+
+### 🐛  Fixes
+* fix: remove unused prop ([cfc9ed2](https://github.com/Growth-UI/Growth-UI-Native/commit/cfc9ed2f518a579e6ec9bd844edf72b9ca672883))
+
 ## [v1.13.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.13.1...vv1.13.1) (2022-03-17)
 
 
