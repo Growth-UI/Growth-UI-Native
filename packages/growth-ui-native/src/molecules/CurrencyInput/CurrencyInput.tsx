@@ -184,12 +184,9 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
           ])}
         >
           <Typography
+            size={size * 2}
+            variant="h6"
             style={StyleSheet.flatten([
-              {
-                color: theme[mode].textColor,
-                fontSize: size * 2,
-                fontWeight: "700",
-              },
               error && {
                 color: theme.error.textColor,
               },
