@@ -1,3 +1,11 @@
+## [1.13.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.12.0...v1.13.0) (2022-03-17)
+
+### 📝  Documentation
+* docs: add doc for new component CurrencyInput ([9575e27](https://github.com/Growth-UI/Growth-UI-Native/commit/9575e27c66926c43a7219cd48308fe13a4465346))
+
+### 🚀  Features
+* feat: add new feature, CurrencyInput ([08ffdd3](https://github.com/Growth-UI/Growth-UI-Native/commit/08ffdd31c0d20374ef0e9b3b648e27d706afd53b))
+
 ## [1.12.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.11.11...v1.12.0) (2022-03-11)
 
 ### 📝  Documentation
