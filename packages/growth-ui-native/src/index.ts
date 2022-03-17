@@ -70,6 +70,9 @@ export type { TooltipProps } from "./atoms/Tooltip";
 export { default as SpeedDial } from "./molecules/SpeedDial";
 export type { SpeedDialProps, SpeedDialActionProps } from "./molecules/SpeedDial";
 
+export { default as CurrencyInput } from "./molecules/CurrencyInput";
+export type { CurrencyInputProps } from "./molecules/CurrencyInput";
+
 export { default as List } from "./molecules/List";
 export type {
   ListProps,
