@@ -221,7 +221,7 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
       >
         <TextInput
           ref={ref}
-          keyboardType="number-pad"
+          keyboardType="numeric"
           autoFocus={true}
           value=""
           onChangeText={handleChange}
