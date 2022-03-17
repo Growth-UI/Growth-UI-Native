@@ -438,5 +438,10 @@
     "heading": "Tab",
     "subheading": "A Tab is a hidden section of content activated by a Menu.",
     "type": "molecules"
+  },
+  "currencyinput": {
+    "heading": "CurrencyInput",
+    "subheading": "A CurrencyInput allows an easy input of currency formatted numbers.",
+    "type": "molecules"
   }
 }

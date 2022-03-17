@@ -31,7 +31,7 @@ export const componentByType: Record<string, string[]> = {
     "spacer",
     "typography",
   ],
-  molecules: ["comment", "list", "speeddial", "tab"],
+  molecules: ["comment", "currencyinput", "list", "speeddial", "tab"],
 };
 export const components = [
   "avatar",
@@ -41,6 +41,7 @@ export const components = [
   "chip",
   "collapse",
   "comment",
+  "currencyinput",
   "icon",
   "image",
   "input",
@@ -120,6 +121,9 @@ export const componentInfo: Record<
       "Comment.Metadata",
       "Comment.Text",
     ],
+  },
+  currencyinput: {
+    names: ["CurrencyInput"],
   },
   list: {
     names: ["List", "List.Content", "List.Description", "List.Heading", "List.Image", "List.Item"],
@@ -1425,6 +1429,150 @@ export const componentProps: Record<
         "Array of objects describing each Tab item and Tab pane:\n [{ title?: string, icon?: IconProps, render: (props: TabProps) => ReactNode }]",
       name: "panes",
       type: "{arrayOf}",
+    },
+  ],
+  CurrencyInput: [
+    {
+      description: "Custom outermost container style.",
+      name: "containerStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description: "Custom cursor style.",
+      name: "containerStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description: "Custom cursor animation config.",
+      name: "cursorAnim",
+      type: "TimingAnimationConfig",
+    },
+    {
+      description: "Limit length of decimals allowed.",
+      name: "decimalsLimit",
+      type: "number",
+      defaultValue: "2",
+    },
+    {
+      description: "Default value.",
+      name: "defaultValue",
+      type: "number",
+      defaultValue: "0",
+    },
+    {
+      description: "An Input field can show the data contains errors.",
+      name: "error",
+      type: "boolean",
+    },
+    {
+      description: "Align the component horizontally.",
+      name: "horizontalAlign",
+      type: "enum",
+      enums: HORIZONTALALIGNMENTS,
+      defaultValue: "center",
+    },
+    {
+      description: "Shorthand for icon",
+      name: "icon",
+      type: "IconProps",
+      defaultValue: "{ name: 'close' }",
+    },
+    {
+      description: "Custom input container style.",
+      name: "inputContainerStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
+      description: "Custom input text animation config.",
+      name: "inputTextAnim",
+      type: "SpringAnimationConfig",
+    },
+    {
+      description: "Custom input text style.",
+      name: "inputTextStyle",
+      type: "StyleProp<TextStyle>",
+    },
+    {
+      description: "Called on blue.",
+      name: "onBlur",
+      type: "func",
+      func: {
+        title: "(event: NativeSyntheticEvent<TextInputFocusEventData>, data: CurrencyInputProps)",
+        params: [
+          {
+            name: "event",
+            description: "React's original NativeSyntheticEvent.",
+          },
+          {
+            name: "data",
+            description: "All props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "Called on change.",
+      name: "onChange",
+      type: "func",
+      func: {
+        title: "(value: number, data: CurrencyInputProps)",
+        params: [
+          {
+            name: "value",
+            description: "New value",
+          },
+          {
+            name: "data",
+            description: "All props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "Called on focus.",
+      name: "onFocus",
+      type: "func",
+      func: {
+        title: "(event: NativeSyntheticEvent<TextInputFocusEventData>, data: CurrencyInputProps)",
+        params: [
+          {
+            name: "event",
+            description: "React's original NativeSyntheticEvent.",
+          },
+          {
+            name: "data",
+            description: "All props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "An input can be descriptive. e.g) $.",
+      name: "prefix",
+      type: "string",
+    },
+    {
+      description: "Custom prefix style.",
+      name: "prefixStyle",
+      type: "StyleProp<TextStyle>",
+    },
+    {
+      description: "An input can format number with commas as thousands separators.",
+      name: "separators",
+      type: "boolean",
+      defaultValue: "true",
+    },
+    {
+      description: "Show clear icon that clears the input field.",
+      defaultValue: "true",
+      name: "showClearIcon",
+      type: "boolean",
+    },
+    {
+      description: "An input can have different sizes",
+      name: "size",
+      type: "number",
+      defaultValue: "20",
     },
   ],
 };
