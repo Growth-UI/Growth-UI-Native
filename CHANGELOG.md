@@ -1,3 +1,8 @@
+## [1.13.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.13.0...v1.13.1) (2022-03-17)
+
+### 🐛  Fixes
+* fix: add fill prop ([161c23c](https://github.com/Growth-UI/Growth-UI-Native/commit/161c23ce5379ea805173069db34b5e06dcfa3804))
+
 ## [1.13.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.12.0...v1.13.0) (2022-03-17)
 
 ### 📝  Documentation
