@@ -49,7 +49,6 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
   const transformAnims = useRef<Array<Animated.Value>>([new Animated.Value(0)]);
 
   useEffect(() => {
-    opacityAnim.current = new Animated.Value(1);
     transformAnims.current = [new Animated.Value(0)];
     setValues([`${+value}`]);
   }, [value]);
