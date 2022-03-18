@@ -24,7 +24,6 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
     cursorAnim,
     cursorStyle,
     decimalsLimit = 2,
-    defaultValue = 0,
     error,
     horizontalAlign = "center",
     icon,
@@ -36,28 +35,35 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
     separators = true,
     showClearIcon = true,
     size = 20,
+    value = 0,
     onBlur,
     onChange,
     onFocus,
   } = props;
   const { mode } = useContext(ThemeContext);
-  const [values, setValues] = useState<Array<string>>([`${defaultValue}`]);
+  const [values, setValues] = useState<Array<string>>([`${+value}`]);
   const [focused, setFocused] = useState(true);
 
   const ref = useRef<TextInput>(null);
-  const opacityAnim = useRef(new Animated.Value(1)).current;
+  const opacityAnim = useRef(new Animated.Value(1));
   const transformAnims = useRef<Array<Animated.Value>>([new Animated.Value(0)]);
+
+  useEffect(() => {
+    opacityAnim.current = new Animated.Value(1);
+    transformAnims.current = [new Animated.Value(0)];
+    setValues([`${+value}`]);
+  }, [value]);
 
   useEffect(() => {
     Animated.loop(
       Animated.sequence([
-        Animated.timing(opacityAnim, {
+        Animated.timing(opacityAnim.current, {
           toValue: 0,
           duration: 1000,
           useNativeDriver: true,
           ...cursorAnim,
         }),
-        Animated.timing(opacityAnim, {
+        Animated.timing(opacityAnim.current, {
           toValue: focused ? 1 : 0,
           duration: 1000,
           useNativeDriver: true,
@@ -205,7 +211,7 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
             height: size * 2.5,
             marginHorizontal: 5,
             backgroundColor: "#2185d0",
-            opacity: opacityAnim,
+            opacity: opacityAnim.current,
           },
           cursorStyle,
         ])}
@@ -292,6 +298,9 @@ export interface StrictCurrencyInputProps {
 
   /** An input can have different sizes. */
   size?: number;
+
+  /** An input value. */
+  value?: number | string;
 }
 
 export default CurrencyInput;

@@ -1454,12 +1454,6 @@ export const componentProps: Record<
       defaultValue: "2",
     },
     {
-      description: "Default value.",
-      name: "defaultValue",
-      type: "number",
-      defaultValue: "0",
-    },
-    {
       description: "An Input field can show the data contains errors.",
       name: "error",
       type: "boolean",
@@ -1573,6 +1567,12 @@ export const componentProps: Record<
       name: "size",
       type: "number",
       defaultValue: "20",
+    },
+    {
+      description: "An input value",
+      name: "value",
+      type: "{ number | string }",
+      defaultValue: "0",
     },
   ],
 };
