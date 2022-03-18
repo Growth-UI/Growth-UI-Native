@@ -1,3 +1,8 @@
+## [1.13.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.13.2...v1.13.3) (2022-03-18)
+
+### 🐛  Fixes
+* fix: remove defaultValue and add value prop ([2526337](https://github.com/Growth-UI/Growth-UI-Native/commit/2526337ef9c86ab5ae60961ef13316b6db3879f3))
+
 ## [1.13.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.13.1...v1.13.2) (2022-03-17)
 
 ### 🐛  Fixes
