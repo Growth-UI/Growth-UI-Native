@@ -1,3 +1,8 @@
+## [1.13.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.13.3...v1.13.4) (2022-03-18)
+
+### 🐛  Fixes
+* fix: fix cursor anim issue (not blinking) ([25a50b4](https://github.com/Growth-UI/Growth-UI-Native/commit/25a50b454cb1b11190f272f791529173a9ec75ec))
+
 ## [1.13.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.13.2...v1.13.3) (2022-03-18)
 
 ### 🐛  Fixes
