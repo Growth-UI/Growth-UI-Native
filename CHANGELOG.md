@@ -1,3 +1,8 @@
+## [1.14.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.13.4...v1.14.0) (2022-03-21)
+
+### 🚀  Features
+* feat: add inputProps that gives more flexibility to control how TextInput behaves ([4065887](https://github.com/Growth-UI/Growth-UI-Native/commit/40658875c7a31033a3d3d5027944be37d51a9c90))
+
 ## [1.13.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.13.3...v1.13.4) (2022-03-18)
 
 ### 🐛  Fixes
