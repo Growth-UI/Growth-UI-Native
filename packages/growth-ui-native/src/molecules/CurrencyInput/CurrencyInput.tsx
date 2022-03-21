@@ -28,6 +28,7 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
     horizontalAlign = "center",
     icon,
     inputContainerStyle,
+    inputProps,
     inputTextAnim,
     inputTextStyle,
     prefix,
@@ -229,6 +230,7 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
           onChangeText={handleChange}
           onKeyPress={handleKeyPress}
           onBlur={handleBlur}
+          {...inputProps}
         />
       </View>
       {showClearIcon && <Icon name="close" size={size * 1.25} {...icon} onPress={clearInput} />}
@@ -267,6 +269,9 @@ export interface StrictCurrencyInputProps {
 
   /** Custom input container style. */
   inputContainerStyle?: StyleProp<ViewStyle>;
+
+  /** Custom input props. */
+  inputProps?: any;
 
   /** Custom input text animation config. */
   inputTextAnim?: Animated.SpringAnimationConfig;
