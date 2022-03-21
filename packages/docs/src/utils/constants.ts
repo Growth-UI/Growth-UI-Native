@@ -1477,6 +1477,11 @@ export const componentProps: Record<
       type: "StyleProp<ViewStyle>",
     },
     {
+      description: "Custom input props.",
+      name: "inputProps",
+      type: "{ object }",
+    },
+    {
       description: "Custom input text animation config.",
       name: "inputTextAnim",
       type: "SpringAnimationConfig",
