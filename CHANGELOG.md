@@ -1,3 +1,8 @@
+## [1.14.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.14.0...v1.14.1) (2022-03-22)
+
+### 🐛  Fixes
+* fix: switch the order of if statement for rendering src, text, and icon type ([9ec5ff4](https://github.com/Growth-UI/Growth-UI-Native/commit/9ec5ff4abb5f1e9c3d80e94aef01639eb391fc9f))
+
 ## [1.14.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.13.4...v1.14.0) (2022-03-21)
 
 ### 🚀  Features
