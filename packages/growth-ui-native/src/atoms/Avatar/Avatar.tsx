@@ -25,22 +25,6 @@ const Avatar: FC<AvatarProps> & AvatarComponents = (props) => {
   const { mode } = useContext(ThemeContext);
 
   const renderAvatar = () => {
-    if (text) {
-      return (
-        <Typography
-          textAlign="center"
-          variant="h6"
-          style={StyleSheet.flatten([{ marginTop: "auto", marginBottom: "auto" }, textStyle])}
-        >
-          {text}
-        </Typography>
-      );
-    }
-
-    if (icon) {
-      return <Icon size={size / 1.4} {...icon} containerStyle={{ margin: "auto" }} />;
-    }
-
     if (src) {
       return (
         <Image
@@ -50,6 +34,22 @@ const Avatar: FC<AvatarProps> & AvatarComponents = (props) => {
             height: size,
           }}
         />
+      );
+    }
+
+    if (icon) {
+      return <Icon size={size / 1.4} {...icon} containerStyle={{ margin: "auto" }} />;
+    }
+
+    if (text) {
+      return (
+        <Typography
+          textAlign="center"
+          variant="h6"
+          style={StyleSheet.flatten([{ marginTop: "auto", marginBottom: "auto" }, textStyle])}
+        >
+          {text}
+        </Typography>
       );
     }
   };
