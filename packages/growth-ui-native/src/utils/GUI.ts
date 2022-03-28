@@ -146,6 +146,7 @@ export const ICONS: GrowthICONS[] = [
   "discover",
   "document",
   "donate",
+  "dot",
   "dots horizontal rounded",
   "download",
   "drafts",

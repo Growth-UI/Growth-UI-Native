@@ -64,6 +64,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Document").default;
     case "donate":
       return require("../Donate").default;
+    case "dot":
+      return require("../Dot").default;
     case "dots horizontal rounded":
       return require("../DotsHorizontalRounded").default;
     case "download":
