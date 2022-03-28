@@ -16,6 +16,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Aws").default;
     case "bank":
       return require("../Bank").default;
+    case "bankofamerica":
+      return require("../Bankofamerica").default;
     case "bill":
       return require("../Bill").default;
     case "bold":
@@ -28,6 +30,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Card").default;
     case "cart":
       return require("../Cart").default;
+    case "chase":
+      return require("../Chase").default;
     case "check":
       return require("../Check").default;
     case "checkbox":
@@ -54,6 +58,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Dashboard").default;
     case "democrat":
       return require("../Democrat").default;
+    case "discover":
+      return require("../Discover").default;
     case "document":
       return require("../Document").default;
     case "donate":
@@ -198,6 +204,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Underline").default;
     case "warning":
       return require("../Warning").default;
+    case "wells fargo":
+      return require("../Wellsfargo").default;
     case "yarn":
       return require("../Yarn").default;
   }
