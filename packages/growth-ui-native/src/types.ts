@@ -144,6 +144,7 @@ export type GrowthICONS =
   | "discover"
   | "document"
   | "donate"
+  | "dot"
   | "dots horizontal rounded"
   | "download"
   | "drafts"
