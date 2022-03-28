@@ -120,12 +120,14 @@ export type GrowthICONS =
   | "arrow right circle fill"
   | "aws"
   | "bank"
+  | "bankofamerica"
   | "bill"
   | "bold"
   | "bookmark"
   | "camera"
   | "card"
   | "cart"
+  | "chase"
   | "check"
   | "checkbox"
   | "chevron down"
@@ -139,6 +141,7 @@ export type GrowthICONS =
   | "confirmation number"
   | "dashboard"
   | "democrat"
+  | "discover"
   | "document"
   | "donate"
   | "dots horizontal rounded"
@@ -211,6 +214,7 @@ export type GrowthICONS =
   | "triangle up"
   | "underline"
   | "warning"
+  | "wells fargo"
   | "yarn";
 
 export type SPACING = Partial<{
