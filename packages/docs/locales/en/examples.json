@@ -443,5 +443,10 @@
     "heading": "CurrencyInput",
     "subheading": "A CurrencyInput allows an easy input of currency formatted numbers.",
     "type": "molecules"
+  },
+  "checkbox": {
+    "heading": "CheckBox",
+    "subheading": "A checkbox allows a user to select a value from a small set of options, often binary.",
+    "type": "molecules"
   }
 }
