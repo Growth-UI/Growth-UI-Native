@@ -31,13 +31,14 @@ export const componentByType: Record<string, string[]> = {
     "spacer",
     "typography",
   ],
-  molecules: ["comment", "currencyinput", "list", "speeddial", "tab"],
+  molecules: ["checkbox", "comment", "currencyinput", "list", "speeddial", "tab"],
 };
 export const components = [
   "avatar",
   "badge",
   "box",
   "button",
+  "checkbox",
   "chip",
   "collapse",
   "comment",
@@ -108,6 +109,9 @@ export const componentInfo: Record<
     names: ["Typography"],
   },
   // Molecules
+  checkbox: {
+    names: ["CheckBox"],
+  },
   comment: {
     names: [
       "Comment",
@@ -1578,6 +1582,83 @@ export const componentProps: Record<
       name: "value",
       type: "{ number | string }",
       defaultValue: "0",
+    },
+  ],
+  CheckBox: [
+    {
+      description: "Custom background color animation config.",
+      name: "backgroundColorAnimConfig",
+      type: "Animated.TimingAnimationConfig",
+    },
+    {
+      description: "Custom border color animation config.",
+      name: "borderColorAnimConfig",
+      type: "Animated.TimingAnimationConfig",
+    },
+    {
+      description: "Custom checkbox animation config.",
+      name: "checkboxAnimConfig",
+      type: "Animated.SpringAnimationConfig",
+    },
+    {
+      description: "Whether or not checkbox is checked.",
+      name: "checked",
+      type: "boolean",
+    },
+    {
+      description: "A checkbox can have different colors.",
+      name: "color",
+      type: "enum",
+      enums: GUI.COLORS,
+    },
+    {
+      description: "A checkbox can be filled with color.",
+      name: "filled",
+      type: "boolean",
+    },
+    {
+      description: "Add a custom Icon by name, props object.",
+      name: "icon",
+      type: "IconProps",
+    },
+    {
+      description: "Called on press.",
+      name: "onPress",
+      type: "func",
+      func: {
+        title: "(event: GestureResponderEvent, data: CheckBoxProps)",
+        params: [
+          {
+            name: "event",
+            description: "React's original GestureResponderEvent.",
+          },
+          {
+            name: "data",
+            description: "All props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "Format as a radio element. This means it is an exclusive option.",
+      name: "radio",
+      type: "boolean",
+    },
+    {
+      description: "A checkbox can be different sizes.",
+      name: "size",
+      type: "number",
+      defaultValue: "25",
+    },
+    {
+      description: "Custom styles.",
+      name: "styles",
+      type: "{ checkbox: ViewStyle,iconContainer: ViewStyle, text: TextStyle }",
+    },
+    {
+      description: "The text that describes what the checkbox is for.",
+      name: "text",
+      type: "string",
     },
   ],
 };
