@@ -73,6 +73,9 @@ export type { SpeedDialProps, SpeedDialActionProps } from "./molecules/SpeedDial
 export { default as CurrencyInput } from "./molecules/CurrencyInput";
 export type { CurrencyInputProps } from "./molecules/CurrencyInput";
 
+export { default as CheckBox } from "./molecules/CheckBox";
+export type { CheckBoxProps } from "./molecules/CheckBox";
+
 export { default as List } from "./molecules/List";
 export type {
   ListProps,
