@@ -1,3 +1,11 @@
+## [1.17.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.16.0...v1.17.0) (2022-03-29)
+
+### 📝  Documentation
+* docs: add doc for CheckBox component ([887940c](https://github.com/Growth-UI/Growth-UI-Native/commit/887940ce5b1e807f45e3e4f743cd8afd43b041af))
+
+### 🚀  Features
+* feat: add new feature, CheckBox ([131c1ad](https://github.com/Growth-UI/Growth-UI-Native/commit/131c1adf199ec9ebec791a62d761d7d027d8ca85))
+
 ## [1.16.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.15.0...v1.16.0) (2022-03-28)
 
 ### 🚀  Features
