@@ -1,3 +1,8 @@
+## [1.17.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.17.1...v1.17.2) (2022-04-01)
+
+### 🐛  Fixes
+* fix: revert unknown bug in currencyinput ([fae58e1](https://github.com/Growth-UI/Growth-UI-Native/commit/fae58e1bd7d26d239ad7c1c3a3bac9d3e21049af))
+
 ## [1.17.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.17.0...v1.17.1) (2022-04-01)
 
 ### 🐛  Fixes
