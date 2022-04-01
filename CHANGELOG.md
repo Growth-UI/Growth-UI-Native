@@ -1,3 +1,8 @@
+## [1.17.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.17.0...v1.17.1) (2022-04-01)
+
+### 🐛  Fixes
+* fix: prevent inputProps.onKeyPress from overriding the existing one ([34a2fb6](https://github.com/Growth-UI/Growth-UI-Native/commit/34a2fb6e353badc47c7a2bd352d387a72fbfd71f))
+
 ## [1.17.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.16.0...v1.17.0) (2022-03-29)
 
 ### 📝  Documentation
