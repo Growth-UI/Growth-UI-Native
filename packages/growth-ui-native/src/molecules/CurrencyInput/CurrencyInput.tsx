@@ -16,6 +16,7 @@ import {
   ViewStyle,
   NativeSyntheticEvent,
   TextInputFocusEventData,
+  TextInputKeyPressEventData,
 } from "react-native";
 
 const CurrencyInput: FC<CurrencyInputProps> = (props) => {
@@ -41,6 +42,7 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
     onChange,
     onFocus,
   } = props;
+  const { onKeyPress, ...textInputProps } = inputProps;
   const { mode } = useContext(ThemeContext);
   const [values, setValues] = useState<Array<string>>([`${+value}`]);
   const [focused, setFocused] = useState(true);
@@ -123,7 +125,10 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
     onBlur?.(e, props);
   };
 
-  const handleKeyPress = ({ nativeEvent: { key } }: any) => {
+  const handleKeyPress = (e: NativeSyntheticEvent<TextInputKeyPressEventData>) => {
+    const {
+      nativeEvent: { key },
+    } = e;
     if (key === "Backspace" && values.length === 1) {
       transformAnims.current = [new Animated.Value(0)];
       onChange?.(0, props);
@@ -145,6 +150,8 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
       onChange?.(+clensedValue, props);
       setValues(formattedValue);
     }
+
+    onKeyPress?.(e);
   };
 
   const clearInput = () => {
@@ -230,7 +237,7 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
           onChangeText={handleChange}
           onKeyPress={handleKeyPress}
           onBlur={handleBlur}
-          {...inputProps}
+          {...textInputProps}
         />
       </View>
       {showClearIcon && <Icon name="close" size={size * 1.25} {...icon} onPress={clearInput} />}
