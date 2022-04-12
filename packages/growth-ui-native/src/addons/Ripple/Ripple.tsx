@@ -15,14 +15,14 @@ const Ripple: FC<RippleProps> = (props) => {
   const [ripples, setRipples] = useState<Record<string, number>[]>([]);
 
   const ref = useRef<View>(null);
+  const mounted = useRef(true)
   const opacityAnims = useRef<Animated.Value[]>([]).current;
   const scaleAnims = useRef<Animated.Value[]>([]).current;
 
   useEffect(() => {
-    let mounted = true;
     let bounce: NodeJS.Timeout;
 
-    if (ripples.length > 0 && mounted) {
+    if (ripples.length > 0 && mounted.current) {
       Animated.parallel([
         Animated.timing(opacityAnims[ripples.length - 1], {
           toValue: 0,
@@ -37,7 +37,7 @@ const Ripple: FC<RippleProps> = (props) => {
       ]).start();
 
       bounce = setTimeout(() => {
-        if (mounted) {
+        if (mounted.current) {
           opacityAnims.length = 0;
           scaleAnims.length = 0;
           setRipples([]);
@@ -47,10 +47,10 @@ const Ripple: FC<RippleProps> = (props) => {
     }
 
     return () => {
-      mounted = false;
+      mounted.current = false;
       clearTimeout(bounce);
     };
-  }, [ripples.length, duration]);
+  }, [ripples, duration]);
 
   const handlePress = (e: GestureResponderEvent) => {
     const { pageX, pageY } = e.nativeEvent;
