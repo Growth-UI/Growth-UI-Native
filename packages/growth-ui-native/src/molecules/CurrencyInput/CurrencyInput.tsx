@@ -25,6 +25,7 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
     cursorAnim,
     cursorStyle,
     decimalsLimit = 2,
+    defaultValue = 0,
     error,
     horizontalAlign = "center",
     icon,
@@ -37,13 +38,12 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
     separators = true,
     showClearIcon = true,
     size = 20,
-    value = 0,
     onBlur,
     onChange,
     onFocus,
   } = props;
   const { mode } = useContext(ThemeContext);
-  const [values, setValues] = useState<Array<string>>([`${+value}`]);
+  const [values, setValues] = useState<Array<string>>([`${+defaultValue}`]);
   const [focused, setFocused] = useState(true);
 
   const ref = useRef<TextInput>(null);
@@ -51,9 +51,8 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
   const transformAnims = useRef<Array<Animated.Value>>([new Animated.Value(0)]);
 
   useEffect(() => {
-    transformAnims.current = [new Animated.Value(0)];
-    setValues([`${+value}`]);
-  }, [value]);
+    setValues([`${+defaultValue}`]);
+  } , [defaultValue])
 
   useEffect(() => {
     Animated.loop(
@@ -75,30 +74,30 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
   }, [focused]);
 
   useEffect(() => {
-    Animated.spring(transformAnims.current[values.length - 1], {
-      toValue: 0,
-      tension: 200,
-      useNativeDriver: true,
-      ...inputTextAnim,
-    }).start();
+    if (transformAnims.current.length !== 0) {
+      Animated.spring(transformAnims.current[values.length - 1], {
+        toValue: 0,
+        tension: 200,
+        useNativeDriver: true,
+        ...inputTextAnim,
+      }).start();
+    }
   }, [values]);
 
   const handleChange = (newValue: string) => {
-    if (values.length === 1 && values[0] === "0" && newValue !== "0") {
-      transformAnims.current = [new Animated.Value(30)];
-      onChange?.(+newValue, props);
-
-      return setValues([newValue]);
-    }
-
-    if (values.length === 1 && values[0] === "0" && newValue === "0") {
+    if (values.length === 1 && values[0] === '0' && (newValue === '0' || newValue === '.')) {
       transformAnims.current = [new Animated.Value(30)];
       onChange?.(0, props);
 
       return setValues(["0."]);
     }
 
-    transformAnims.current.push(new Animated.Value(30));
+    if (values.length === 1 && values[0] === "0" && newValue !== "0") {
+      transformAnims.current = [new Animated.Value(30)];
+      onChange?.(+newValue, props);
+
+      return setValues([newValue]);
+    }
 
     const newValues = [...values];
     newValues.push(newValue);
@@ -108,6 +107,14 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
       decimalsLimit,
       separators,
     });
+
+    transformAnims.current = formattedValue.map((_, idx) => {
+      if (idx === formattedValue.length - 1) {
+        return new Animated.Value(30)
+      }
+
+      return new Animated.Value(0)
+    })
 
     onChange?.(+clensedValue, props);
     setValues(formattedValue);
@@ -135,15 +142,14 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
     }
 
     if (key === "Backspace") {
-      const newValues = [...values];
-      newValues.pop();
-      transformAnims.current.pop();
-
-      const clensedValue = removeInvalidChars(newValues.join(""));
+      const clensedValue = removeInvalidChars(values.join(""));
       const formattedValue = formatValue(clensedValue, {
         decimalsLimit,
         separators,
       });
+
+      formattedValue.pop();
+      transformAnims.current.pop();
 
       onChange?.(+clensedValue, props);
       setValues(formattedValue);
@@ -305,9 +311,6 @@ export interface StrictCurrencyInputProps {
 
   /** An input can have different sizes. */
   size?: number;
-
-  /** An input value. */
-  value?: number | string;
 }
 
 export default CurrencyInput;

@@ -1577,12 +1577,6 @@ export const componentProps: Record<
       type: "number",
       defaultValue: "20",
     },
-    {
-      description: "An input value",
-      name: "value",
-      type: "{ number | string }",
-      defaultValue: "0",
-    },
   ],
   CheckBox: [
     {
