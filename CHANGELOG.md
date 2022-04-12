@@ -1,3 +1,8 @@
+## [1.17.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.17.3...v1.17.4) (2022-04-12)
+
+### 🐛  Fixes
+* fix: fix memory leaking issue ([cab4d71](https://github.com/Growth-UI/Growth-UI-Native/commit/cab4d71aaf23814e534aeeccf79e98c7b416c451))
+
 ## [1.17.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.17.2...v1.17.3) (2022-04-12)
 
 ### 🐛  Fixes
