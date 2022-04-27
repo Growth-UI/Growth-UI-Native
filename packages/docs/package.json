@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@growth-ui/native": "*",
-    "@growth-ui/react": "^1.17.0",
+    "@growth-ui/react": "^1.19.1",
     "@native-html/iframe-plugin": "^2.6.1",
     "brace": "^0.11.1",
     "copy-to-clipboard": "^3.3.1",
@@ -21,9 +21,9 @@
     "next-translate": "^1.2.0",
     "next-transpile-modules": "^9.0.0",
     "prettier": "^2.4.1",
-    "react": "17.0.2",
+    "react": "18.0.0",
     "react-ace": "^9.5.0",
-    "react-dom": "17.0.2",
+    "react-dom": "18.0.0",
     "react-markdown": "^7.1.0",
     "react-native": "^0.66.3",
     "react-native-svg": "^12.1.1",
@@ -33,7 +33,7 @@
     "remark-gfm": "^3.0.1",
     "setimmediate": "^1.0.5",
     "string-similarity": "^4.0.4",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/faker": "^5.5.9",

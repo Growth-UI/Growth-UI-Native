@@ -121,6 +121,7 @@ export type GrowthICONS =
   | "aws"
   | "bank"
   | "bankofamerica"
+  | "barchart"
   | "bill"
   | "bold"
   | "bookmark"

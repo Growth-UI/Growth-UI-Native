@@ -18,6 +18,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Bank").default;
     case "bankofamerica":
       return require("../Bankofamerica").default;
+    case "barchart":
+      return require("../BarChart").default;
     case "bill":
       return require("../Bill").default;
     case "bold":

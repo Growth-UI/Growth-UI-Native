@@ -123,6 +123,7 @@ export const ICONS: GrowthICONS[] = [
   "aws",
   "bank",
   "bankofamerica",
+  "barchart",
   "bill",
   "bold",
   "bookmark",
