@@ -26,6 +26,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Bold").default;
     case "bookmark":
       return require("../Bookmark").default;
+    case "calendar":
+      return require("../Calendar").default;
     case "camera":
       return require("../Camera").default;
     case "card":
@@ -92,6 +94,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../FolderOutline").default;
     case "github":
       return require("../Github").default;
+    case "hand coin":
+      return require("../HandCoin").default;
     case "heart":
       return require("../Heart").default;
     case "help":
@@ -104,6 +108,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Inbox").default;
     case "install":
       return require("../Install").default;
+    case "invoice":
+      return require("../Invoice").default;
     case "italic":
       return require("../Italic").default;
     case "label important":
@@ -154,6 +160,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../PlaySkipForward").default;
     case "plus":
       return require("../Plus").default;
+    case "point of sale":
+      return require("../PointOfSale").default;
     case "price tag":
       return require("../PriceTag").default;
     case "purchase tag":
