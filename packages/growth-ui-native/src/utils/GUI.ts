@@ -1,6 +1,12 @@
 import { GrowthICONS } from "../types";
 
-export const VERTICALALIGNMENTS = ["baseline", "top", "middle", "bottom", "stretch"];
+export const VERTICALALIGNMENTS = [
+  "baseline",
+  "top",
+  "middle",
+  "bottom",
+  "stretch",
+];
 export const HORIZONTALALIGNMENTS = [
   "left",
   "center",
@@ -19,9 +25,31 @@ export const DIRECTION = [
   "right center",
   "left center",
 ];
-export const ONLY = ["monimobile", "mobile", "tablet", "laptop", "computer", "widescreen"];
-export const VISIBILITY = ["mobile", "tablet", "laptop", "computer", "widescreen"];
-export const SIZES = ["mini", "tiny", "small", "medium", "large", "big", "huge", "massive"];
+export const ONLY = [
+  "monimobile",
+  "mobile",
+  "tablet",
+  "laptop",
+  "computer",
+  "widescreen",
+];
+export const VISIBILITY = [
+  "mobile",
+  "tablet",
+  "laptop",
+  "computer",
+  "widescreen",
+];
+export const SIZES = [
+  "mini",
+  "tiny",
+  "small",
+  "medium",
+  "large",
+  "big",
+  "huge",
+  "massive",
+];
 export const TEXTALIGNMENTS = ["left", "right", "center", "auto"];
 export const COLORS = [
   "primary",
@@ -113,7 +141,14 @@ export const COLORS = [
   "indigo-800",
   "indigo-900",
 ];
-export const LINEHEIGHTS = ["none", "tight", "snug", "normal", "relaxed", "loose"];
+export const LINEHEIGHTS = [
+  "none",
+  "tight",
+  "snug",
+  "normal",
+  "relaxed",
+  "loose",
+];
 export const ICONS: GrowthICONS[] = [
   "add",
   "airplane",
@@ -133,6 +168,7 @@ export const ICONS: GrowthICONS[] = [
   "cart",
   "chase",
   "check",
+  "checkmark circle outline",
   "checkbox",
   "chevron down",
   "chevron left",
