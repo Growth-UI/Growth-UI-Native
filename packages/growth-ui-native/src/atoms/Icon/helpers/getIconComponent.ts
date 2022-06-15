@@ -176,6 +176,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../RefreshOutline").default;
     case "republican":
       return require("../Republican").default;
+    case "restaurant":
+      return require("../Restaurant").default;
     case "school":
       return require("../School").default;
     case "search":

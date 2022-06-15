@@ -213,6 +213,7 @@ export type GrowthICONS =
   | "react logo"
   | "refresh outline"
   | "republican"
+  | "restaurant"
   | "school"
   | "search"
   | "send"
