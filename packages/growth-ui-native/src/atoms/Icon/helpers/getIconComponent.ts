@@ -38,6 +38,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Chase").default;
     case "check":
       return require("../Check").default;
+    case "checkmark circle outline":
+      return require("../CheckmarkCircleOutline").default;
     case "checkbox":
       return require("../Checkbox").default;
     case "chevron down":
@@ -174,6 +176,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../RefreshOutline").default;
     case "republican":
       return require("../Republican").default;
+    case "restaurant":
+      return require("../Restaurant").default;
     case "school":
       return require("../School").default;
     case "search":
