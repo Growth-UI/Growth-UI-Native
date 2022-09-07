@@ -14,6 +14,9 @@ export type { BoxProps } from "./atoms/Box";
 export { default as Typography } from "./atoms/Typography";
 export type { TypographyProps } from "./atoms/Typography";
 
+export { default as Parallax } from "./atoms/Parallax";
+export type { ParallaxProps } from "./atoms/Parallax";
+
 export { default as Row } from "./atoms/Row";
 export type { RowProps } from "./atoms/Row";
 
