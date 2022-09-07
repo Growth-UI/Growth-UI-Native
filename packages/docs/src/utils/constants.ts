@@ -25,6 +25,7 @@ export const componentByType: Record<string, string[]> = {
     "icon",
     "image",
     "input",
+    "parallax",
     "row",
     "sheet",
     "slider",
@@ -48,6 +49,7 @@ export const components = [
   "input",
   "list",
   "row",
+  "parallax",
   "sheet",
   "slider",
   "spacer",
@@ -92,6 +94,9 @@ export const componentInfo: Record<
   },
   row: {
     names: ["Row"],
+  },
+  parallax: {
+    names: ["Parallax"],
   },
   sheet: {
     names: ["Sheet"],
@@ -1653,6 +1658,95 @@ export const componentProps: Record<
       description: "The text that describes what the checkbox is for.",
       name: "text",
       type: "string",
+    },
+  ],
+  Parallax: [
+    {
+      description:
+        "This is data that gets passed on to the FlatList Element. It is used to render items list.",
+      name: "data",
+      type: "Array<any>",
+    },
+    {
+      description: "The height of the header that renders on the very top of screen.",
+      name: "headerHeight",
+      type: "number",
+      defaultValue: "100",
+    },
+    {
+      description:
+        "Called once when the scroll position gets within onEndReachedThreshold of the rendered content.",
+      name: "onEndReached",
+      type: "func",
+      func: {
+        title: "()",
+        params: [],
+      },
+    },
+    {
+      description:
+        "How far from the end (in units of visible length of the list) the bottom edge of the list must be from the end of the content to trigger the `onEndReached` callback. Thus a value of 0.5 will trigger `onEndReached` when the end of the content is within half the visible length of the list.",
+      name: "onEndReachedThreshold",
+      type: "number",
+      defaultValue: "0.3",
+    },
+    {
+      description: "The height of parallax header",
+      name: "parallaxHeaderHeight",
+      type: "number",
+      required: true,
+    },
+    {
+      description:
+        "A RefreshControl component, used to provide pull-to-refresh functionality for the ScrollView.",
+      name: "refreshControl",
+      type: "ReactElement<RefreshControlProps>",
+    },
+    {
+      description: "Takes an item from data and renders it into the list.",
+      name: "renderItem",
+      type: "func",
+      required: true,
+      func: {
+        title: "({ item, index })",
+        params: [
+          {
+            name: "item",
+            description: "Data from data parameter your passed.",
+          },
+          {
+            name: "index",
+            description: "Index of the item.",
+          },
+        ],
+      },
+    },
+    {
+      description: "The background of the parallax header. ",
+      name: "Background",
+      type: "ReactNode",
+    },
+    {
+      description: "The fixed header that will always be visible and fixed to the top of the view.",
+      name: "FixedHeader",
+      type: "ReactNode",
+    },
+    {
+      description: "Rendered at the very top of the screen.",
+      name: "Header",
+      type: "ReactNode",
+    },
+    {
+      description:
+        "The sticky header that will stick to the bottom of Background Element when parallax header scrolls up.",
+      name: "StickyHeader",
+      type: "ReactNode",
+    },
+    {
+      description:
+        "Everything else that you pass to Parallax component will be passed to the FlatList component.",
+      name: "*",
+      type: "FlatListProps",
     },
   ],
 };

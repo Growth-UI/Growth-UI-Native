@@ -448,5 +448,10 @@
     "heading": "CheckBox",
     "subheading": "A checkbox allows a user to select a value from a small set of options, often binary.",
     "type": "molecules"
+  },
+  "parallax": {
+    "heading": "Parallax",
+    "subheading": "A parallax allows a user to maximize visual effect on scrolling list.",
+    "type": "atoms"
   }
 }
