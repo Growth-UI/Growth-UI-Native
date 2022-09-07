@@ -1,3 +1,11 @@
+## [1.22.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.21.0...v1.22.0) (2022-09-07)
+
+### 📝  Documentation
+* docs: doc for Parallax ([8fb0da4](https://github.com/Growth-UI/Growth-UI-Native/commit/8fb0da44383c97608d2b24c7e50e8cb16d30b560))
+
+### 🚀  Features
+* feat: new Component, Parallax ([09c6c5a](https://github.com/Growth-UI/Growth-UI-Native/commit/09c6c5a6940c5c3d9aef58ed215b1deb240f13a3))
+
 ## [1.21.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.20.0...v1.21.0) (2022-06-15)
 
 ### 🚀  Features
