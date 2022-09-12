@@ -1,11 +1,6 @@
 import { ViewStyle } from "react-native";
 
-export type VERTICALALIGNMENTS =
-  | "baseline"
-  | "top"
-  | "middle"
-  | "bottom"
-  | "stretch";
+export type VERTICALALIGNMENTS = "baseline" | "top" | "middle" | "bottom" | "stretch";
 export type HORIZONTALALIGNMENTS =
   | "left"
   | "center"
@@ -108,15 +103,7 @@ export type COLORS =
   | "purple-700"
   | "purple-800"
   | "purple-900";
-export type SIZES =
-  | "mini"
-  | "tiny"
-  | "small"
-  | "medium"
-  | "large"
-  | "big"
-  | "huge"
-  | "massive";
+export type SIZES = "mini" | "tiny" | "small" | "medium" | "large" | "big" | "huge" | "massive";
 export type FONTWEIGHTS =
   | "thin"
   | "light"
@@ -172,6 +159,8 @@ export type GrowthICONS =
   | "file outline"
   | "fingerprint"
   | "folder outline"
+  | "gift"
+  | "gift fill"
   | "github"
   | "hand coin"
   | "heart"

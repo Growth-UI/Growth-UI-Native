@@ -94,6 +94,10 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Fingerprint").default;
     case "folder outline":
       return require("../FolderOutline").default;
+    case "gift":
+      return require("../Gift").default;
+    case "gift fill":
+      return require("../GiftFill").default;
     case "github":
       return require("../Github").default;
     case "hand coin":
