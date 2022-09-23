@@ -100,6 +100,7 @@ const Image: FC<ImageProps> = (props) => {
   return (
     <View
       {...rest}
+      collapsable={false}
       ref={ref}
       style={StyleSheet.flatten([
         {
