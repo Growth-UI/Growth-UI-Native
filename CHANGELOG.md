@@ -1,3 +1,9 @@
+## [1.23.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.23.1...v1.23.2) (2022-09-23)
+
+### 🐛  Fixes
+* fix: fix import function name ([e86b9d6](https://github.com/Growth-UI/Growth-UI-Native/commit/e86b9d6f948498f112631e60267790a25fa104fc))
+* fix: fix issue with rendering item ([9b99db2](https://github.com/Growth-UI/Growth-UI-Native/commit/9b99db218c5317f9173a0aca8cb039058d5b8f09))
+
 ## [1.23.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.23.0...v1.23.1) (2022-09-23)
 
 ### 🐛  Fixes
