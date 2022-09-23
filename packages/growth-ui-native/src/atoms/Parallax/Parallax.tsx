@@ -134,6 +134,7 @@ const Parallax: FC<ParallaxProps> = (props) => {
       {FixedHeader && renderFixedHeader()}
       {Background && renderBackgroundImage()}
       <Animated.FlatList
+        {...rest}
         nestedScrollEnabled={true}
         showsVerticalScrollIndicator={false}
         data={newData}
@@ -156,7 +157,6 @@ const Parallax: FC<ParallaxProps> = (props) => {
         }
         renderItem={renderListItem}
         onEndReached={handleEndReached}
-        {...rest}
       />
     </>
   );

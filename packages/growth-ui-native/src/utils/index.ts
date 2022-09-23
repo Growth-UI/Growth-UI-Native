@@ -10,4 +10,4 @@ export { default as sx } from "./sx";
 
 export const isIOS = Platform.OS === "ios";
 
-export { StatusBarHeight } from "./status-bar-height";
+export { getStatusBarHeight } from "./status-bar-height";
