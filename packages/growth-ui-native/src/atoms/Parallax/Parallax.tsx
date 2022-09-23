@@ -1,5 +1,5 @@
 import React, { FC, ReactElement, ReactNode, useRef } from "react";
-import { StatusBarHeight } from "../../utils/status-bar-height";
+import { getStatusBarHeight } from "../../utils/status-bar-height";
 import {
   Animated,
   Dimensions,
@@ -34,13 +34,21 @@ const Parallax: FC<ParallaxProps> = (props) => {
     Header,
     parallaxHeaderHeight = 270,
     StickyHeader,
+    onEndReached,
     renderItem,
     ...rest
   } = props;
   const scrollY = useRef(new Animated.Value(0)).current;
+  const flatListReady = useRef(false);
 
   const offsetHeight = Header ? headerHeight : 0;
-  const newData = StickyHeader ? [null, ...data] : data;
+  const newData = StickyHeader ? [{}, {}, ...data] : data;
+
+  const handleEndReached = () => {
+    if (flatListReady.current) {
+      onEndReached?.();
+    }
+  };
 
   /**
    * Renderer
@@ -73,7 +81,7 @@ const Parallax: FC<ParallaxProps> = (props) => {
           {
             width: window.width,
             height: headerHeight,
-            paddingTop: StatusBarHeight,
+            paddingTop: getStatusBarHeight(),
             opacity: interpolate(scrollY, {
               inputRange: [0, p],
               outputRange: [0, 1],
@@ -92,7 +100,7 @@ const Parallax: FC<ParallaxProps> = (props) => {
       <View
         style={{
           position: "absolute",
-          top: StatusBarHeight,
+          top: getStatusBarHeight(),
           backgroundColor: "transparent",
           zIndex: 2,
         }}
@@ -103,7 +111,7 @@ const Parallax: FC<ParallaxProps> = (props) => {
   };
 
   const renderListItem = ({ index, ...info }: ListRenderItemInfo<any>) => {
-    if (index === 0) {
+    if (StickyHeader && index === 0) {
       return (
         <View
           style={{
@@ -114,6 +122,8 @@ const Parallax: FC<ParallaxProps> = (props) => {
         </View>
       );
     }
+
+    if (StickyHeader && index === 1) return null;
 
     return renderItem({ index, ...info });
   };
@@ -127,10 +137,15 @@ const Parallax: FC<ParallaxProps> = (props) => {
         nestedScrollEnabled={true}
         showsVerticalScrollIndicator={false}
         data={newData}
-        onEndReachedThreshold={0.3}
-        stickyHeaderIndices={[1]}
+        onEndReachedThreshold={0.1}
+        stickyHeaderIndices={StickyHeader ? [1] : []}
         onScroll={Animated.event([{ nativeEvent: { contentOffset: { y: scrollY } } }], {
           useNativeDriver: true,
+          listener: () => {
+            if (!flatListReady.current) {
+              flatListReady.current = true;
+            }
+          },
         })}
         ListHeaderComponent={
           <View
@@ -140,6 +155,7 @@ const Parallax: FC<ParallaxProps> = (props) => {
           />
         }
         renderItem={renderListItem}
+        onEndReached={handleEndReached}
         {...rest}
       />
     </>
