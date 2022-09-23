@@ -1,3 +1,8 @@
+## [1.23.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.23.0...v1.23.1) (2022-09-23)
+
+### 🐛  Fixes
+* fix: fix image not not showing error on android devices ([40a6614](https://github.com/Growth-UI/Growth-UI-Native/commit/40a66144d7ceefdc840d00d1962384b31b1ccf3d))
+
 ## [1.23.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.22.0...v1.23.0) (2022-09-12)
 
 ### 🚀  Features
