@@ -1,3 +1,8 @@
+## [1.24.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.23.2...v1.24.0) (2022-10-04)
+
+### 🚀  Features
+* feat: dateInput ([10b00b1](https://github.com/Growth-UI/Growth-UI-Native/commit/10b00b158547ca213f95d4f9365f47e666362e3e))
+
 ## [1.23.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.23.1...v1.23.2) (2022-09-23)
 
 ### 🐛  Fixes
