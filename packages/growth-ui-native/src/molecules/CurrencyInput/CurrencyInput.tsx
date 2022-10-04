@@ -52,7 +52,7 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
 
   useEffect(() => {
     setValues([`${+defaultValue}`]);
-  } , [defaultValue])
+  }, [defaultValue]);
 
   useEffect(() => {
     Animated.loop(
@@ -85,7 +85,7 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
   }, [values]);
 
   const handleChange = (newValue: string) => {
-    if (values.length === 1 && values[0] === '0' && (newValue === '0' || newValue === '.')) {
+    if (values.length === 1 && values[0] === "0" && (newValue === "0" || newValue === ".")) {
       transformAnims.current = [new Animated.Value(30)];
       onChange?.(0, props);
 
@@ -110,11 +110,11 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
 
     transformAnims.current = formattedValue.map((_, idx) => {
       if (idx === formattedValue.length - 1) {
-        return new Animated.Value(30)
+        return new Animated.Value(30);
       }
 
-      return new Animated.Value(0)
-    })
+      return new Animated.Value(0);
+    });
 
     onChange?.(+clensedValue, props);
     setValues(formattedValue);

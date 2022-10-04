@@ -453,5 +453,10 @@
     "heading": "Parallax",
     "subheading": "A parallax allows a user to maximize visual effect on scrolling list.",
     "type": "atoms"
+  },
+  "dateinput": {
+    "heading": "DateInput",
+    "subheading": "Date Input lets the user input a date",
+    "type": "molecules"
   }
 }

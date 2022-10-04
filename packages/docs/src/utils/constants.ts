@@ -1,5 +1,10 @@
+import {
+  DATE_MASK,
+  DIRECTION,
+  HORIZONTALALIGNMENTS,
+  VERTICALALIGNMENTS,
+} from "@growth-ui/native/utils/GUI";
 import { GUI } from "@growth-ui/native/utils";
-import { DIRECTION, HORIZONTALALIGNMENTS, VERTICALALIGNMENTS } from "@growth-ui/native/utils/GUI";
 
 export const growthUIRepoURL = "https://github.com/Growth-UI/Growth-UI-Native";
 export const availableLanguages = [
@@ -32,7 +37,7 @@ export const componentByType: Record<string, string[]> = {
     "spacer",
     "typography",
   ],
-  molecules: ["checkbox", "comment", "currencyinput", "list", "speeddial", "tab"],
+  molecules: ["checkbox", "comment", "currencyinput", "dateinput", "list", "speeddial", "tab"],
 };
 export const components = [
   "avatar",
@@ -44,6 +49,7 @@ export const components = [
   "collapse",
   "comment",
   "currencyinput",
+  "dateinput",
   "icon",
   "image",
   "input",
@@ -133,6 +139,9 @@ export const componentInfo: Record<
   },
   currencyinput: {
     names: ["CurrencyInput"],
+  },
+  dateinput: {
+    names: ["DateInput"],
   },
   list: {
     names: ["List", "List.Content", "List.Description", "List.Heading", "List.Image", "List.Item"],
@@ -1581,6 +1590,47 @@ export const componentProps: Record<
       name: "size",
       type: "number",
       defaultValue: "20",
+    },
+  ],
+  DateInput: [
+    {
+      description: "Mask (e.g. mm/yyyy or mm/dd/yyyy).",
+      name: "mask",
+      type: "enum",
+      enums: DATE_MASK,
+    },
+    {
+      description: "Called on change.",
+      name: "onChange",
+      type: "func",
+      func: {
+        title: "(text: string, data: DateInputPros)",
+        params: [
+          {
+            name: "text",
+            description: "Formatted date string",
+          },
+          {
+            name: "data",
+            description: "All props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "Called on change.",
+      name: "renderInput",
+      required: true,
+      type: "func",
+      func: {
+        title: "(params: TextInputProps) => ReactElement",
+        params: [
+          {
+            name: "params",
+            description: "TextInputProps",
+          },
+        ],
+      },
     },
   ],
   CheckBox: [
