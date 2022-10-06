@@ -1,3 +1,8 @@
+## [1.25.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.25.1...v1.25.2) (2022-10-06)
+
+### 🐛  Fixes
+* fix: allow null or empty string for props.value ([7eb8caf](https://github.com/Growth-UI/Growth-UI-Native/commit/7eb8caf66418a1265528e4b8919701184138d435))
+
 ## [1.25.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.25.0...v1.25.1) (2022-10-06)
 
 ### 🐛  Fixes
