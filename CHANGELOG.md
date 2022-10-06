@@ -1,3 +1,8 @@
+## [1.25.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.25.0...v1.25.1) (2022-10-06)
+
+### 🐛  Fixes
+* fix: rerender on change in props.value ([b6fbe12](https://github.com/Growth-UI/Growth-UI-Native/commit/b6fbe1260e7ec9760388ac195cc1e7dbc2bf068e))
+
 ## [1.25.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.24.0...v1.25.0) (2022-10-06)
 
 ### 🚀  Features
