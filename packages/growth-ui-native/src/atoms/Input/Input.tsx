@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import Icon, { IconProps } from "../Icon";
 import invoke from "lodash/invoke";
-import React, { FC, forwardRef, useContext, useRef, useState } from "react";
+import React, { FC, forwardRef, useContext, useEffect, useRef, useState } from "react";
 import Row from "../Row";
 import theme from "../../theme";
 import ThemeContext from "../../ThemeContext";
@@ -39,16 +39,24 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
 
   const { mode } = useContext(ThemeContext);
 
+  const [text, setText] = useState<string>("");
   const [isFocused, setIsFocused] = useState(false);
 
   const input = forwardedRef || useRef<TextInput>(null);
   const colorAnim = useRef(new Animated.Value(0)).current;
-  const floatAnim = useRef(new Animated.Value(value ? -10 : 0)).current;
-  const fontSizeAnim = useRef(new Animated.Value(value ? 12 : 14)).current;
+  const floatAnim = useRef(new Animated.Value(text ? -10 : 0)).current;
+  const fontSizeAnim = useRef(new Animated.Value(text ? 12 : 14)).current;
   const borderAnim = useRef(new Animated.Value(0)).current;
-  const opacityAnim = useRef(new Animated.Value(value ? 1 : 0)).current;
+  const opacityAnim = useRef(new Animated.Value(text ? 1 : 0)).current;
+
+  useEffect(() => {
+    if (value) {
+      setText(`${value}`);
+    }
+  }, [value]);
 
   const handleChangeText = (text: string) => {
+    setText(text);
     invoke(props, "onChangeText", text);
   };
 
@@ -103,17 +111,17 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
         useNativeDriver: false,
       }),
       Animated.timing(fontSizeAnim, {
-        toValue: value ? 12 : 14,
+        toValue: text ? 12 : 14,
         duration: 400,
         useNativeDriver: false,
       }),
       Animated.timing(floatAnim, {
-        toValue: value ? -10 : 0,
+        toValue: text ? -10 : 0,
         duration: 400,
         useNativeDriver: false,
       }),
       Animated.timing(opacityAnim, {
-        toValue: value ? 1 : 0,
+        toValue: text ? 1 : 0,
         duration: 400,
         useNativeDriver: false,
       }),
@@ -135,7 +143,7 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
         onFocus: handleFocus,
         editable: !disabled,
         placeholder: label && !isFocused ? "" : placeholder,
-        value,
+        value: text,
       },
       rest,
     ];
