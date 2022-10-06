@@ -1,3 +1,8 @@
+## [1.25.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.24.0...v1.25.0) (2022-10-06)
+
+### 🚀  Features
+* feat: able to pass ref to TextInput ([327c604](https://github.com/Growth-UI/Growth-UI-Native/commit/327c604e68e7235f6de5e9f7f84692994c28c815))
+
 ## [1.24.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.23.2...v1.24.0) (2022-10-04)
 
 ### 🚀  Features
