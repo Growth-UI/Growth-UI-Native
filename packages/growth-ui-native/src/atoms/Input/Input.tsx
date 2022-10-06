@@ -50,9 +50,7 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
   const opacityAnim = useRef(new Animated.Value(text ? 1 : 0)).current;
 
   useEffect(() => {
-    if (value) {
-      setText(`${value}`);
-    }
+    setText(value as string);
   }, [value]);
 
   const handleChangeText = (text: string) => {
