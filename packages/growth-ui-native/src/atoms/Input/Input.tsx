@@ -1,6 +1,7 @@
+/* eslint-disable react/display-name */
 import Icon, { IconProps } from "../Icon";
 import invoke from "lodash/invoke";
-import React, { FC, useContext, useRef, useState } from "react";
+import React, { FC, forwardRef, useContext, useRef, useState } from "react";
 import Row from "../Row";
 import theme from "../../theme";
 import ThemeContext from "../../ThemeContext";
@@ -18,7 +19,7 @@ import {
   TextStyle,
 } from "react-native";
 
-const Input: FC<InputProps> = (props) => {
+const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
   const {
     adornment,
     adornmentColor,
@@ -40,7 +41,7 @@ const Input: FC<InputProps> = (props) => {
 
   const [isFocused, setIsFocused] = useState(false);
 
-  const input = useRef<TextInput>(null);
+  const input = forwardedRef || useRef<TextInput>(null);
   const colorAnim = useRef(new Animated.Value(0)).current;
   const floatAnim = useRef(new Animated.Value(value ? -10 : 0)).current;
   const fontSizeAnim = useRef(new Animated.Value(value ? 12 : 14)).current;
@@ -247,7 +248,7 @@ const Input: FC<InputProps> = (props) => {
       )}
     </>
   );
-};
+}) as FC<InputProps>;
 
 const styles = StyleSheet.create({
   container: {
