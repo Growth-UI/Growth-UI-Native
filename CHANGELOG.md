@@ -1,3 +1,8 @@
+## [1.26.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.26.0...v1.26.1) (2022-10-07)
+
+### 🐛  Fixes
+* fix: darkmode color for placeholder ([ffcb7fb](https://github.com/Growth-UI/Growth-UI-Native/commit/ffcb7fbaf879c92faac95f3ac4601ce9b829599b))
+
 ## [1.26.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.25.2...v1.26.0) (2022-10-07)
 
 ### 🚀  Features
