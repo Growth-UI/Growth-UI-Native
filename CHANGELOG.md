@@ -1,3 +1,8 @@
+## [1.26.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.25.2...v1.26.0) (2022-10-07)
+
+### 🚀  Features
+* feat: add dark mode ([4767535](https://github.com/Growth-UI/Growth-UI-Native/commit/47675353e540f2ee0d96f4802b6f91ca3e5b74f6))
+
 ## [1.25.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.25.1...v1.25.2) (2022-10-06)
 
 ### 🐛  Fixes
