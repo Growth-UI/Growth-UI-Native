@@ -1,3 +1,8 @@
+## [1.28.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.0...v1.28.1) (2022-10-07)
+
+### 🐛  Fixes
+* fix: fix overflow issue for selected items ([d6c3352](https://github.com/Growth-UI/Growth-UI-Native/commit/d6c3352e49285788bcbd487b07c2db8aed4430b9))
+
 ## [1.28.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.27.0...v1.28.0) (2022-10-07)
 
 ### 🚀  Features
