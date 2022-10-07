@@ -224,6 +224,7 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
               label ? styles.common : { paddingVertical: 15 },
               inputStyle,
             ])}
+            placeholderTextColor={theme[mode].lightTextColor}
             underlineColorAndroid="transparent"
             {...nativeInputProps}
           />
