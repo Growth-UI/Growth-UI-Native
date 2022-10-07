@@ -32,7 +32,7 @@ function Dropdown(props: DropdownProps) {
     scrolling,
     label,
     onChange,
-    onItemClick,
+    onItemPress,
     onSearchChange,
     options,
     placeholder,
@@ -156,12 +156,12 @@ function Dropdown(props: DropdownProps) {
     }
 
     onChange?.(newSelectedItem, props);
-    onItemClick?.(option, props);
+    onItemPress?.(option, props);
     setSelectedItems(newSelectedItem);
   };
 
   const handleRemoveItem = (option: Option) => () => {
-    onItemClick?.(option, props);
+    onItemPress?.(option, props);
 
     if (!multiple) {
       return setSelectedItems([]);
@@ -184,6 +184,7 @@ function Dropdown(props: DropdownProps) {
         style={StyleSheet.flatten([
           {
             overflow: "hidden",
+            flex: 1,
           },
           selectedItemsContainerStyle,
         ])}
@@ -242,7 +243,7 @@ function Dropdown(props: DropdownProps) {
           searchContainerStyle,
         ])}
       >
-        {<Input placeholder="Search..." {...inputProps} />}
+        <Input placeholder="Search..." {...inputProps} />
       </Box>
     );
   };
@@ -460,13 +461,13 @@ export interface StrictDropdownProps {
   /** Default values */
   defaultValues?: Option[];
 
-  /** An Input field can show the data contains errors. */
+  /** A dropdown can show the data contains errors. */
   error?: boolean;
 
   /** Feedback to the user about the error. */
   feedback?: string;
 
-  /** The label of the input used for layout. */
+  /** The label of the dropdown used for layout. */
   label?: string;
 
   /** Custom Menu item style */
@@ -475,14 +476,14 @@ export interface StrictDropdownProps {
   /** Custom Menu style */
   menuStyle?: ViewStyle;
 
-  /** A select can allow multiple selections. */
+  /** A dropdown can allow multiple selections. */
   multiple?: boolean;
 
   /** Called on change. */
   onChange?: (items: Option[], data: DropdownProps) => void;
 
   /* Called on item click. */
-  onItemClick?: (item: Option, data: DropdownProps) => void;
+  onItemPress?: (item: Option, data: DropdownProps) => void;
 
   /** Called on search input change. */
   onSearchChange?: (text: string, data: DropdownProps) => void;
@@ -496,7 +497,9 @@ export interface StrictDropdownProps {
   /** Placeholder */
   placeholder?: string;
 
-  search?: boolean;
+  /** A selection dropdown can allow a user to search through a large list of choices.
+Pass a function here to replace the default search. */
+  search?: boolean | string;
 
   /** Custom selected item style */
   selectedItemStyle?: ViewStyle;
