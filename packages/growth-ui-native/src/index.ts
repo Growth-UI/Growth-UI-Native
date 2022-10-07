@@ -92,3 +92,5 @@ export type {
 } from "./molecules/List";
 
 export { GUI } from "./utils";
+
+export { default as theme } from "./theme";
