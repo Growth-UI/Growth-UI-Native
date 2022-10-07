@@ -50,6 +50,9 @@ export type { SheetProps } from "./atoms/Sheet";
 export { default as Tab } from "./molecules/Tab";
 export type { TabProps } from "./molecules/Tab";
 
+export { default as Dropdown } from "./molecules/Dropdown";
+export type { DropdownProps } from "./molecules/Dropdown";
+
 export { default as Comment } from "./molecules/Comment";
 export type {
   CommentProps,
