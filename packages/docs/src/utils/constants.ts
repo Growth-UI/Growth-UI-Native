@@ -37,7 +37,16 @@ export const componentByType: Record<string, string[]> = {
     "spacer",
     "typography",
   ],
-  molecules: ["checkbox", "comment", "currencyinput", "dateinput", "list", "speeddial", "tab"],
+  molecules: [
+    "checkbox",
+    "comment",
+    "currencyinput",
+    "dateinput",
+    "dropdown",
+    "list",
+    "speeddial",
+    "tab",
+  ],
 };
 export const components = [
   "avatar",
@@ -50,6 +59,7 @@ export const components = [
   "comment",
   "currencyinput",
   "dateinput",
+  "dropdown",
   "icon",
   "image",
   "input",
@@ -142,6 +152,9 @@ export const componentInfo: Record<
   },
   dateinput: {
     names: ["DateInput"],
+  },
+  dropdown: {
+    names: ["Dropdown"],
   },
   list: {
     names: ["List", "List.Content", "List.Description", "List.Heading", "List.Image", "List.Item"],
@@ -1797,6 +1810,176 @@ export const componentProps: Record<
         "Everything else that you pass to Parallax component will be passed to the FlatList component.",
       name: "*",
       type: "FlatListProps",
+    },
+  ],
+  Dropdown: [
+    {
+      description: "Custom container style",
+      name: "containerStyle",
+      type: "ViewStyle",
+    },
+    {
+      description: "Default values",
+      name: "defaultValues",
+      type: "Option[]",
+    },
+    {
+      description: "A dropdown can show the data contains errors",
+      name: "error",
+      type: "boolean",
+    },
+    {
+      description: "Feedback to the user about the error",
+      name: "feedback",
+      type: "boolean",
+    },
+    {
+      description: "The label of the dropdown used for layout",
+      name: "label",
+      type: "string",
+    },
+    {
+      description: "Custom individual menu item style",
+      name: "menuItemsStyle",
+      type: "ViewStyle",
+    },
+    {
+      description: "Custom Menu style",
+      name: "menuStyle",
+      type: "ViewStyle",
+    },
+    {
+      description: "A dropdown can allow multiple selections",
+      name: "multiple",
+      type: "boolean",
+    },
+    {
+      description: "Called on change",
+      name: "onChange",
+      type: "func",
+      func: {
+        title: "(items: Option[], data: DropdownProps) => void",
+        params: [
+          {
+            name: "item",
+            description: "New selected items.",
+          },
+          {
+            name: "data",
+            description: "Dropdown props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "Called on change",
+      name: "onChange",
+      type: "func",
+      func: {
+        title: "(items: Option[], data: DropdownProps) => void",
+        params: [
+          {
+            name: "item",
+            description: "New selected items.",
+          },
+          {
+            name: "data",
+            description: "Dropdown props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "Called on item press",
+      name: "onItemPress",
+      type: "func",
+      func: {
+        title: "(item: Option, data: DropdownProps) => void",
+        params: [
+          {
+            name: "item",
+            description: "Pressed item.",
+          },
+          {
+            name: "data",
+            description: "Dropdown props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "Called on search input change",
+      name: "onSearchChange",
+      type: "func",
+      func: {
+        title: "(text: string, data: DropdownProps) => void",
+        params: [
+          {
+            name: "text",
+            description: "Search query.",
+          },
+          {
+            name: "data",
+            description: "Dropdown props.",
+          },
+        ],
+      },
+    },
+    {
+      description: "Items for Dropdown component",
+      name: "options",
+      type: "{content?: any, value: string, text?: string, icon?: IconProps, image?: string, iconPosition?: 'left' | 'right'}[]",
+      required: true,
+    },
+    {
+      description: "Called on search input change",
+      name: "renderSearchInput",
+      type: "func",
+      func: {
+        title: "(props: TextInputProps) => ReactElement",
+        params: [
+          {
+            name: "props",
+            description: "TextInputProps.",
+          },
+        ],
+      },
+    },
+    {
+      description: "Placeholder.",
+      name: "placeholder",
+      type: "string",
+    },
+    {
+      description:
+        "A selection dropdown can allow a user to search through a large list of choices. Pass a function here to replace the default search.",
+      name: "search",
+      type: "boolean | string",
+    },
+    {
+      description: "Custom selected item style",
+      name: "selectedItemStyle",
+      type: "ViewStyle",
+    },
+    {
+      description: "Custom selected item container style",
+      name: "selectedItemsContainerStyle",
+      type: "ViewStyle",
+    },
+    {
+      description: "A dropdown can have its menu scroll.",
+      name: "scrolling",
+      type: "boolean | number",
+    },
+    {
+      description: "Custom search container style",
+      name: "searchContainerStyle",
+      type: "ViewStyle",
+    },
+    {
+      description: "Show close icon on selected item",
+      name: "showCloseIcon",
+      type: "boolean",
     },
   ],
 };
