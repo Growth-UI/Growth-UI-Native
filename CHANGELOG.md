@@ -1,3 +1,9 @@
+## [1.28.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.27.0...v1.28.0) (2022-10-07)
+
+### 🚀  Features
+* style: new utils ([b7e381d](https://github.com/Growth-UI/Growth-UI-Native/commit/b7e381df350fde5cef782169e7cb482cc0cc3d72))
+* feat: new feature dropdown ([b5b44cb](https://github.com/Growth-UI/Growth-UI-Native/commit/b5b44cb6e7c1896bd8d454bff61ed769d2c8b9bc))
+
 ## [1.27.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.26.1...v1.27.0) (2022-10-07)
 
 ### 🚀  Features
