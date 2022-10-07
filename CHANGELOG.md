@@ -1,3 +1,8 @@
+## [1.27.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.26.1...v1.27.0) (2022-10-07)
+
+### 🚀  Features
+* style: allow to import theme ([7ae3950](https://github.com/Growth-UI/Growth-UI-Native/commit/7ae3950a73c5b9b4365b8104a7d2ca5343ce8cfe))
+
 ## [1.26.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.26.0...v1.26.1) (2022-10-07)
 
 ### 🐛  Fixes
