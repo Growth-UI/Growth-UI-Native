@@ -1,3 +1,8 @@
+## [1.28.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.1...v1.28.2) (2022-10-10)
+
+### 🐛  Fixes
+* fix: do not apply theme context to Box ([54b6880](https://github.com/Growth-UI/Growth-UI-Native/commit/54b68809ee5c1069e8be61a31f03433c215f6c9f))
+
 ## [1.28.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.0...v1.28.1) (2022-10-07)
 
 ### 🐛  Fixes
