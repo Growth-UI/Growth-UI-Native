@@ -1,3 +1,8 @@
+## [1.28.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.2...v1.28.3) (2022-10-16)
+
+### 🐛  Fixes
+* fix: remove deprecated features ([77427d9](https://github.com/Growth-UI/Growth-UI-Native/commit/77427d90a1c9d7ad15673d5351faf8d7bf23d95e))
+
 ## [1.28.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.1...v1.28.2) (2022-10-10)
 
 ### 🐛  Fixes
