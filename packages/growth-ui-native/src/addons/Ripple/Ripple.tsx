@@ -15,7 +15,7 @@ const Ripple: FC<RippleProps> = (props) => {
   const [ripples, setRipples] = useState<Record<string, number>[]>([]);
 
   const ref = useRef<View>(null);
-  const mounted = useRef(true)
+  const mounted = useRef(true);
   const opacityAnims = useRef<Animated.Value[]>([]).current;
   const scaleAnims = useRef<Animated.Value[]>([]).current;
 
@@ -50,7 +50,7 @@ const Ripple: FC<RippleProps> = (props) => {
       mounted.current = false;
       clearTimeout(bounce);
     };
-  }, [ripples, duration]);
+  }, [ripples, duration, opacityAnims, scaleAnims]);
 
   const handlePress = (e: GestureResponderEvent) => {
     const { pageX, pageY } = e.nativeEvent;
