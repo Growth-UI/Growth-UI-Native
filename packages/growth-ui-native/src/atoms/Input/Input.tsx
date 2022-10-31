@@ -43,11 +43,11 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const input = forwardedRef || useRef<TextInput>(null);
-  const colorAnim = useRef(new Animated.Value(text ? 1 : 0)).current;
+  const colorAnim = useRef(new Animated.Value(0)).current;
   const floatAnim = useRef(new Animated.Value(text ? -10 : 0)).current;
   const fontSizeAnim = useRef(new Animated.Value(text ? 12 : 14)).current;
   const borderAnim = useRef(new Animated.Value(0)).current;
-  const opacityAnim = useRef(new Animated.Value(text ? 1 : 0)).current;
+  const opacityAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     setText(value as string);
