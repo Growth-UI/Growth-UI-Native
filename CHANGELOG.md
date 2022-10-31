@@ -1,3 +1,9 @@
+## [1.28.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.3...v1.28.4) (2022-10-31)
+
+### 🐛  Fixes
+* fix: animated effect for default value ([fa216b5](https://github.com/Growth-UI/Growth-UI-Native/commit/fa216b50f3ed83b775af7e266993647471e11e5a))
+* fix: add dependencies to useEffect ([a91f50f](https://github.com/Growth-UI/Growth-UI-Native/commit/a91f50f6f47263730a1e40dfc403bab793d472e4))
+
 ## [1.28.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.2...v1.28.3) (2022-10-16)
 
 ### 🐛  Fixes
