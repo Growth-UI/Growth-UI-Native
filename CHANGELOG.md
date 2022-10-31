@@ -1,3 +1,8 @@
+## [1.28.6](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.5...v1.28.6) (2022-10-31)
+
+### 🐛  Fixes
+* fix: no color anim on default value ([95527ea](https://github.com/Growth-UI/Growth-UI-Native/commit/95527eac64534b31dd04dfae9a2a8129219eff04))
+
 ## [1.28.5](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.4...v1.28.5) (2022-10-31)
 
 ### 🐛  Fixes
