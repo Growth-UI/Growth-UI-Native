@@ -1,3 +1,8 @@
+## [1.28.5](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.4...v1.28.5) (2022-10-31)
+
+### 🐛  Fixes
+* fix: fix border focused on default value passed ([5090d68](https://github.com/Growth-UI/Growth-UI-Native/commit/5090d682d7096cd77ba613cff268679b8dc6a4b3))
+
 ## [1.28.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.3...v1.28.4) (2022-10-31)
 
 ### 🐛  Fixes
