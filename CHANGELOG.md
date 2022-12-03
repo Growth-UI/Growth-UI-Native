@@ -1,3 +1,8 @@
+## [1.28.7](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.6...v1.28.7) (2022-12-03)
+
+### 🐛  Fixes
+* fix: fix input anim on default value ([dacc1cd](https://github.com/Growth-UI/Growth-UI-Native/commit/dacc1cd70c47e06c57a5d3f8b888a815c5d4646c))
+
 ## [1.28.6](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.5...v1.28.6) (2022-10-31)
 
 ### 🐛  Fixes
