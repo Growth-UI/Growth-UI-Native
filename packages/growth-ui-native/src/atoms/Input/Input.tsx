@@ -44,8 +44,8 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
 
   const input = forwardedRef || useRef<TextInput>(null);
   const colorAnim = useRef(new Animated.Value(0)).current;
-  const floatAnim = useRef(new Animated.Value(text ? -10 : 0)).current;
-  const fontSizeAnim = useRef(new Animated.Value(text ? 12 : 14)).current;
+  const floatAnim = useRef(new Animated.Value(value ? -10 : 0)).current;
+  const fontSizeAnim = useRef(new Animated.Value(value ? 12 : 14)).current;
   const borderAnim = useRef(new Animated.Value(0)).current;
   const opacityAnim = useRef(new Animated.Value(0)).current;
 
