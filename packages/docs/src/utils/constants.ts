@@ -191,6 +191,11 @@ export const componentProps: Record<
       type: "boolean",
     },
     {
+      description: "A button can be borderless.",
+      name: "borderless",
+      type: "boolean",
+    },
+    {
       description: "Custom button style.",
       name: "buttonStyle",
       type: "StyleSheetProperties",

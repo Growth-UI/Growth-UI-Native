@@ -19,6 +19,7 @@ import {
 const Button: FunctionComponent<ButtonProps> = (props) => {
   const {
     basic,
+    borderless,
     buttonStyle,
     children,
     circular,
@@ -85,7 +86,7 @@ const Button: FunctionComponent<ButtonProps> = (props) => {
             borderRadius,
             backgroundColor,
             borderColor: backgroundColor,
-            borderWidth: 1,
+            borderWidth: borderless ? 0 : 1,
             justifyContent: "center",
             alignItems: "center",
           },
@@ -139,6 +140,9 @@ export interface ButtonProps extends StrictButtonProps {
 interface StrictButtonProps {
   /** A basic button is less pronounced. */
   basic?: boolean;
+
+  /** A button can be borderless. */
+  borderless?: boolean;
 
   /** Custom button style. */
   buttonStyle?: StyleProp<ViewStyle>;
