@@ -33,6 +33,7 @@ const Button: FunctionComponent<ButtonProps> = (props) => {
     onPress,
     ripple = true,
     textStyle,
+    transparent,
   } = props;
 
   const backgroundColor = color ? theme.colors[color] : "#e0e1e2";
@@ -93,6 +94,7 @@ const Button: FunctionComponent<ButtonProps> = (props) => {
           disabled && { cursor: "default", opacity: 0.6 },
           loading && { cursor: "default" },
           basic && { backgroundColor: "white" },
+          transparent && { backgroundColor: "transparent" },
           buttonStyle,
         ])}
         onPress={handlePress}
@@ -179,6 +181,9 @@ interface StrictButtonProps {
 
   /** Custom text style. */
   textStyle?: TypographyProps["style"];
+
+  /** A button can have transparent background. */
+  transparent?: boolean;
 }
 
 export default Button;

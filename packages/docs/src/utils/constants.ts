@@ -260,6 +260,11 @@ export const componentProps: Record<
       name: "textStyle",
       type: "StyleSheetProperties",
     },
+    {
+      description: "A button can have transparent background.",
+      name: "transparent",
+      type: "transparent",
+    },
   ],
   ButtonGroup: [
     {
