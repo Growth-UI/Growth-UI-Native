@@ -1,3 +1,9 @@
+## [1.29.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.7...v1.29.0) (2022-12-04)
+
+### 🚀  Features
+* feat: transparent background prop added ([554b7bb](https://github.com/Growth-UI/Growth-UI-Native/commit/554b7bbdb2cee4458fbe316d22f26810feca0ce3))
+* feat: borderless feat ([556c704](https://github.com/Growth-UI/Growth-UI-Native/commit/556c704fced9b2a4758bf979b9510cfe5b3d8b84))
+
 ## [1.28.7](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.6...v1.28.7) (2022-12-03)
 
 ### 🐛  Fixes
