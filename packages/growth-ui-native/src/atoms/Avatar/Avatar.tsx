@@ -62,10 +62,7 @@ const Avatar: FC<AvatarProps> & AvatarComponents = (props) => {
             position: "relative",
             width: size,
             height: size,
-            borderRadius: 7,
-          },
-          circular && {
-            borderRadius: 500,
+            borderRadius: circular ? 500 : 7,
           },
           isGrouped && {
             position: "absolute",
