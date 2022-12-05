@@ -1,3 +1,8 @@
+## [1.30.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.29.0...v1.30.0) (2022-12-05)
+
+### 🚀  Features
+* feat: add basic style ([cf8b836](https://github.com/Growth-UI/Growth-UI-Native/commit/cf8b83621d537f407d5ed4272cf788ea13440cca))
+
 ## [1.29.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.28.7...v1.29.0) (2022-12-04)
 
 ### 🚀  Features
