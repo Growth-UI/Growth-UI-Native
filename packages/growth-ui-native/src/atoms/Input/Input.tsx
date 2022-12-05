@@ -180,6 +180,7 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
             borderRightWidth: 0,
             borderTopWidth: 0,
             borderRadius: 0,
+            paddingLeft: 0,
           },
           containerStyle,
         ])}
@@ -236,6 +237,9 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
               styles.input,
               {
                 color: error ? theme.error.textColor : theme[mode].textColor,
+              },
+              basic && {
+                paddingLeft: 0,
               },
               label ? styles.common : { paddingVertical: 15 },
               inputStyle,
