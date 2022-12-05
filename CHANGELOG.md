@@ -1,3 +1,8 @@
+## [1.30.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.30.1...v1.30.2) (2022-12-05)
+
+### 🐛  Fixes
+* fix: fixed circular style bug on android ([d177d79](https://github.com/Growth-UI/Growth-UI-Native/commit/d177d791491dd3ae3932d3c5d31bda0175683c98))
+
 ## [1.30.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.30.0...v1.30.1) (2022-12-05)
 
 ### 🐛  Fixes
