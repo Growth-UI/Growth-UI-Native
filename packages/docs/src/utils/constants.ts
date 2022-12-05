@@ -332,6 +332,11 @@ export const componentProps: Record<
       type: "string",
     },
     {
+      description: "An Input can be a basic shape.",
+      name: "basic",
+      type: "boolean",
+    },
+    {
       description: "Custom container style.",
       name: "containerStyle",
       type: "StyleProp<ViewStyle>",
@@ -355,6 +360,11 @@ export const componentProps: Record<
       description: "The label of the input used for layout.",
       name: "label",
       type: "string",
+    },
+    {
+      description: "Custom label style.",
+      name: "labelStyle",
+      type: "StyleProp<ViewStyle>",
     },
     {
       description: "Icon to display inside the Input.",

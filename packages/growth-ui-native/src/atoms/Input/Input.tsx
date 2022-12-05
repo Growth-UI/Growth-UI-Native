@@ -23,11 +23,13 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
   const {
     adornment,
     adornmentColor,
+    basic,
     containerStyle,
     disabled,
     error,
     feedback,
     label,
+    labelStyle,
     icon,
     iconPosition = "left",
     inputStyle,
@@ -173,11 +175,25 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
           },
           disabled && { opacity: 0.6 },
           rounded && { borderRadius: 500 },
+          basic && {
+            borderLeftWidth: 0,
+            borderRightWidth: 0,
+            borderTopWidth: 0,
+            borderRadius: 0,
+          },
           containerStyle,
         ])}
       >
         {label && (
-          <Animated.View style={StyleSheet.flatten([styles.label])}>
+          <Animated.View
+            style={StyleSheet.flatten([
+              styles.label,
+              basic && {
+                left: 0,
+              },
+              labelStyle,
+            ])}
+          >
             <Animated.Text
               style={{
                 color: error ? theme.error.textColor : colorInterpolation,
@@ -298,6 +314,9 @@ export interface StrictInputProps {
   /** Color of the adornmanet. */
   adornmentColor?: string;
 
+  /** An Input can be a basic shape. */
+  basic?: boolean;
+
   /** Custom container style */
   containerStyle?: StyleProp<ViewStyle>;
 
@@ -312,6 +331,9 @@ export interface StrictInputProps {
 
   /** The label of the input used for layout. */
   label?: string;
+
+  /** Custom label style */
+  labelStyle?: StyleProp<ViewStyle>;
 
   /** Icon to display inside the Input. */
   icon?: IconProps;
