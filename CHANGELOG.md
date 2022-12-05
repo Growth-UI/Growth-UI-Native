@@ -1,3 +1,8 @@
+## [1.30.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.30.0...v1.30.1) (2022-12-05)
+
+### 🐛  Fixes
+* fix: remove padding left for basic style ([7b8d511](https://github.com/Growth-UI/Growth-UI-Native/commit/7b8d51180ab0c189668236b2bf6cc85cb3ebafb2))
+
 ## [1.30.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.29.0...v1.30.0) (2022-12-05)
 
 ### 🚀  Features
