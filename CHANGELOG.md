@@ -1,3 +1,8 @@
+## [1.31.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.30.2...v1.31.0) (2022-12-06)
+
+### 🚀  Features
+* feat: allow custom color ([a2b7e13](https://github.com/Growth-UI/Growth-UI-Native/commit/a2b7e131ac10ef8f45263380082380a16b496ea1))
+
 ## [1.30.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.30.1...v1.30.2) (2022-12-05)
 
 ### 🐛  Fixes
