@@ -54,7 +54,7 @@ const Icon: FC<IconProps> & IconComponents = (props) => {
     }
 
     if (color) {
-      return theme.colors[color];
+      return theme.colors[color] || color;
     }
 
     return theme[mode].iconColor;

@@ -46,7 +46,7 @@ const Typography: FC<TypographyProps> = (props) => {
       {...rest}
       style={StyleSheet.flatten([
         {
-          color: color ? theme.colors[color] : theme[mode].textColor,
+          color: color ? theme.colors[color] || color : theme[mode].textColor,
           textAlign: textAlign || "left",
           flexShrink: 1,
         },
