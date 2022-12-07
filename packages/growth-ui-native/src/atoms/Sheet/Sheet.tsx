@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useContext, useEffect, useRef, useState } from "react";
+import React, { FC, ReactNode, useCallback, useContext, useEffect, useRef, useState } from "react";
 import theme from "../../theme";
 import ThemeContext from "../../ThemeContext";
 import { sx } from "../../utils";
@@ -46,26 +46,32 @@ const Sheet: FC<SheetProps> = (props) => {
     setVisible(open);
   }, [open]);
 
-  const handleClose = (e: GestureResponderEvent) => {
-    Animated.timing(transformAnim, {
-      duration,
-      toValue: direction === "bottom" ? windowHeight : -windowHeight,
-      useNativeDriver: true,
-    }).start(() => {
-      setVisible(false);
-      onClose?.(e, { ...props, open: false });
-    });
-  };
+  const handleClose = useCallback(
+    (e: GestureResponderEvent) => {
+      Animated.timing(transformAnim, {
+        duration,
+        toValue: direction === "bottom" ? windowHeight : -windowHeight,
+        useNativeDriver: true,
+      }).start(() => {
+        setVisible(false);
+        onClose?.(e, { ...props, open: false });
+      });
+    },
+    [onClose, direction]
+  );
 
-  const handleOpen = (e: NativeSyntheticEvent<any>) => {
-    Animated.timing(transformAnim, {
-      duration,
-      toValue: open ? 0 : direction === "bottom" ? windowHeight : -windowHeight,
-      useNativeDriver: true,
-    }).start();
+  const handleOpen = useCallback(
+    (e: NativeSyntheticEvent<any>) => {
+      Animated.timing(transformAnim, {
+        duration,
+        toValue: 0,
+        useNativeDriver: true,
+      }).start();
 
-    onOpen?.(e, { ...props, open: true });
-  };
+      onOpen?.(e, { ...props, open: true });
+    },
+    [onOpen, direction]
+  );
 
   return (
     <>
