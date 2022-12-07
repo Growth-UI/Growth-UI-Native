@@ -1391,11 +1391,6 @@ export const componentProps: Record<
       type: "string",
     },
     {
-      description: "Custom style for SafeAreaView.",
-      name: "safeAreaViewStyle",
-      type: "StyleProp<ViewStyle>",
-    },
-    {
       description: "Accepts all system properties.",
       name: "sx",
       type: "enums",

@@ -6,16 +6,12 @@ import { SX } from "../../types";
 import {
   Modal,
   Pressable,
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
-  StatusBar,
   ViewStyle,
   StyleProp,
   GestureResponderEvent,
   NativeSyntheticEvent,
   Animated,
-  Platform,
   Dimensions,
 } from "react-native";
 
@@ -29,7 +25,6 @@ const Sheet: FC<SheetProps> = (props) => {
     duration = 400,
     open = false,
     overlayColor,
-    safeAreaViewStyle,
     trigger,
     onClose,
     onOpen,
@@ -113,18 +108,7 @@ const Sheet: FC<SheetProps> = (props) => {
             containerStyle,
           ])}
         >
-          <SafeAreaView
-            style={StyleSheet.flatten([
-              styles.safeAreaView,
-              direction === "top" &&
-                Platform.OS === "android" && {
-                  paddingTop: StatusBar.currentHeight,
-                },
-              safeAreaViewStyle,
-            ])}
-          >
-            <ScrollView>{children}</ScrollView>
-          </SafeAreaView>
+          {children}
         </Animated.View>
       </Modal>
     </>
@@ -169,9 +153,6 @@ export interface StrictSheetProps {
 
   /** Overlay color. */
   overlayColor?: string;
-
-  /** Custom style for SafeAreaView. */
-  safeAreaViewStyle?: StyleProp<ViewStyle>;
 
   /** Accepts all system properties. */
   sx?: SX;
