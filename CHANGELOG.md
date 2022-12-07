@@ -1,3 +1,8 @@
+## [1.31.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.31.2...v1.31.3) (2022-12-07)
+
+### 🐛  Fixes
+* fix: remove safearea ([521c581](https://github.com/Growth-UI/Growth-UI-Native/commit/521c5819936334fc62f6650932a45630f9262e0f))
+
 ## [1.31.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.31.1...v1.31.2) (2022-12-07)
 
 ### 🐛  Fixes
