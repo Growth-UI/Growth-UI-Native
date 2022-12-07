@@ -50,7 +50,7 @@ const Sheet: FC<SheetProps> = (props) => {
     Animated.timing(transformAnim, {
       duration,
       toValue: direction === "bottom" ? windowHeight : -windowHeight,
-      useNativeDriver: false,
+      useNativeDriver: true,
     }).start(() => {
       setVisible(false);
       onClose?.(e, { ...props, open: false });
@@ -61,7 +61,7 @@ const Sheet: FC<SheetProps> = (props) => {
     Animated.timing(transformAnim, {
       duration,
       toValue: open ? 0 : direction === "bottom" ? windowHeight : -windowHeight,
-      useNativeDriver: false,
+      useNativeDriver: true,
     }).start();
 
     onOpen?.(e, { ...props, open: true });
