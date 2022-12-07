@@ -1,3 +1,8 @@
+## [1.31.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.31.1...v1.31.2) (2022-12-07)
+
+### 🐛  Fixes
+* fix: fix animation bouncing bug ([21e64fc](https://github.com/Growth-UI/Growth-UI-Native/commit/21e64fc56ab7f984e5554965c0a29ead5efdd79d))
+
 ## [1.31.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.31.0...v1.31.1) (2022-12-07)
 
 ### 🐛  Fixes
