@@ -42,6 +42,7 @@ const Tab: FC<TabProps> = (props) => {
     tabStyle,
     tabItemStyle,
     tabPaneStyle,
+    tabPaneContainerStyle,
     panes,
     onTabChange,
   } = props;
@@ -247,6 +248,7 @@ const Tab: FC<TabProps> = (props) => {
               },
             ],
             backgroundColor: theme[mode].backgroundColor,
+            tabPaneContainerStyle,
           },
         ])}
         {...panResponder.panHandlers}
@@ -312,6 +314,9 @@ export interface StrictTabProps {
 
   /** Additional styling for tab item  */
   tabItemStyle?: StyleProp<ViewStyle>;
+
+  /** Additional styling for tab pane  */
+  tabPaneContainerStyle?: StyleProp<ViewStyle>;
 
   /** Additional styling for tab pane  */
   tabPaneStyle?: StyleProp<ViewStyle>;

@@ -1471,6 +1471,11 @@ export const componentProps: Record<
       type: "StyleProp<ViewStyle>",
     },
     {
+      description: "Additional styling for tab pane container.",
+      name: "tabPaneContainerStyle",
+      type: "StyleProp<ViewStyle>",
+    },
+    {
       description:
         "Array of objects describing each Tab item and Tab pane:\n [{ title?: string, icon?: IconProps, render: (props: TabProps) => ReactNode }]",
       name: "panes",
