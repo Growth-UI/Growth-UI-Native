@@ -1,3 +1,8 @@
+## [1.32.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.32.1...v1.32.2) (2022-12-20)
+
+### 📝  Documentation
+* docs: audiences ([2bb10f7](https://github.com/Growth-UI/Growth-UI-Native/commit/2bb10f7f830912adcd7b6200cbe540b499fe514a))
+
 ## [1.32.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.32.0...v1.32.1) (2022-12-20)
 
 ### 🐛  Fixes
