@@ -1,10 +1,11 @@
+import "setimmediate";
 import Context from "../components/Context";
 import Head from "next/head";
 import React, { useState } from "react";
 import ThemeProvider from "@growth-ui/native/ThemeProvider";
+import { Analytics } from "@vercel/analytics/react";
 import { AppProps } from "next/dist/shared/lib/router/router";
 import { GrowthStyle } from "@growth-ui/react";
-import "setimmediate";
 
 const globalStyle = `
   #__next {
@@ -42,6 +43,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           </ThemeProvider>
         </GrowthStyle>
       </Context.Provider>
+      <Analytics />
     </>
   );
 };

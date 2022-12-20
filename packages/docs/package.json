@@ -12,6 +12,7 @@
     "@growth-ui/native": "*",
     "@growth-ui/react": "^1.19.1",
     "@native-html/iframe-plugin": "^2.6.1",
+    "@vercel/analytics": "^0.1.6",
     "brace": "^0.11.1",
     "copy-to-clipboard": "^3.3.1",
     "faker": "^5.5.3",
