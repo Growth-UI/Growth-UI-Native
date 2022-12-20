@@ -248,8 +248,8 @@ const Tab: FC<TabProps> = (props) => {
               },
             ],
             backgroundColor: theme[mode].backgroundColor,
-            tabPaneContainerStyle,
           },
+          tabPaneContainerStyle,
         ])}
         {...panResponder.panHandlers}
       >
