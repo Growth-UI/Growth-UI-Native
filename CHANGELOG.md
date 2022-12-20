@@ -1,3 +1,8 @@
+## [1.32.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.31.3...v1.32.0) (2022-12-20)
+
+### 🚀  Features
+* feat: tabPaneContainerStyle ([bf42dbe](https://github.com/Growth-UI/Growth-UI-Native/commit/bf42dbe5ddab735e4109a45ce9ab2105e08ac103))
+
 ## [1.31.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.31.2...v1.31.3) (2022-12-07)
 
 ### 🐛  Fixes
