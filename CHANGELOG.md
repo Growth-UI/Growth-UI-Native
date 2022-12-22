@@ -1,3 +1,11 @@
+## [1.33.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.32.3...v1.33.0) (2022-12-22)
+
+### 🚀  Features
+* feat: add disable parallax effect ([38091b9](https://github.com/Growth-UI/Growth-UI-Native/commit/38091b9c2c6f3d973a21ec820413335c016f5990))
+
+### 🐛  Fixes
+* fix: fix not functioning ripple effect ([398cc90](https://github.com/Growth-UI/Growth-UI-Native/commit/398cc905795aeb6f2a7a6ce0277d62af12706bc0))
+
 ## [1.32.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.32.2...v1.32.3) (2022-12-20)
 
 ### 🐛  Fixes
