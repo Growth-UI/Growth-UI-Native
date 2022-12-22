@@ -1751,6 +1751,11 @@ export const componentProps: Record<
       type: "Array<any>",
     },
     {
+      description: "Disable the parallax effect.",
+      name: "disabled",
+      type: "boolean",
+    },
+    {
       description: "The height of the header that renders on the very top of screen.",
       name: "headerHeight",
       type: "number",

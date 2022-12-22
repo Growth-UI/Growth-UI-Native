@@ -28,6 +28,7 @@ const interpolate = (
 const Parallax: FC<ParallaxProps> = (props) => {
   const {
     data,
+    disabled,
     headerHeight = 100,
     Background,
     FixedHeader,
@@ -63,7 +64,7 @@ const Parallax: FC<ParallaxProps> = (props) => {
             width: window.width,
             height: parallaxHeaderHeight,
           },
-          styles.backgroundImage,
+          disabled ? {} : styles.backgroundImage,
         ]}
       >
         <View>{Background}</View>
@@ -132,7 +133,7 @@ const Parallax: FC<ParallaxProps> = (props) => {
     <>
       {Header && renderHeader()}
       {FixedHeader && renderFixedHeader()}
-      {Background && renderBackgroundImage()}
+      {!disabled && Background && renderBackgroundImage()}
       <Animated.FlatList
         {...rest}
         nestedScrollEnabled={true}
@@ -149,11 +150,17 @@ const Parallax: FC<ParallaxProps> = (props) => {
           },
         })}
         ListHeaderComponent={
-          <View
-            style={{
-              paddingTop: StickyHeader ? parallaxHeaderHeight - offsetHeight : parallaxHeaderHeight,
-            }}
-          />
+          disabled ? (
+            renderBackgroundImage()
+          ) : (
+            <View
+              style={{
+                paddingTop: StickyHeader
+                  ? parallaxHeaderHeight - offsetHeight
+                  : parallaxHeaderHeight,
+              }}
+            />
+          )
         }
         renderItem={renderListItem}
         onEndReached={handleEndReached}
@@ -189,6 +196,9 @@ export interface ParallaxProps extends StrictParallaxProps {
 export interface StrictParallaxProps {
   /** This is data that gets passed on to the FlatList Element. It is used to render items list. */
   data: Array<any>;
+
+  /** Disable the parallax effect. */
+  disabled?: boolean;
 
   /** The height of the header that renders on the very top of screen. */
   headerHeight?: number;
