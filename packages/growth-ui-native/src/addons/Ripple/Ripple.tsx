@@ -16,20 +16,20 @@ const Ripple: FC<RippleProps> = (props) => {
 
   const ref = useRef<View>(null);
   const mounted = useRef(true);
-  const opacityAnims = useRef<Animated.Value[]>([]).current;
-  const scaleAnims = useRef<Animated.Value[]>([]).current;
+  const opacityAnims = useRef<Animated.Value[]>([]);
+  const scaleAnims = useRef<Animated.Value[]>([]);
 
   useEffect(() => {
-    let bounce: NodeJS.Timeout;
+    let bounce: any;
 
-    if (ripples.length > 0 && mounted.current) {
+    if (ripples.length > 0) {
       Animated.parallel([
-        Animated.timing(opacityAnims[ripples.length - 1], {
+        Animated.timing(opacityAnims.current[ripples.length - 1], {
           toValue: 0,
           duration,
           useNativeDriver: true,
         }),
-        Animated.timing(scaleAnims[ripples.length - 1], {
+        Animated.timing(scaleAnims.current[ripples.length - 1], {
           toValue: 2,
           duration,
           useNativeDriver: true,
@@ -38,8 +38,8 @@ const Ripple: FC<RippleProps> = (props) => {
 
       bounce = setTimeout(() => {
         if (mounted.current) {
-          opacityAnims.length = 0;
-          scaleAnims.length = 0;
+          opacityAnims.current = [];
+          scaleAnims.current = [];
           setRipples([]);
           clearTimeout(bounce);
         }
@@ -47,8 +47,9 @@ const Ripple: FC<RippleProps> = (props) => {
     }
 
     return () => {
-      mounted.current = false;
-      clearTimeout(bounce);
+      if (bounce) {
+        clearTimeout(bounce);
+      }
     };
   }, [ripples, duration, opacityAnims, scaleAnims]);
 
@@ -66,8 +67,8 @@ const Ripple: FC<RippleProps> = (props) => {
         size,
       };
 
-      opacityAnims.push(new Animated.Value(0.75));
-      scaleAnims.push(new Animated.Value(0));
+      opacityAnims.current.push(new Animated.Value(0.75));
+      scaleAnims.current.push(new Animated.Value(0));
 
       setRipples([...ripples, newRipple]);
     });
@@ -103,10 +104,10 @@ const Ripple: FC<RippleProps> = (props) => {
                 width: size,
                 height: size,
                 backgroundColor: color,
-                opacity: opacityAnims[index],
+                opacity: opacityAnims.current[index],
                 transform: [
                   {
-                    scale: scaleAnims[index],
+                    scale: scaleAnims.current[index],
                   },
                 ],
               },
