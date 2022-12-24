@@ -209,12 +209,7 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
         <Row>
           {iconPosition === "left" && (
             <Animated.View
-              style={StyleSheet.flatten([
-                {
-                  opacity: opacityAnim,
-                },
-                label ? styles.common : { paddingVertical: 15 },
-              ])}
+              style={StyleSheet.flatten([label ? styles.common : { paddingVertical: 15 }])}
             >
               {icon && <Icon {...icon} />}
             </Animated.View>
