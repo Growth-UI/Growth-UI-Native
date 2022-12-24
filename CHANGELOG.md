@@ -1,3 +1,8 @@
+## [1.33.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.33.0...v1.33.1) (2022-12-24)
+
+### 🐛  Fixes
+* fix: different style for search icon ([885928d](https://github.com/Growth-UI/Growth-UI-Native/commit/885928df5599fda2a0ed2deaf34508ec7b908b7b))
+
 ## [1.33.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.32.3...v1.33.0) (2022-12-22)
 
 ### 🚀  Features
