@@ -1,3 +1,8 @@
+## [1.33.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.33.1...v1.33.2) (2022-12-24)
+
+### 🐛  Fixes
+* fix: fix opacity anim for icon ([d2c97ed](https://github.com/Growth-UI/Growth-UI-Native/commit/d2c97eddaab09a3a4b31ac80ba2b257fd40ff6c8))
+
 ## [1.33.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.33.0...v1.33.1) (2022-12-24)
 
 ### 🐛  Fixes
