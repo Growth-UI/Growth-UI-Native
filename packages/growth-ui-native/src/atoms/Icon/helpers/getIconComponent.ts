@@ -34,6 +34,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Card").default;
     case "cart":
       return require("../Cart").default;
+    case "category":
+      return require("../Category").default;
     case "chase":
       return require("../Chase").default;
     case "check":
@@ -108,6 +110,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Help").default;
     case "home":
       return require("../Home").default;
+    case "home heart":
+      return require("../HomeHeart").default;
     case "image":
       return require("../Image").default;
     case "inbox":
