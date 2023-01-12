@@ -142,13 +142,16 @@ const CurrencyInput: FC<CurrencyInputProps> = (props) => {
     }
 
     if (key === "Backspace") {
-      const clensedValue = removeInvalidChars(values.join(""));
-      const formattedValue = formatValue(clensedValue, {
+      const newValue = [...values];
+      newValue.pop();
+
+      const formattedValue = formatValue(removeInvalidChars(newValue.join("")), {
         decimalsLimit,
         separators,
       });
 
-      formattedValue.pop();
+      const clensedValue = removeInvalidChars(formattedValue.join(""));
+
       transformAnims.current.pop();
 
       onChange?.(+clensedValue, props);
