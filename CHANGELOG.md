@@ -1,3 +1,8 @@
+## [1.34.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.34.0...v1.34.1) (2023-01-12)
+
+### 🐛  Fixes
+* fix: fix not returning up-to-date value when hit backspace ([2f0ebfe](https://github.com/Growth-UI/Growth-UI-Native/commit/2f0ebfe9d4abac2f68dfa77207822a568f820150))
+
 ## [1.34.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.33.2...v1.34.0) (2022-12-24)
 
 ### 🚀  Features
