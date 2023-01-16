@@ -463,5 +463,10 @@
     "heading": "Dropdown",
     "subheading": "A dropdown allows a user to select a value from a series of options.",
     "type": "molecules"
+  },
+  "rating": {
+    "heading": "Rating",
+    "subheading": "Ratings are used to collect measurable feedback from users. Use Rating over an Input where imagery can increase user interaction.",
+    "type": "molecules"
   }
 }
