@@ -1,3 +1,8 @@
+## [1.35.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.35.0...v1.35.1) (2023-01-16)
+
+### 🐛  Fixes
+* fix: add locale for rating ([568e747](https://github.com/Growth-UI/Growth-UI-Native/commit/568e74712dfdaab00056c6c4e1b6bc57cae2fd15))
+
 ## [1.35.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.34.1...v1.35.0) (2023-01-16)
 
 ### 🚀  Features
