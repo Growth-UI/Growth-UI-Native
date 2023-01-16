@@ -1,3 +1,8 @@
+## [1.35.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.34.1...v1.35.0) (2023-01-16)
+
+### 🚀  Features
+* feat: new feat "Rating" ([47ac21a](https://github.com/Growth-UI/Growth-UI-Native/commit/47ac21aecb73121cd5eb5788f47f6880a00f6e1f))
+
 ## [1.34.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.34.0...v1.34.1) (2023-01-12)
 
 ### 🐛  Fixes
