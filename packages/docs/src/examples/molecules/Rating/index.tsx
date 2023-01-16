@@ -1,12 +1,12 @@
 import React from "react";
 import Snack from "../../../components/ComponentDoc/Snack";
 
-const SpeedDialExamples = () => {
+const RatingExamples = () => {
   return (
     <>
-      <Snack id="@kyuhakyuk/speeddial" />
+      <Snack id="@kyuhakyuk/rating" />
     </>
   );
 };
 
-export default SpeedDialExamples;
+export default RatingExamples;

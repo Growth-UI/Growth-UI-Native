@@ -85,6 +85,9 @@ export type { DateInputProps } from "./molecules/DateInput";
 export { default as CheckBox } from "./molecules/CheckBox";
 export type { CheckBoxProps } from "./molecules/CheckBox";
 
+export { default as Rating } from "./molecules/Rating";
+export type { RatingProps } from "./molecules/Rating";
+
 export { default as List } from "./molecules/List";
 export type {
   ListProps,

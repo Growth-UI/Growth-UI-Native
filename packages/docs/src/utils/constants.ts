@@ -44,6 +44,7 @@ export const componentByType: Record<string, string[]> = {
     "dateinput",
     "dropdown",
     "list",
+    "rating",
     "speeddial",
     "tab",
   ],
@@ -64,8 +65,9 @@ export const components = [
   "image",
   "input",
   "list",
-  "row",
   "parallax",
+  "rating",
+  "row",
   "sheet",
   "slider",
   "spacer",
@@ -2005,6 +2007,45 @@ export const componentProps: Record<
       description: "Show close icon on selected item",
       name: "showCloseIcon",
       type: "boolean",
+    },
+  ],
+  Rating: [
+    {
+      description: "Total number of ratings to displayDefault is 5",
+      name: "count",
+      type: "number",
+      defaultValue: "5",
+    },
+    {
+      description: "Initial value for the ratingDefault is 4",
+      name: "defaultRating",
+      type: "number",
+      defaultValue: "4",
+    },
+    {
+      description: "Whether the rating can be modiefied by the userDefault is false",
+      name: "disabled",
+      type: "boolean",
+    },
+    {
+      description: "Size of rating icon is 25",
+      name: "size",
+      type: "number",
+      defaultValue: "25",
+    },
+    {
+      description: "Called on rating change",
+      name: "onChange",
+      type: "func",
+      func: {
+        title: "(rating: number) => void",
+        params: [
+          {
+            name: "rating",
+            description: "New rating.",
+          },
+        ],
+      },
     },
   ],
 };
