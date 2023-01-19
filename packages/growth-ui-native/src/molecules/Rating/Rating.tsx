@@ -8,6 +8,8 @@ const Rating: FC<RatingProps> = (props) => {
     count = 5,
     defaultRating = 3,
     disabled = false,
+    maxThreshold = 0.7,
+    minThreshold = 0.3,
     selectedColor = "yellow-400",
     size = 25,
     onChange,
@@ -31,8 +33,11 @@ const Rating: FC<RatingProps> = (props) => {
   return (
     <Row>
       {new Array(count).fill(0).map((_, idx) => {
-        const isSelected = idx + 1 <= rating;
-        const isHalf = idx + 1 === count - Math.floor(count - rating);
+        const isSelected =
+          idx + 1 <= rating ||
+          (idx + 1 <= Math.floor(rating) + 1 && +(rating % 1).toFixed(2) >= maxThreshold);
+        const isHalf =
+          idx + 1 === Math.floor(rating) + 1 && +(rating % 1).toFixed(2) >= minThreshold;
         const isNotSelected = idx + 1 > rating;
 
         if (isSelected)
@@ -69,6 +74,12 @@ export interface RatingProps {
 
   /** Whether the rating can be modiefied by the userDefault is false */
   disabled?: boolean;
+
+  /** If maxThreshold is 0.7, then 4.7 rating will be displayed as 5 stars instead of 4 stars abnd half star  */
+  maxThreshold?: number;
+
+  /** If minThreshold is 0.3, then 4.2 rating will be displayed as 4 stars instead of 4 stars and half star.  */
+  minThreshold?: number;
 
   /** Color value for filled stars. Default is yellow-400 */
   selectedColor?: COLORS;

@@ -405,6 +405,21 @@ export const componentProps: Record<
       type: "string",
     },
     {
+      description: "Custom render input.",
+      name: "renderInput",
+      required: true,
+      type: "func",
+      func: {
+        title: "(params: TextInputProps) => ReactElement",
+        params: [
+          {
+            name: "params",
+            description: "TextInputProps",
+          },
+        ],
+      },
+    },
+    {
       description: "An Input field can be rounded shape.",
       name: "rounded",
       type: "boolean",
@@ -1653,7 +1668,7 @@ export const componentProps: Record<
       },
     },
     {
-      description: "Called on change.",
+      description: "Custom render input.",
       name: "renderInput",
       required: true,
       type: "func",
@@ -2021,6 +2036,20 @@ export const componentProps: Record<
       name: "defaultRating",
       type: "number",
       defaultValue: "4",
+    },
+    {
+      description:
+        "If maxThreshold is 0.7, then 4.7 rating will be displayed as 5 stars instead of 4 stars abnd half star.",
+      name: "maxThreshold",
+      type: "number",
+      defaultValue: "0.7",
+    },
+    {
+      description:
+        "If minThreshold is 0.3, then 4.2 rating will be displayed as 4 stars instead of 4 stars and half star.",
+      name: "minThreshold",
+      type: "number",
+      defaultValue: "0.3",
     },
     {
       description: "Whether the rating can be modiefied by the userDefault is false",
