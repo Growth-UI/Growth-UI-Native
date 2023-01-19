@@ -1,7 +1,15 @@
 /* eslint-disable react/display-name */
 import Icon, { IconProps } from "../Icon";
 import invoke from "lodash/invoke";
-import React, { FC, forwardRef, useContext, useEffect, useRef, useState } from "react";
+import React, {
+  FC,
+  forwardRef,
+  ReactElement,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Row from "../Row";
 import theme from "../../theme";
 import ThemeContext from "../../ThemeContext";
@@ -17,6 +25,7 @@ import {
   StyleProp,
   ViewStyle,
   TextStyle,
+  TextInputProps,
 } from "react-native";
 
 const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
@@ -34,6 +43,7 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
     iconPosition = "left",
     inputStyle,
     placeholder,
+    renderInput,
     rounded,
     value,
     ...unhandled
@@ -150,6 +160,23 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
   };
 
   const [nativeInputProps] = inputProps();
+  const defaultInputProps = {
+    selectionColor: theme.colors.primary,
+    style: StyleSheet.flatten([
+      styles.input,
+      {
+        color: error ? theme.error.textColor : theme[mode].textColor,
+      },
+      basic && {
+        paddingLeft: 0,
+      },
+      label ? styles.common : { paddingVertical: 15 },
+      inputStyle,
+    ]),
+    placeholderTextColor: theme[mode].lightTextColor,
+    underlineColorAndroid: "transparent",
+    ...nativeInputProps,
+  };
 
   const borderInterpolation = borderAnim.interpolate({
     inputRange: [0, 1],
@@ -225,24 +252,13 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
           >
             {adornment}
           </Animated.Text>
-          <TextInput
-            ref={input}
-            selectionColor={theme.colors.primary}
-            style={StyleSheet.flatten([
-              styles.input,
-              {
-                color: error ? theme.error.textColor : theme[mode].textColor,
-              },
-              basic && {
-                paddingLeft: 0,
-              },
-              label ? styles.common : { paddingVertical: 15 },
-              inputStyle,
-            ])}
-            placeholderTextColor={theme[mode].lightTextColor}
-            underlineColorAndroid="transparent"
-            {...nativeInputProps}
-          />
+
+          {renderInput ? (
+            renderInput(defaultInputProps)
+          ) : (
+            <TextInput ref={input} {...defaultInputProps} />
+          )}
+
           {iconPosition === "right" && (
             <Animated.View
               style={StyleSheet.flatten([
@@ -352,6 +368,9 @@ export interface StrictInputProps {
 
   /** The input placeholder. */
   placeholder?: string;
+
+  /** Custom render input. */
+  renderInput?: (props: TextInputProps) => ReactElement;
 
   /** An Input field can be rounded shape. */
   rounded?: boolean;
