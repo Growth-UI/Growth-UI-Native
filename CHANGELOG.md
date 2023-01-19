@@ -1,3 +1,9 @@
+## [1.36.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.35.1...v1.36.0) (2023-01-19)
+
+### 🚀  Features
+* feat: add max/min threshold for rating ([b74325c](https://github.com/Growth-UI/Growth-UI-Native/commit/b74325ce8377d572e214da6d9cd6a377b7327326))
+* feat: allow to use custom input ([f71fa72](https://github.com/Growth-UI/Growth-UI-Native/commit/f71fa72c1b5ccbe533e3b99b9c76d368aaa16449))
+
 ## [1.35.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.35.0...v1.35.1) (2023-01-16)
 
 ### 🐛  Fixes
