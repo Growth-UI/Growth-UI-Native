@@ -1,3 +1,8 @@
+## [1.36.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.36.0...v1.36.1) (2023-01-19)
+
+### 🐛  Fixes
+* fix: add Props example ([c111de5](https://github.com/Growth-UI/Growth-UI-Native/commit/c111de577f36d32864aae7d3d20ccad05e2e563e))
+
 ## [1.36.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.35.1...v1.36.0) (2023-01-19)
 
 ### 🚀  Features
