@@ -75,7 +75,7 @@ export interface RatingProps {
   /** Whether the rating can be modiefied by the userDefault is false */
   disabled?: boolean;
 
-  /** If maxThreshold is 0.7, then 4.7 rating will be displayed as 5 stars instead of 4 stars abnd half star  */
+  /** If maxThreshold is 0.7, then 4.7 rating will be displayed as 5 stars instead of 4 stars abnd half star.  */
   maxThreshold?: number;
 
   /** If minThreshold is 0.3, then 4.2 rating will be displayed as 4 stars instead of 4 stars and half star.  */

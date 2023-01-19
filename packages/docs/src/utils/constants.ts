@@ -161,6 +161,9 @@ export const componentInfo: Record<
   list: {
     names: ["List", "List.Content", "List.Description", "List.Heading", "List.Image", "List.Item"],
   },
+  rating: {
+    names: ["Rating"],
+  },
   speeddial: {
     names: ["SpeedDial", "SpeedDial.Action"],
   },
