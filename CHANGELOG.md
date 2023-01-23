@@ -1,3 +1,8 @@
+## [1.36.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.36.1...v1.36.2) (2023-01-23)
+
+### 🐛  Fixes
+* fix: fix animation issue when click outside modal ([47ff387](https://github.com/Growth-UI/Growth-UI-Native/commit/47ff3877b0120259d292fbe17fa6089c85ab8625))
+
 ## [1.36.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.36.0...v1.36.1) (2023-01-19)
 
 ### 🐛  Fixes
