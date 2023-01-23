@@ -39,6 +39,8 @@ const Sheet: FC<SheetProps> = (props) => {
 
   useEffect(() => {
     setVisible(open);
+
+    handleClose({} as any);
   }, [open]);
 
   const handleClose = useCallback(
