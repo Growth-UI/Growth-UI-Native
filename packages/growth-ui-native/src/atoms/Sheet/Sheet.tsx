@@ -38,9 +38,11 @@ const Sheet: FC<SheetProps> = (props) => {
   ).current;
 
   useEffect(() => {
-    setVisible(open);
-
-    handleClose({} as any);
+    if (open) {
+      handleOpen({} as any);
+    } else {
+      handleClose({} as any);
+    }
   }, [open]);
 
   const handleClose = useCallback(
@@ -64,7 +66,7 @@ const Sheet: FC<SheetProps> = (props) => {
         toValue: 0,
         useNativeDriver: true,
       }).start();
-
+      setVisible(true);
       onOpen?.(e, { ...props, open: true });
     },
     [onOpen, direction]
