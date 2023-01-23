@@ -1,3 +1,8 @@
+## [1.36.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.36.2...v1.36.3) (2023-01-23)
+
+### 🐛  Fixes
+* fix: fix animation issue(2) ([b9601b1](https://github.com/Growth-UI/Growth-UI-Native/commit/b9601b1c0ff3f52f8d0be89faecd7b8c5c2c960d))
+
 ## [1.36.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.36.1...v1.36.2) (2023-01-23)
 
 ### 🐛  Fixes
