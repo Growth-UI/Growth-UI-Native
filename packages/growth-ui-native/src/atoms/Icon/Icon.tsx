@@ -128,8 +128,8 @@ const Icon: FC<IconProps> & IconComponents = (props) => {
       {...rest}
       style={StyleSheet.flatten([
         {
-          height: size,
-          width: size,
+          height: inverted ? size * 1.7 + 4 : size,
+          width: inverted ? size * 1.7 + 4 : size,
           transform: [
             {
               rotate: rotationInterpolation,
