@@ -1,3 +1,8 @@
+## [1.36.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.36.3...v1.36.4) (2023-01-24)
+
+### 🐛  Fixes
+* fix: icon container size malformed for inverted icon ([bf06e23](https://github.com/Growth-UI/Growth-UI-Native/commit/bf06e23668ac484ccc90ec9bfe26319f7d5c6ac7))
+
 ## [1.36.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.36.2...v1.36.3) (2023-01-23)
 
 ### 🐛  Fixes
