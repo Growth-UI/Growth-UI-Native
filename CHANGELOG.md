@@ -1,3 +1,8 @@
+## [1.37.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.37.1...v1.37.2) (2023-01-30)
+
+### 🐛  Fixes
+* fix: revert ([60b68e0](https://github.com/Growth-UI/Growth-UI-Native/commit/60b68e0ed051a24408b6bde511b36466beac4b30))
+
 ## [1.37.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.37.0...v1.37.1) (2023-01-30)
 
 ### 🐛  Fixes
