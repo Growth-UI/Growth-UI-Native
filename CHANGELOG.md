@@ -1,3 +1,8 @@
+## [1.37.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.36.4...v1.37.0) (2023-01-30)
+
+### 🚀  Features
+* feat: add option to close dropdown menu on menu item selection ([eb3b358](https://github.com/Growth-UI/Growth-UI-Native/commit/eb3b358f01d508bb46afaaa9d1c4198d48dbc3a9))
+
 ## [1.36.4](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.36.3...v1.36.4) (2023-01-24)
 
 ### 🐛  Fixes
