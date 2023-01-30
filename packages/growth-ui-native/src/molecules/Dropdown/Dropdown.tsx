@@ -57,6 +57,10 @@ function Dropdown(props: DropdownProps) {
   const { mode } = useContext(ThemeContext);
 
   useEffect(() => {
+    setSelectedItems(defaultValues);
+  }, [defaultValues]);
+
+  useEffect(() => {
     if (typeof search !== "boolean") {
       setSearchQuery(search);
     }
