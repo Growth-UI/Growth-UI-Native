@@ -1761,7 +1761,7 @@ const Flag: FC<FlagProps> = (props) => {
 
   const getFlag = () => {
     if (name) {
-      return countryToFlag[name];
+      return countryToFlag[name as keyof typeof countryToFlag];
     }
 
     return countryOptions.find(({ iso }) => iso === code)?.flag;
