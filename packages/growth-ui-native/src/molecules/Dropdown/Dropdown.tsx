@@ -22,6 +22,7 @@ import {
 
 function Dropdown(props: DropdownProps) {
   const {
+    closeOnSelect = false,
     containerStyle,
     defaultValues = [],
     error = false,
@@ -158,6 +159,8 @@ function Dropdown(props: DropdownProps) {
     onChange?.(newSelectedItem, props);
     onItemPress?.(option, props);
     setSelectedItems(newSelectedItem);
+
+    closeOnSelect && handleBlur();
   };
 
   const handleRemoveItem = (option: Option) => () => {
@@ -455,6 +458,9 @@ export interface DropdownProps extends StrictDropdownProps {
 }
 
 export interface StrictDropdownProps {
+  /** Close dropdown menu on item selection. */
+  closeOnSelect?: boolean;
+
   /** Custom container style */
   containerStyle?: ViewStyle;
 
