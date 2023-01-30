@@ -11,6 +11,9 @@ export type { AvatarProps, AvatarGroupProps } from "./atoms/Avatar";
 export { default as Box } from "./atoms/Box";
 export type { BoxProps } from "./atoms/Box";
 
+export { default as Flag } from "./atoms/Flag";
+export type { FlagProps } from "./atoms/Flag";
+
 export { default as Typography } from "./atoms/Typography";
 export type { TypographyProps } from "./atoms/Typography";
 

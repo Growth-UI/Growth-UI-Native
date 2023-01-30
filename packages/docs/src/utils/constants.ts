@@ -1,4 +1,6 @@
 import {
+  COUNTRY_CODES,
+  COUNTRY_NAMES,
   DATE_MASK,
   DIRECTION,
   HORIZONTALALIGNMENTS,
@@ -27,6 +29,7 @@ export const componentByType: Record<string, string[]> = {
     "button",
     "chip",
     "collapse",
+    "flag",
     "icon",
     "image",
     "input",
@@ -61,6 +64,7 @@ export const components = [
   "currencyinput",
   "dateinput",
   "dropdown",
+  "flag",
   "icon",
   "image",
   "input",
@@ -100,6 +104,9 @@ export const componentInfo: Record<
   },
   collapse: {
     names: ["Collapse"],
+  },
+  flag: {
+    names: ["Flag"],
   },
   icon: {
     names: ["Icon"],
@@ -2078,6 +2085,25 @@ export const componentProps: Record<
           },
         ],
       },
+    },
+  ],
+  Flag: [
+    {
+      description: "You can get flag by country code",
+      name: "countryCode",
+      type: "enum",
+      enums: COUNTRY_CODES,
+    },
+    {
+      description: "You can get flag by country name",
+      name: "countryName",
+      type: "enum",
+      enums: COUNTRY_NAMES,
+    },
+    {
+      description: "Custom text styles",
+      name: "style",
+      type: "TextStyle",
     },
   ],
 };

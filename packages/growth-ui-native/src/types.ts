@@ -1,4 +1,5 @@
 import { ViewStyle } from "react-native";
+import { COUNTRY_CODES, COUNTRY_NAMES } from "./utils/GUI";
 
 export type VERTICALALIGNMENTS = "baseline" | "top" | "middle" | "bottom" | "stretch";
 export type HORIZONTALALIGNMENTS =
@@ -316,3 +317,7 @@ export type PALETTE = Partial<{
 }>;
 
 export type SX = SPACING & SIZING & PALETTE & ViewStyle;
+
+export type CountryCode = typeof COUNTRY_CODES[number];
+
+export type CountryName = typeof COUNTRY_NAMES[number];

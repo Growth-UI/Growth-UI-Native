@@ -468,5 +468,10 @@
     "heading": "Rating",
     "subheading": "Ratings are used to collect measurable feedback from users. Use Rating over an Input where imagery can increase user interaction.",
     "type": "molecules"
+  },
+  "flag": {
+    "heading": "Flag",
+    "subheading": "A flag is is used to represent a political state.",
+    "type": "atom"
   }
 }
