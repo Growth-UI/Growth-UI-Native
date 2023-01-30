@@ -1,3 +1,8 @@
+## [1.37.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.37.0...v1.37.1) (2023-01-30)
+
+### 🐛  Fixes
+* fix: label floating issue when defaultValue is provided ([acda795](https://github.com/Growth-UI/Growth-UI-Native/commit/acda7957481e3cada1d7ce7136e24bfdd694eec5))
+
 ## [1.37.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.36.4...v1.37.0) (2023-01-30)
 
 ### 🚀  Features
