@@ -1,3 +1,9 @@
+## [1.38.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.37.2...v1.38.0) (2023-01-30)
+
+### 🚀  Features
+* feat: fix type ([442ec28](https://github.com/Growth-UI/Growth-UI-Native/commit/442ec28db3690461480cbcdd78e5bf45d48d18a3))
+* feat: add new feature Flag ([7c023f3](https://github.com/Growth-UI/Growth-UI-Native/commit/7c023f3811e64f7ec24dfc1bc72640b6dec4f7e1))
+
 ## [1.37.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.37.1...v1.37.2) (2023-01-30)
 
 ### 🐛  Fixes
