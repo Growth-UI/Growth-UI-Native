@@ -22,6 +22,7 @@ import {
 
 function Dropdown(props: DropdownProps) {
   const {
+    basic,
     closeOnSelect = false,
     containerStyle,
     defaultValues = [],
@@ -190,6 +191,9 @@ function Dropdown(props: DropdownProps) {
             flex: 1,
           },
           selectedItemsContainerStyle,
+          basic && {
+            paddingLeft: 0,
+          },
         ])}
       >
         {selectedItems.map((item) => (
@@ -215,7 +219,14 @@ function Dropdown(props: DropdownProps) {
     if (!placeholder || selectedItems.length !== 0 || (!visible && label)) return null;
 
     return (
-      <Box sx={StyleSheet.flatten([styles.placeholder])}>
+      <Box
+        sx={StyleSheet.flatten([
+          styles.placeholder,
+          basic && {
+            paddingLeft: 0,
+          },
+        ])}
+      >
         <Typography>{placeholder}</Typography>
       </Box>
     );
@@ -353,12 +364,26 @@ function Dropdown(props: DropdownProps) {
               paddingBottom: 0,
               justifyContent: "center",
             },
+            basic && {
+              borderLeftWidth: 0,
+              borderRightWidth: 0,
+              borderTopWidth: 0,
+              borderRadius: 0,
+              paddingLeft: 0,
+            },
             containerStyle,
           ])}
           onLayout={handleLayout}
         >
           {label && (
-            <Animated.View style={StyleSheet.flatten([styles.label])}>
+            <Animated.View
+              style={StyleSheet.flatten([
+                styles.label,
+                basic && {
+                  left: 0,
+                },
+              ])}
+            >
               <Animated.Text
                 style={{
                   color: error ? theme.error.textColor : colorInterpolation,
@@ -458,6 +483,9 @@ export interface DropdownProps extends StrictDropdownProps {
 }
 
 export interface StrictDropdownProps {
+  /** A dropdown can be a basic shape. */
+  basic?: boolean;
+
   /** Close dropdown menu on item selection. */
   closeOnSelect?: boolean;
 

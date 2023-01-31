@@ -1866,6 +1866,11 @@ export const componentProps: Record<
   ],
   Dropdown: [
     {
+      description: "A dropdown can be a basic shape.",
+      name: "basic",
+      type: "boolean",
+    },
+    {
       description: "Custom container style",
       name: "containerStyle",
       type: "ViewStyle",
@@ -1892,7 +1897,7 @@ export const componentProps: Record<
     },
     {
       description: "Custom individual menu item style",
-      name: "menuItemsStyle",
+      name: "menuItemStyle",
       type: "ViewStyle",
     },
     {
