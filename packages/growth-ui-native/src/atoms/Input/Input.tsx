@@ -56,6 +56,7 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const input = forwardedRef || useRef<TextInput>(null);
+  const textRef = useRef(text);
   const colorAnim = useRef(new Animated.Value(0)).current;
   const floatAnim = useRef(new Animated.Value(text ? -10 : 0)).current;
   const fontSizeAnim = useRef(new Animated.Value(text ? 12 : 14)).current;
@@ -66,9 +67,44 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
     setText(value as string);
   }, [value]);
 
+  const animate = (float?: boolean) => {
+    Animated.parallel([
+      Animated.timing(colorAnim, {
+        toValue: 0,
+        duration: 400,
+        useNativeDriver: false,
+      }),
+      Animated.timing(borderAnim, {
+        toValue: 0,
+        duration: 400,
+        useNativeDriver: false,
+      }),
+      Animated.timing(fontSizeAnim, {
+        toValue: textRef.current || float ? 12 : 14,
+        duration: 400,
+        useNativeDriver: false,
+      }),
+      Animated.timing(floatAnim, {
+        toValue: textRef.current || float ? -10 : 0,
+        duration: 400,
+        useNativeDriver: false,
+      }),
+      Animated.timing(opacityAnim, {
+        toValue: textRef.current || float ? 1 : 0,
+        duration: 400,
+        useNativeDriver: false,
+      }),
+    ]).start();
+  };
+
   const handleChangeText = (text: string) => {
+    textRef.current = text;
     setText(text);
     invoke(props, "onChangeText", text);
+
+    if (!isFocused) {
+      animate();
+    }
   };
 
   const handleFocus = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
@@ -76,70 +112,14 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
       return true;
     }
 
-    Animated.parallel([
-      Animated.timing(colorAnim, {
-        toValue: 1,
-        duration: 400,
-        useNativeDriver: false,
-      }),
-      Animated.timing(borderAnim, {
-        toValue: 1,
-        duration: 400,
-        useNativeDriver: false,
-      }),
-      Animated.timing(fontSizeAnim, {
-        toValue: 12,
-        duration: 400,
-        useNativeDriver: false,
-      }),
-      Animated.timing(floatAnim, {
-        toValue: -10,
-        duration: 400,
-        useNativeDriver: false,
-      }),
-      Animated.timing(opacityAnim, {
-        toValue: 1,
-        duration: 400,
-        useNativeDriver: false,
-      }),
-    ]).start();
-
+    animate(true);
     setIsFocused(true);
-
     invoke(props, "onFocus", e, props);
   };
 
   const handleBlur = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
-    Animated.parallel([
-      Animated.timing(colorAnim, {
-        toValue: 0,
-        duration: 400,
-        useNativeDriver: false,
-      }),
-      Animated.timing(borderAnim, {
-        toValue: 0,
-        duration: 400,
-        useNativeDriver: false,
-      }),
-      Animated.timing(fontSizeAnim, {
-        toValue: text ? 12 : 14,
-        duration: 400,
-        useNativeDriver: false,
-      }),
-      Animated.timing(floatAnim, {
-        toValue: text ? -10 : 0,
-        duration: 400,
-        useNativeDriver: false,
-      }),
-      Animated.timing(opacityAnim, {
-        toValue: text ? 1 : 0,
-        duration: 400,
-        useNativeDriver: false,
-      }),
-    ]).start();
-
+    animate();
     setIsFocused(false);
-
     invoke(props, "onBlur", e, props);
   };
 
