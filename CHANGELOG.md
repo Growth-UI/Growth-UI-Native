@@ -1,3 +1,8 @@
+## [1.39.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.38.0...v1.39.0) (2023-01-31)
+
+### 🚀  Features
+* feat: add basic shape feature for dropdown ([969288a](https://github.com/Growth-UI/Growth-UI-Native/commit/969288ae85595cd3484fe8a58faeccb0d8d3954e))
+
 ## [1.38.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.37.2...v1.38.0) (2023-01-30)
 
 ### 🚀  Features
