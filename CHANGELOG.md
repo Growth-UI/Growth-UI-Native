@@ -1,3 +1,8 @@
+## [1.39.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.39.0...v1.39.1) (2023-01-31)
+
+### 🐛  Fixes
+* fix: floating anim bug upon closeOnSelect ([3c25f7d](https://github.com/Growth-UI/Growth-UI-Native/commit/3c25f7d4c6ddf183addcb33e58aedbdb5a8993db))
+
 ## [1.39.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.38.0...v1.39.0) (2023-01-31)
 
 ### 🚀  Features
