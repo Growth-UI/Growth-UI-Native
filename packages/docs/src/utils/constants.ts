@@ -359,6 +359,11 @@ export const componentProps: Record<
       type: "boolean",
     },
     {
+      description: "An Input field can be disabled without opacity.",
+      name: "disabledWithoutOpacity",
+      type: "boolean",
+    },
+    {
       description: "An Input field can show the data contains errors.",
       name: "error",
       type: "boolean",

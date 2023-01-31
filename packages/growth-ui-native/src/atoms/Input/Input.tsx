@@ -35,6 +35,7 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
     basic,
     containerStyle,
     disabled,
+    disabledWithoutOpacity,
     error,
     feedback,
     label,
@@ -56,8 +57,8 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
 
   const input = forwardedRef || useRef<TextInput>(null);
   const colorAnim = useRef(new Animated.Value(0)).current;
-  const floatAnim = useRef(new Animated.Value(value ? -10 : 0)).current;
-  const fontSizeAnim = useRef(new Animated.Value(value ? 12 : 14)).current;
+  const floatAnim = useRef(new Animated.Value(text ? -10 : 0)).current;
+  const fontSizeAnim = useRef(new Animated.Value(text ? 12 : 14)).current;
   const borderAnim = useRef(new Animated.Value(0)).current;
   const opacityAnim = useRef(new Animated.Value(0)).current;
 
@@ -71,7 +72,7 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
   };
 
   const handleFocus = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
-    if (disabled) {
+    if (disabled || disabledWithoutOpacity) {
       return true;
     }
 
@@ -151,7 +152,7 @@ const Input = forwardRef<TextInput, InputProps>((props, forwardedRef) => {
         onBlur: handleBlur,
         onChangeText: handleChangeText,
         onFocus: handleFocus,
-        editable: !disabled,
+        editable: !disabled && !disabledWithoutOpacity,
         placeholder: label && !isFocused ? "" : placeholder,
         value: text,
       },
@@ -337,6 +338,9 @@ export interface StrictInputProps {
 
   /** An Input field can show that it is disabled. */
   disabled?: boolean;
+
+  /** An Input field can be disabled without opacity. */
+  disabledWithoutOpacity?: boolean;
 
   /** An Input field can show the data contains errors. */
   error?: boolean;
