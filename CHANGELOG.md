@@ -1,3 +1,8 @@
+## [1.39.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.39.2...v1.39.3) (2023-01-31)
+
+### 🐛  Fixes
+* fix: fix not updating items on "removeItem" ([6a3cd27](https://github.com/Growth-UI/Growth-UI-Native/commit/6a3cd27ede3964e19391e5d205a4b494736427b9))
+
 ## [1.39.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.39.1...v1.39.2) (2023-01-31)
 
 ### 🐛  Fixes
