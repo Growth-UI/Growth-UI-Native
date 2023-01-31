@@ -7,6 +7,7 @@ import stringSimilarity from "string-similarity";
 import theme from "../../theme";
 import ThemeContext from "../../ThemeContext";
 import Typography from "../../atoms/Typography";
+import useStateCallback from "../../utils/hooks/useStateCallback";
 import { IconProps } from "../../atoms/Icon";
 import {
   Animated,
@@ -43,7 +44,7 @@ function Dropdown(props: DropdownProps) {
     searchContainerStyle,
     selectedItemsContainerStyle,
   } = props;
-  const [selectedItems, setSelectedItems] = useState<Option[]>(defaultValues);
+  const [selectedItems, setSelectedItems] = useStateCallback<Option[]>(defaultValues);
   const [searchQuery, setSearchQuery] = useState("");
   const [visible, setVisible] = useState(false);
   const [layout, setLayout] = useState<any>({});
@@ -159,9 +160,9 @@ function Dropdown(props: DropdownProps) {
 
     onChange?.(newSelectedItem, props);
     onItemPress?.(option, props);
-    setSelectedItems(newSelectedItem);
-
-    closeOnSelect && handleBlur();
+    setSelectedItems(newSelectedItem, () => {
+      closeOnSelect && handleBlur();
+    });
   };
 
   const handleRemoveItem = (option: Option) => () => {
