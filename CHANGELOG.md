@@ -1,3 +1,8 @@
+## [1.39.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.39.1...v1.39.2) (2023-01-31)
+
+### 🐛  Fixes
+* fix: fix floating issue (2) ([28dbb79](https://github.com/Growth-UI/Growth-UI-Native/commit/28dbb79413ea75784797093ccb5a123002da19ff))
+
 ## [1.39.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.39.0...v1.39.1) (2023-01-31)
 
 ### 🐛  Fixes
