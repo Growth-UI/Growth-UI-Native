@@ -1,3 +1,8 @@
+## [1.40.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.39.3...v1.40.0) (2023-01-31)
+
+### 🚀  Features
+* feat: add "disabledWithoutOpacity" feat for Input ([a82cb52](https://github.com/Growth-UI/Growth-UI-Native/commit/a82cb52484b85782c623be24a2179c626bf48af3))
+
 ## [1.39.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.39.2...v1.39.3) (2023-01-31)
 
 ### 🐛  Fixes
