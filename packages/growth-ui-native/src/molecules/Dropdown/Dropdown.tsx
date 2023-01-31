@@ -7,7 +7,6 @@ import stringSimilarity from "string-similarity";
 import theme from "../../theme";
 import ThemeContext from "../../ThemeContext";
 import Typography from "../../atoms/Typography";
-import useStateCallback from "../../utils/hooks/useStateCallback";
 import { IconProps } from "../../atoms/Icon";
 import {
   Animated,
@@ -44,7 +43,7 @@ function Dropdown(props: DropdownProps) {
     searchContainerStyle,
     selectedItemsContainerStyle,
   } = props;
-  const [selectedItems, setSelectedItems] = useStateCallback<Option[]>(defaultValues);
+  const [selectedItems, setSelectedItems] = useState<Option[]>(defaultValues);
   const [searchQuery, setSearchQuery] = useState("");
   const [visible, setVisible] = useState(false);
   const [layout, setLayout] = useState<any>({});
@@ -113,7 +112,9 @@ function Dropdown(props: DropdownProps) {
     setVisible(true);
   };
 
-  const handleBlur = () => {
+  const handleBlur = (newSelectedItem?: Option[]) => {
+    const items = newSelectedItem ?? selectedItems;
+
     Animated.parallel([
       Animated.timing(colorAnim, {
         toValue: 0,
@@ -126,12 +127,12 @@ function Dropdown(props: DropdownProps) {
         useNativeDriver: false,
       }),
       Animated.timing(fontSizeAnim, {
-        toValue: selectedItems.length !== 0 ? 12 : 14,
+        toValue: items.length !== 0 ? 12 : 14,
         duration: 400,
         useNativeDriver: false,
       }),
       Animated.timing(floatAnim, {
-        toValue: selectedItems.length !== 0 ? -10 : 0,
+        toValue: items.length !== 0 ? -10 : 0,
         duration: 400,
         useNativeDriver: false,
       }),
@@ -158,11 +159,10 @@ function Dropdown(props: DropdownProps) {
       }
     }
 
+    setSelectedItems(newSelectedItem);
     onChange?.(newSelectedItem, props);
     onItemPress?.(option, props);
-    setSelectedItems(newSelectedItem, () => {
-      closeOnSelect && handleBlur();
-    });
+    closeOnSelect && handleBlur(newSelectedItem);
   };
 
   const handleRemoveItem = (option: Option) => () => {
@@ -267,10 +267,10 @@ function Dropdown(props: DropdownProps) {
     return (
       <Pressable key={index} onPress={handleSelectItem(item)}>
         <Box
-          sx={StyleSheet.flatten([
+          style={StyleSheet.flatten([
             styles.item,
             isActive(item.value) && {
-              bg: mode === "dark" ? "rgba(0,0,0,0.5)" : "rgba(0,0,0,0.05)",
+              backgroundColor: mode === "dark" ? "rgba(0,0,0,0.5)" : "rgba(0,0,0,0.05)",
             },
             menuItemStyle,
           ])}
@@ -296,7 +296,7 @@ function Dropdown(props: DropdownProps) {
 
     return (
       <Modal transparent statusBarTranslucent visible={visible}>
-        <TouchableWithoutFeedback onPress={handleBlur}>
+        <TouchableWithoutFeedback onPress={() => handleBlur()}>
           <View style={{ flex: 1 }}>
             <Box
               style={StyleSheet.flatten([
