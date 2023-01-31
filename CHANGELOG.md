@@ -1,3 +1,8 @@
+## [1.40.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.40.0...v1.40.1) (2023-01-31)
+
+### 🐛  Fixes
+* fix: floating animation issue upon default value changes ([d5a05fc](https://github.com/Growth-UI/Growth-UI-Native/commit/d5a05fca6dc344adbbdc2fa0ef948c6d9ea6c49d))
+
 ## [1.40.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.39.3...v1.40.0) (2023-01-31)
 
 ### 🚀  Features
