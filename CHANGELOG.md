@@ -1,3 +1,8 @@
+## [1.40.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.40.1...v1.40.2) (2023-01-31)
+
+### 🐛  Fixes
+* fix: forgot to change setText -> handleChangeText ([387836a](https://github.com/Growth-UI/Growth-UI-Native/commit/387836a4107252309151585910043ed73cbdd410))
+
 ## [1.40.1](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.40.0...v1.40.1) (2023-01-31)
 
 ### 🐛  Fixes
