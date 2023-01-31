@@ -169,10 +169,15 @@ function Dropdown(props: DropdownProps) {
     onItemPress?.(option, props);
 
     if (!multiple) {
+      handleBlur([]);
+      onChange?.([], props);
       return setSelectedItems([]);
     }
 
-    setSelectedItems(selectedItems.filter((item) => item.value !== option.value));
+    const newItems = selectedItems.filter((item) => item.value !== option.value);
+    handleBlur(newItems);
+    onChange?.(newItems, props);
+    setSelectedItems(newItems);
   };
 
   /**
