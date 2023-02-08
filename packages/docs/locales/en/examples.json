@@ -472,6 +472,6 @@
   "flag": {
     "heading": "Flag",
     "subheading": "A flag is is used to represent a political state.",
-    "type": "atom"
+    "type": "atoms"
   }
 }
