@@ -1,3 +1,8 @@
+## [1.40.3](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.40.2...v1.40.3) (2023-02-08)
+
+### 🐛  Fixes
+* fix: typo in locale ([b1ed857](https://github.com/Growth-UI/Growth-UI-Native/commit/b1ed8571c01616baf1c6d78dea10a39c22965b11))
+
 ## [1.40.2](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.40.1...v1.40.2) (2023-01-31)
 
 ### 🐛  Fixes
