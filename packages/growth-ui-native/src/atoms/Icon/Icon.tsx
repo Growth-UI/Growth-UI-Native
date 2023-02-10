@@ -17,6 +17,7 @@ import {
 
 const Icon: FC<IconProps> & IconComponents = (props) => {
   const {
+    children,
     color,
     containerStyle,
     duration = 300,
@@ -119,7 +120,19 @@ const Icon: FC<IconProps> & IconComponents = (props) => {
     onPress && onPress(e, props);
   };
 
-  const IconComponent = getIconComponent(name);
+  const renderSVGIcon = () => {
+    if (children && React.Children.only(children)) {
+      return children;
+    }
+
+    if (name) {
+      return getIconComponent(name);
+    }
+
+    return null;
+  };
+
+  const IconComponent = renderSVGIcon();
 
   const rotationInterpolation = rotationAnim.interpolate(computeRotationDegree());
 
@@ -178,6 +191,9 @@ export interface IconProps extends StrictIconProps {
 }
 
 interface StrictIconProps {
+  /** Children. (Custom Icon) */
+  children?: React.ReactNode;
+
   /** Color of the icon. */
   color?: COLORS;
 
