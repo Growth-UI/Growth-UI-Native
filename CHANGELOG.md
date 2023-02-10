@@ -1,3 +1,8 @@
+## [1.42.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.41.0...v1.42.0) (2023-02-10)
+
+### 🚀  Features
+* feat: allow to bring your own icon feature ([fa2b2b4](https://github.com/Growth-UI/Growth-UI-Native/commit/fa2b2b4d7de097bacfed6482782085b947742015))
+
 ## [1.41.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.40.3...v1.41.0) (2023-02-10)
 
 ### 🚀  Features
