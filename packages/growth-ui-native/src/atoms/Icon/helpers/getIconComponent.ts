@@ -86,6 +86,10 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Email").default;
     case "email outline":
       return require("../EmailOutline").default;
+    case "eye fill":
+      return require("../EyeFill").default;
+    case "eye slash fill":
+      return require("../EyeSlashFill").default;
     case "file copy":
       return require("../FileCopy").default;
     case "file copy outline":

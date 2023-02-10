@@ -211,6 +211,8 @@ export type GrowthICONS =
   | "edit"
   | "email"
   | "email outline"
+  | "eye fill"
+  | "eye slash fill"
   | "file copy"
   | "file copy outline"
   | "file outline"
