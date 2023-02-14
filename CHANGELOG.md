@@ -1,3 +1,8 @@
+## [1.43.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.42.0...v1.43.0) (2023-02-14)
+
+### 🚀  Features
+* feat: new icons ([b5e282a](https://github.com/Growth-UI/Growth-UI-Native/commit/b5e282a89a6a0ce6293465322e5731d42264b873))
+
 ## [1.42.0](https://github.com/Growth-UI/Growth-UI-Native/compare/v1.41.0...v1.42.0) (2023-02-10)
 
 ### 🚀  Features
