@@ -222,12 +222,14 @@ export const ICONS: GrowthICONS[] = [
   "gift",
   "gift fill",
   "github",
+  "global",
   "hand coin",
   "heart",
   "help",
   "home",
   "image",
   "inbox",
+  "instagram",
   "install",
   "invoice",
   "italic",
@@ -285,6 +287,7 @@ export const ICONS: GrowthICONS[] = [
   "warning",
   "wells fargo",
   "yarn",
+  "yelp",
 ];
 
 export const COUNTRY_CODES = [

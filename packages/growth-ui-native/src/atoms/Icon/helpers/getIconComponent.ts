@@ -106,6 +106,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../GiftFill").default;
     case "github":
       return require("../Github").default;
+    case "global":
+      return require("../Global").default;
     case "hand coin":
       return require("../HandCoin").default;
     case "heart":
@@ -120,6 +122,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Image").default;
     case "inbox":
       return require("../Inbox").default;
+    case "instagram":
+      return require("../Instagram").default;
     case "install":
       return require("../Install").default;
     case "invoice":
@@ -236,6 +240,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Wellsfargo").default;
     case "yarn":
       return require("../Yarn").default;
+    case "yelp":
+      return require("../Yelp").default;
   }
 };
 

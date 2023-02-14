@@ -221,6 +221,7 @@ export type GrowthICONS =
   | "gift"
   | "gift fill"
   | "github"
+  | "global"
   | "hand coin"
   | "heart"
   | "home"
@@ -228,6 +229,7 @@ export type GrowthICONS =
   | "help"
   | "image"
   | "inbox"
+  | "instagram"
   | "install"
   | "invoice"
   | "italic"
@@ -285,7 +287,8 @@ export type GrowthICONS =
   | "underline"
   | "warning"
   | "wells fargo"
-  | "yarn";
+  | "yarn"
+  | "yelp";
 
 export type SPACING = Partial<{
   m: number | string;
