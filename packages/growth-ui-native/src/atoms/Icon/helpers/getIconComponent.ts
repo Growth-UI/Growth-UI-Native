@@ -146,12 +146,16 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Lock").default;
     case "logout":
       return require("../Logout").default;
+    case "map location dot":
+      return require("../MapLocationDot").default;
     case "menu":
       return require("../Menu").default;
     case "message":
       return require("../Message").default;
     case "newspaper":
       return require("../Newspaper").default;
+    case "notification":
+      return require("../Notification").default;
     case "notifications":
       return require("../Notifications").default;
     case "npm":
@@ -220,6 +224,8 @@ const getIconComponent = (name: GrowthICONS) => {
       return require("../Sun").default;
     case "support agent":
       return require("../SupportAgent").default;
+    case "telephone":
+      return require("../Telephone").default;
     case "thumbs down":
       return require("../ThumbsDown").default;
     case "thumbs up":
